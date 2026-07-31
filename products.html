@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Catalog - Dehydrated Powders, Flakes & Spices | IMM Food Innovators</title>
+    <meta name="description" content="Explore our catalog of 50+ dehydrated food products, banana powder, moringa leaves powder, spices, and vegetable flakes manufactured by IMM Food Innovators LLP in Jalgaon, India.">
+    <link rel="icon" href="images/IMMLogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css?v=2.2">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+
+    <!-- TOP HEADER BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <span>🕒 Hours: 09:00 AM - 06:00 PM</span>
+                </div>
+                <div class="top-bar-item">
+                    <span>📞 Phone: <a href="tel:+919114403000" style="color:inherit; font-weight: 700;">+91 91144 03000</a> / <a href="tel:+919170625050" style="color:inherit;">+91 9170625050</a></span>
+                </div>
+                <div class="top-bar-item">
+                    <span>✉️ Email: <a href="mailto:info@immfoodinnovators.in" style="color:inherit;">info@immfoodinnovators.in</a></span>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-social">
+                    <a href="https://wa.me/919114403000" target="_blank" title="WhatsApp">💬</a>
+                    <a href="https://www.facebook.com/profile.php?id=61581102029221" target="_blank" title="Facebook">📘</a>
+                    <a href="https://www.instagram.com/imm_food_innovators" target="_blank" title="Instagram">📷</a>
+                    <a href="https://www.linkedin.com/in/imm-innovators-22232238b" target="_blank" title="LinkedIn">🔗</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/IMMLogo.png" alt="IMM Food Innovators Logo" class="logo-img">
+                <div class="logo-text-wrap">
+                    <span class="logo-text">IMM Food Innovators</span>
+                    <span class="logo-sub">LLP • Jalgaon, India</span>
+                </div>
+            </a>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                    <!-- PRODUCTS DROPDOWN MENU -->
+                    <li class="nav-item dropdown">
+                        <a href="products.html" class="nav-link active">Products <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=powder" class="dropdown-item">🍌 Fruit & Veggie Powders</a></li>
+                            <li><a href="products.html?category=flakes" class="dropdown-item">🧅 Flakes & Cubes</a></li>
+                            <li><a href="products.html?category=spices" class="dropdown-item">🌶️ Pure Spices</a></li>
+                            <li><a href="products.html?category=herbal" class="dropdown-item">🌿 Herbal & Wellness</a></li>
+                            <li><a href="products.html" class="dropdown-item">📦 View All 50+ Products</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- SERVICES DROPDOWN -->
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">Our Services <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#packaging" class="dropdown-item">🏷️ Private Labeling & Packaging</a></li>
+                            <li><a href="services.html#blending" class="dropdown-item">🌿 Custom Spice & Powder Blending</a></li>
+                            <li><a href="services.html#contract" class="dropdown-item">🏭 Contract Manufacturing</a></li>
+                            <li><a href="services.html#quality" class="dropdown-item">🔬 Quality & Export Testing</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="index.html#blogs" class="nav-link">Blogs</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- INNER PAGE HERO -->
+    <section class="inner-page-hero">
+        <div class="hero-content">
+            <div class="section-badge badge-gold">WHOLESALE & EXPORT CATALOG</div>
+            <h1>Our Product Portfolio</h1>
+            <p>A comprehensive range of 50+ export-grade dehydrated food powders, flakes, spices, and wellness herbs manufactured in Jalgaon, Maharashtra.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTS CATALOG SEARCH & FILTERS -->
+    <section class="products-section">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <div style="max-width: 750px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+                <div class="form-group" style="flex: 1 1 320px; margin: 0;">
+                    <input type="text" id="productSearchInput" placeholder="🔍 Search product name (e.g. Banana, Garlic, Moringa)..." style="border-radius: 50px; padding: 16px 24px; box-shadow: var(--shadow-sm); width: 100%;">
+                </div>
+                <div class="form-group" style="flex: 0 1 260px; margin: 0;">
+                    <select id="productCategorySelect" style="border-radius: 50px; padding: 16px 24px; box-shadow: var(--shadow-sm); width: 100%; border: 1px solid var(--border-light); background: #FFFFFF; font-family: var(--font-heading); font-weight: 600; color: var(--primary-dark); cursor: pointer;">
+                        <option value="all">📁 Filter by Category (All)</option>
+                        <option value="powder">🍌 Fruit & Veggie Powders</option>
+                        <option value="flakes">🧅 Flakes & Cubes</option>
+                        <option value="spices">🌶️ Pure Spices</option>
+                        <option value="herbal">🌿 Herbal & Wellness</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-filter-container">
+            <div class="products-filter-bar">
+                <button class="filter-btn active" data-category="all">✨ All Products (50+)</button>
+                <button class="filter-btn" data-category="powder">🍌 Fruit & Veggie Powders</button>
+                <button class="filter-btn" data-category="flakes">🧅 Flakes & Cubes</button>
+                <button class="filter-btn" data-category="spices">🌶️ Pure Spices</button>
+                <button class="filter-btn" data-category="herbal">🌿 Herbal & Wellness</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="fullProductsGrid">
+            <!-- Full 51 product cards rendered via JS -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1rem;">
+                    <img src="images/IMMLogo.png" alt="IMM Logo" class="logo-img">
+                    <span class="logo-text">IMM Food Innovators</span>
+                </div>
+                <p>India's leading manufacturer and exporter of dehydrated banana powder, fruit & vegetable powders, pure spices, and herbal food ingredients.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="products.html">Product Catalog</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <div class="footer-links">
+                    <a href="products.html?category=powder">Fruit Powders</a>
+                    <a href="products.html?category=spices">Spice Powders</a>
+                    <a href="products.html?category=herbal">Herbal Powders</a>
+                    <a href="products.html?category=flakes">Vegetable Flakes</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Nhavi Hambardi Road, Yawal, Jalgaon, Maharashtra - 425524</p>
+                <p><strong>Primary:</strong> +91 91144 03000</p>
+                <p><strong>Secondary:</strong> +91 9170625050</p>
+                <p><strong>Email:</strong> info@immfoodinnovators.in</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 IMM Food Innovators LLP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL FOR QUOTE INQUIRY -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js?v=2.2"></script>
+</body>
+</html>

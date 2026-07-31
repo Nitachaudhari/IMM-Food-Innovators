@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#FFFFFF"/>
+  <g transform="translate(135, 25)">
+    <!-- Shadow -->
+    <ellipse cx="65" cy="235" rx="55" ry="10" fill="#E2E8F0"/>
+    
+    <!-- Metallic Tin Body -->
+    <rect x="15" y="45" width="100" height="185" rx="12" fill="url(#silverTin)" stroke="#94A3B8" stroke-width="2"/>
+    <ellipse cx="65" cy="45" rx="50" ry="12" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5"/>
+    <ellipse cx="65" cy="45" rx="42" ry="9" fill="#94A3B8"/>
+    
+    <!-- Metallic Highlights -->
+    <rect x="25" y="55" width="12" height="165" fill="#FFFFFF" opacity="0.4"/>
+    <rect x="95" y="55" width="6" height="165" fill="#000000" opacity="0.08"/>
+    
+    <!-- Front Printed Label -->
+    <rect x="20" y="85" width="90" height="105" rx="4" fill="#FFFFFF" stroke="#0A2E1D" stroke-dasharray="0" stroke-width="1.5"/>
+    <rect x="25" y="90" width="80" height="95" rx="2" fill="none" stroke="#0A2E1D" stroke-width="1"/>
+    
+    <circle cx="65" cy="115" r="12" fill="#0A2E1D"/>
+    <path d="M60 118 C60 110 70 110 70 118 Z" fill="#F59E0B"/>
+    <text x="65" y="142" font-family="'Outfit', 'Inter', sans-serif" font-size="10" font-weight="800" fill="#0A2E1D" text-anchor="middle">IMM FOOD</text>
+    <text x="65" y="153" font-family="'Outfit', 'Inter', sans-serif" font-size="8" font-weight="600" fill="#C84B31" text-anchor="middle">INNOVATORS</text>
+    <text x="65" y="166" font-family="'Inter', sans-serif" font-size="7" font-weight="500" fill="#64748B" text-anchor="middle">Tin Can Packing</text>
+  </g>
+  
+  <defs>
+    <linearGradient id="silverTin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="30%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+  </defs>
+</svg>
