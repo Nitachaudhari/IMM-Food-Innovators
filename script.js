@@ -1,5 +1,5 @@
 /*!
- * IMM Food Innovators — script.js v2.1
+ * IMM Food Innovators — script.js v3.2
  * Features: Hero Banner Slider, Product Catalog Search & Filters, 
  * Dropdown Menu Controller, Service Modals, Certificate Viewer, Scroll Progress, Mobile Nav
  */
@@ -48,7 +48,7 @@
       category: "Business Strategy",
       date: "July 15, 2026",
       readTime: "6 min read",
-      image: "images/company.jpg?v=3.1",
+      image: "images/company.jpg?v=3.2",
       excerpt: "Launching a food brand requires significant capital. Learn how third-party contract manufacturing allows brands to scale efficiently, reduce costs, and accelerate product launches.",
       content: `
         <p>The food industry is experiencing a massive shift toward D2C brands, organic superfoods, and clean-label snacks. However, setting up a processing facility involves massive capital expenditures, regulatory delays, and operational bottlenecks. This is where private label and third-party contract manufacturing comes in as a game-changer for startups and growing FMCG companies.</p>
@@ -72,7 +72,7 @@
       category: "Food Tech",
       date: "July 10, 2026",
       readTime: "5 min read",
-      image: "images/carrot.jpg",
+      image: "images/factory.jpg?v=3.2",
       excerpt: "Traditional solar or high-heat oven drying often damages the flavor, color, and nutritional values of food ingredients. Discover how modern low-temperature dehydration preserves quality.",
       content: `
         <p>Drying is one of the oldest methods of food preservation. However, the technology used to dehydrate raw materials plays a critical role in determining the final product's quality, color, aroma, and nutrient density. Modern food processing demands advanced low-temperature dehydration over traditional drying methods.</p>
