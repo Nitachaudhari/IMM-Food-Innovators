@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="50%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#854D0E" />
+    </linearGradient>
+    <linearGradient id="qRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+  </defs>
+  <!-- Starburst Base -->
+  <circle cx="80" cy="72" r="62" fill="url(#qGold)" />
+  <circle cx="80" cy="72" r="54" fill="url(#qRed)" stroke="#FEF08A" stroke-width="2" />
+  
+  <!-- Ribbon Ribs -->
+  <path d="M50,120 L35,152 L60,142 L75,152 L65,115 Z" fill="url(#qRed)" />
+  <path d="M110,120 L95,115 L85,152 L100,142 L125,152 Z" fill="url(#qRed)" />
+
+  <!-- Stars & Text -->
+  <path d="M80,32 L83,40 L91,40 L85,45 L87,53 L80,48 L73,53 L75,45 L69,40 L77,40 Z" fill="#FEF08A" />
+  <text x="80" y="68" font-family="'Outfit', 'Inter', sans-serif" font-size="11" font-weight="900" fill="#FEF08A" text-anchor="middle" letter-spacing="1">100% QUALITY</text>
+  <text x="80" y="85" font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">MANAGEMENT</text>
+  <text x="80" y="99" font-family="'Outfit', 'Inter', sans-serif" font-size="9" font-weight="800" fill="#FEF08A" text-anchor="middle" letter-spacing="0.5">CERTIFICATE</text>
+</svg>

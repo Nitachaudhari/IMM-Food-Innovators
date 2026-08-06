@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Catalog - Dehydrated Powders, Flakes & Spices | IMM Food Innovators</title>
-    <meta name="description" content="Explore our catalog of 50+ dehydrated food products, banana powder, moringa leaves powder, spices, and vegetable flakes manufactured by IMM Food Innovators LLP in Jalgaon, India.">
+    <title>Industry Articles & Food Tech Blogs | IMM Food Innovators LLP</title>
+    <meta name="description" content="Read latest industry insights on dehydrated banana powder, B2B food contract manufacturing, private label scaling, and food dehydration technology from IMM Food Innovators LLP.">
     <link rel="icon" href="images/IMMLogo.png" type="image/png">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=2.2">
+    <link rel="stylesheet" href="style.css?v=2.4">
 </head>
 <body>
     <div id="scroll-progress"></div>
@@ -55,7 +55,7 @@
                     <li><a href="index.html#about" class="nav-link">About Us</a></li>
                     <!-- PRODUCTS DROPDOWN MENU -->
                     <li class="nav-item dropdown">
-                        <a href="products.html" class="nav-link active">Products <span class="dropdown-arrow">▾</span></a>
+                        <a href="products.html" class="nav-link">Products <span class="dropdown-arrow">▾</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="products.html?category=powder" class="dropdown-item">🍌 Fruit & Veggie Powders</a></li>
                             <li><a href="products.html?category=flakes" class="dropdown-item">🧅 Flakes & Cubes</a></li>
@@ -65,7 +65,7 @@
                         </ul>
                     </li>
                     
-                    <!-- SERVICES DROPDOWN -->
+                    <!-- OUR SERVICES DROPDOWN MENU -->
                     <li class="nav-item dropdown">
                         <a href="services.html" class="nav-link">Our Services <span class="dropdown-arrow">▾</span></a>
                         <ul class="dropdown-menu">
@@ -76,7 +76,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                    <li><a href="blogs.html" class="nav-link active">Blogs</a></li>
                     <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -91,43 +91,22 @@
     <!-- INNER PAGE HERO -->
     <section class="inner-page-hero">
         <div class="hero-content">
-            <div class="section-badge badge-gold">WHOLESALE & EXPORT CATALOG</div>
-            <h1>Our Product Portfolio</h1>
-            <p>A comprehensive range of 50+ export-grade dehydrated food powders, flakes, spices, and wellness herbs manufactured in Jalgaon, Maharashtra.</p>
+            <div class="section-badge badge-gold">INSIGHTS & GUIDES</div>
+            <h1>Industry Articles & Food Tech Blogs</h1>
+            <p>Explore technical knowledge, market research, and food dehydration insights written by the experts at IMM Food Innovators LLP.</p>
         </div>
     </section>
 
-    <!-- PRODUCTS CATALOG SEARCH & FILTERS -->
-    <section class="products-section">
-        <div class="section-header" style="margin-bottom: 2rem;">
-            <div style="max-width: 750px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
-                <div class="form-group" style="flex: 1 1 320px; margin: 0;">
-                    <input type="text" id="productSearchInput" placeholder="🔍 Search product name (e.g. Banana, Turmeric, Shatavari, Garlic)..." style="border-radius: 50px; padding: 16px 24px; box-shadow: var(--shadow-sm); width: 100%;">
-                </div>
-                <div class="form-group" style="flex: 0 1 260px; margin: 0;">
-                    <select id="productCategorySelect" style="border-radius: 50px; padding: 16px 24px; box-shadow: var(--shadow-sm); width: 100%; border: 1px solid var(--border-light); background: #FFFFFF; font-family: var(--font-heading); font-weight: 600; color: var(--primary-dark); cursor: pointer;">
-                        <option value="all">📁 Filter by Category (All)</option>
-                        <option value="powder">🍌 Fruit & Veggie Powders</option>
-                        <option value="flakes">🧅 Flakes & Cubes</option>
-                        <option value="spices">🌶️ Pure Spices</option>
-                        <option value="herbal">🌿 Herbal & Wellness</option>
-                    </select>
-                </div>
-            </div>
+    <!-- BLOGS SECTION -->
+    <section class="blogs-section" style="padding: 5rem 0;">
+        <div class="section-header" style="margin-bottom: 3rem;">
+            <div class="section-badge">FEATURED KNOWLEDGE</div>
+            <h2 class="section-title">Latest Articles</h2>
+            <p class="section-subtitle">Deep dive into superfoods, B2B manufacturing strategies, and quality preservation technology.</p>
         </div>
 
-        <div class="products-filter-container">
-            <div class="products-filter-bar">
-                <button class="filter-btn active" data-category="all">✨ All Products (50+)</button>
-                <button class="filter-btn" data-category="powder">🍌 Fruit & Veggie Powders</button>
-                <button class="filter-btn" data-category="flakes">🧅 Flakes & Cubes</button>
-                <button class="filter-btn" data-category="spices">🌶️ Pure Spices</button>
-                <button class="filter-btn" data-category="herbal">🌿 Herbal & Wellness</button>
-            </div>
-        </div>
-
-        <div class="products-grid" id="fullProductsGrid">
-            <!-- Full 51 product cards rendered via JS -->
+        <div class="blog-grid" id="blogGrid">
+            <!-- Dynamic blog cards rendered via JS -->
         </div>
     </section>
 
@@ -155,17 +134,17 @@
                     <a href="index.html#about">About Us</a>
                     <a href="products.html">Product Catalog</a>
                     <a href="services.html">Our Services</a>
+                    <a href="blogs.html">Industry Blogs</a>
                     <a href="index.html#contact">Contact</a>
                 </div>
             </div>
 
             <div class="footer-col">
-                <h4>Categories</h4>
+                <h4>Featured Articles</h4>
                 <div class="footer-links">
-                    <a href="products.html?category=powder">Fruit Powders</a>
-                    <a href="products.html?category=spices">Spice Powders</a>
-                    <a href="products.html?category=herbal">Herbal Powders</a>
-                    <a href="products.html?category=flakes">Vegetable Flakes</a>
+                    <a href="blogs.html" onclick="openBlogModal('banana-powder-benefits')">Dehydrated Banana Powder Benefits</a>
+                    <a href="blogs.html" onclick="openBlogModal('private-label-food-startup')">Private Label Manufacturing</a>
+                    <a href="blogs.html" onclick="openBlogModal('dehydration-technology-drying')">Low-Temp Dehydration Tech</a>
                 </div>
             </div>
 
@@ -179,11 +158,11 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 IMM Food Innovators LLP. All Rights Reserved.</p>
+            <p>© 2026 IMM Food Innovators LLP. All Rights Reserved. ISO 9001:2015 & FSSAI Certified Facility.</p>
         </div>
     </footer>
 
-    <!-- MODAL FOR QUOTE INQUIRY -->
+    <!-- MODAL FOR BLOG READ & INQUIRIES -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-container">
             <button class="modal-close" id="modalClose">✕</button>
@@ -191,6 +170,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=2.2"></script>
+    <script src="script.js?v=2.4"></script>
 </body>
 </html>

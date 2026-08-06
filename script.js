@@ -143,6 +143,8 @@
     { name: "Tamarind Seed Powder", category: "powder", image: "images/powders/Tumrind.png", description: "Ground tamarind seeds for natural thickening." },
     { name: "Triphala Powder", category: "herbal", image: "images/powders/Triphala.png", description: "Traditional Ayurvedic blend for digestion and detox." },
     { name: "Bhumi Amla Powder", category: "herbal", image: "images/powders/BhumiAmla.png", description: "Ayurvedic liver-supporting herb for detoxification." },
+    { name: "Turmeric Powder", category: "spices", image: "images/powders/Turmeric.png", description: "Premium high-curcumin pure dehydrated turmeric powder (Haldi). Brilliant golden yellow color, rich natural aroma, and anti-inflammatory benefits; essential for culinary curry mixes, food processing, and wellness products." },
+    { name: "Shatavari Powder", category: "herbal", image: "images/powders/Shatavari.png", description: "Pure dehydrated Shatavari (Asparagus racemosus) root powder. Traditional Ayurvedic herbal supplement for vitality, hormonal balance, lactation support, and general immunity." },
     { name: "Yashtimadhu Powder", category: "herbal", image: "images/powders/Yashtimadhu.png", description: "Soothing herbal powder for throat and digestion." }
   ];
 
@@ -460,28 +462,207 @@
     `);
   };
 
+  function getProductSpecs(p) {
+    const nameLower = (p.name || '').toLowerCase();
+
+    let form = "Fine Free-Flowing Powder";
+    let mesh = "80 - 100 Fine Mesh";
+    let moisture = "< 5.0% Max";
+    let activeMarker = "100% Pure Farm-Fresh Dehydrated Extract";
+    let color = "Characteristic Natural Color";
+    let odor = "Fresh Characteristic Aroma";
+    let packaging = "25 kg Poly-Lined HDPE Drum / Kraft Bag";
+    let shelfLife = "18 Months (Cool & Dry Storage)";
+    let moq = "100 kg Domestic & Export";
+    let brixSolubility = "Water Dispersible";
+
+    if (nameLower.includes("banana")) {
+      form = "Fine Micro-Ground Fruit Powder";
+      mesh = "80 - 100 Fine Mesh";
+      moisture = "< 4.0% Max";
+      activeMarker = "Prebiotic Resistant Starch (~82%) & Potassium (>1,200 mg/100g)";
+      color = "Off-White to Pale Creamy Yellow";
+      odor = "Sweet Natural Cavendish Banana Aroma";
+      packaging = "25 kg Triple-Barrier Aluminum Foil Lined Kraft Bag";
+      shelfLife = "18 Months";
+      moq = "100 kg";
+      brixSolubility = "Smooth Dispersible / Non-Clumping";
+    } else if (nameLower.includes("turmeric")) {
+      form = "Pure Ground Rhizome Spice Powder";
+      mesh = "60 - 80 Standard Spice Mesh";
+      moisture = "< 8.0% Max (ASTA / FSSAI Grade)";
+      activeMarker = "Active Curcuminoids (3.5% - 5.0% Curcumin)";
+      color = "Vibrant Deep Golden Yellow";
+      odor = "Warm, Pungent & Earthy Aroma";
+      packaging = "25 kg Moisture-Proof PP Woven Bag with Inner PE Liner";
+      shelfLife = "24 Months";
+      moq = "100 kg";
+      brixSolubility = "Dispersible in Warm Water & Fats";
+    } else if (nameLower.includes("ginger")) {
+      form = "Pure Ground Ginger Root Powder";
+      mesh = "60 - 80 Spice Mesh";
+      moisture = "< 7.0% Max";
+      activeMarker = "Active Gingerols (>1.5%) & Volatile Essential Oils (>1.8%)";
+      color = "Light Tan to Pale Buff Yellow";
+      odor = "Strong Spicy Pungent Aroma";
+      packaging = "25 kg Moisture-Proof Poly-Lined Kraft Bag";
+      shelfLife = "24 Months";
+      moq = "100 kg";
+      brixSolubility = "Earthy Dispersible";
+    } else if (nameLower.includes("garlic powder") || nameLower.includes("red onion powder") || nameLower.includes("white onion powder") || nameLower.includes("spring onion powder")) {
+      form = "High-Pungency Dehydrated Vegetable Powder";
+      mesh = "80 - 100 Fine Mesh";
+      moisture = "< 5.0% Max";
+      activeMarker = "Natural Allicin / Alliin Pungent Organosulfur Compounds";
+      color = nameLower.includes("white") ? "Off-White Cream" : nameLower.includes("red") ? "Pinkish Buff" : "Creamish Buff";
+      odor = "Intense Pungent Characteristic Allium Aroma";
+      packaging = "20 kg Sealed Aluminum Foil Moisture Barrier Carton";
+      shelfLife = "12 Months (Hygroscopic - Keep Sealed)";
+      moq = "200 kg";
+      brixSolubility = "Instant Water Dispersible";
+    } else if (nameLower.includes("flakes") || nameLower.includes("cubes")) {
+      form = nameLower.includes("cubes") ? "4mm x 4mm Uniform Dehydrated Cubes" : "3mm - 5mm Dehydrated Kibbled Flakes";
+      mesh = "Kibbled Cut Pieces (N/A Mesh)";
+      moisture = "< 6.5% Max";
+      activeMarker = "100% Dehydrated Farm-Fresh Slices";
+      color = nameLower.includes("carrot") ? "Vibrant Orange" : nameLower.includes("chilli") ? "Deep Emerald Green" : "Light Cream Buff";
+      odor = "Fresh Characteristic Dehydrated Flavor";
+      packaging = "15-20 kg 5-Ply Corrugated Cartons with Double PE Liners";
+      shelfLife = "12 - 18 Months";
+      moq = "200 kg";
+      brixSolubility = "Instant Rehydration in Warm Water (5-8 mins)";
+    } else if (nameLower.includes("moringa")) {
+      form = "Micro-Ground Dried Leaf Powder";
+      mesh = "80 - 120 Micro-Fine Mesh";
+      moisture = "< 6.0% Max";
+      activeMarker = "Crude Bioactive Protein (>27%) & Rich Chlorophyll";
+      color = "Vibrant Deep Emerald Green";
+      odor = "Fresh Leafy Herbal Aroma";
+      packaging = "25 kg Vacuum-Sealed Fiber Drum with PE Liner";
+      shelfLife = "18 Months";
+      moq = "50 kg";
+      brixSolubility = "Dispersible in Water / Juice";
+    } else if (nameLower.includes("shatavari")) {
+      form = "Ayurvedic Root Herbal Powder";
+      mesh = "80 - 100 Mesh";
+      moisture = "< 5.0% Max";
+      activeMarker = "Steroidal Saponins (Shatavarins)";
+      color = "Light Beige to Buff Cream";
+      odor = "Sweetish Slightly Bitter Herbal Aroma";
+      packaging = "25 kg Sealed Fiber Drum";
+      shelfLife = "24 Months";
+      moq = "50 kg";
+      brixSolubility = "Partially Soluble in Warm Liquids";
+    } else if (nameLower.includes("tomato")) {
+      form = "Fine Dehydrated Spray-Dried / Low-Temp Powder";
+      mesh = "80 Mesh";
+      moisture = "< 3.8% Max";
+      activeMarker = "Natural Lycopene (>300 mg/kg) & Brix >90%";
+      color = "Brilliant Natural Red";
+      odor = "Tangy Ripe Tomato Flavor";
+      packaging = "20 kg Foil-Lined Moisture-Lock Cartons";
+      shelfLife = "12 Months";
+      moq = "200 kg";
+      brixSolubility = "High Water Solubility (>92%)";
+    } else if (nameLower.includes("amla")) {
+      form = "Raw Herbal Fruit Powder";
+      mesh = "80 Mesh";
+      moisture = "< 6.0% Max";
+      activeMarker = "Natural Vitamin C (>4000 mg/100g) & Gallic Acid";
+      color = "Tan Brownish Green";
+      odor = "Astringent Sour Taste";
+      packaging = "25 kg PE Lined Fiber Drums";
+      shelfLife = "24 Months";
+      moq = "100 kg";
+      brixSolubility = "Water Dispersible";
+    } else if (nameLower.includes("chilli") || nameLower.includes("chillie")) {
+      form = "Ground Spice Powder";
+      mesh = "50 - 80 Spice Mesh";
+      moisture = "< 7.5% Max";
+      activeMarker = "Capsaicin Content (20,000 - 45,000 SHU)";
+      color = nameLower.includes("green") ? "Vibrant Green" : "Bright Red";
+      odor = "Pungent Spicy Heat";
+      packaging = "25 kg PP Bags with Moisture Barrier Liner";
+      shelfLife = "18 Months";
+      moq = "100 kg";
+      brixSolubility = "Dispersible in Oils & Water";
+    } else if (nameLower.includes("beetroot")) {
+      form = "Natural Vegetable Color Powder";
+      mesh = "80 Mesh";
+      moisture = "< 4.5% Max";
+      activeMarker = "Natural Betanin Pigment & Dietary Nitrates";
+      color = "Deep Ruby Red / Magenta";
+      odor = "Earthy Sweet Beetroot Flavor";
+      packaging = "25 kg Sealed Poly Drums";
+      shelfLife = "18 Months";
+      moq = "100 kg";
+      brixSolubility = "Fully Water Soluble (>95%)";
+    } else if (nameLower.includes("safed musali") || nameLower.includes("gokharu") || nameLower.includes("harda") || nameLower.includes("triphala") || nameLower.includes("bhumi amla")) {
+      form = "Ayurvedic Herbal Root/Herb Powder";
+      mesh = "80 - 100 Mesh";
+      moisture = "< 5.0% Max";
+      activeMarker = "100% Pure Standardized Botanical Powder";
+      color = "Natural Earthy Tan/Brown";
+      odor = "Characteristic Herbal Aroma";
+      packaging = "25 kg Sealed Fiber Drum";
+      shelfLife = "24 Months";
+      moq = "50 kg";
+      brixSolubility = "Herbal Dispersible";
+    }
+
+    return { form, mesh, moisture, activeMarker, color, odor, packaging, shelfLife, moq, brixSolubility };
+  }
+
   window.openSpecModal = function (productName) {
-    const p = productsData.find(item => item.name === productName) || { name: productName, category: 'Food Ingredient', description: 'Premium dehydrated food powder manufactured by IMM Food Innovators.' };
+    const p = productsData.find(item => item.name === productName) || { name: productName, category: 'powder', description: 'Premium dehydrated food powder manufactured by IMM Food Innovators.' };
+    const spec = getProductSpecs(p);
+
+    const docId = 'TDS-IMM-' + p.name.replace(/[^a-zA-Z0-9]/g, '-').toUpperCase();
 
     openModal(`
-      <div class="spec-modal-container">
-        <div class="section-badge badge-gold">TECHNICAL SPECIFICATIONS</div>
-        <h2 style="font-size: 1.8rem; margin: 0.8rem 0; color: var(--primary-dark);">${p.name}</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">${p.description}</p>
+      <div class="spec-tds-container" style="text-align: left; max-width: 720px; margin: 0 auto;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-gold); padding-bottom: 0.75rem;">
+          <div>
+            <span class="section-badge badge-gold" style="font-size: 0.7rem; padding: 4px 10px;">TECHNICAL DATA SHEET (TDS)</span>
+            <h2 style="font-size: 1.75rem; color: var(--primary-dark); margin-top: 4px; font-weight: 800; line-height: 1.2;">${p.name}</h2>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #10B981; background: rgba(16,185,129,0.12); padding: 4px 10px; border-radius: 20px; display: inline-block;">✓ ISO 9001:2015 & FSSAI Compliant</span>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; font-family: monospace;">Ref: ${docId}</div>
+          </div>
+        </div>
+
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.94rem; line-height: 1.6;">${p.description}</p>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; background: var(--bg-alt); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
-          <div><strong style="color: var(--primary-dark);">Facility Origin:</strong> Jalgaon, Maharashtra, India</div>
-          <div><strong style="color: var(--primary-dark);">Processing:</strong> Low-Temp Dehydration</div>
-          <div><strong style="color: var(--primary-dark);">Moisture:</strong> &lt; 5.0% Maximum</div>
-          <div><strong>Particle Mesh:</strong> 60 - 100 Fine Mesh</div>
-          <div><strong>Shelf Life:</strong> 12 Months (Sealed)</div>
-          <div><strong>Certifications:</strong> ISO 9001:2015 & FSSAI</div>
-          <div><strong>Standard Packaging:</strong> 25 kg HDPE Drums / Bags</div>
-          <div><strong>Dispatch MOQ:</strong> 100 kg Domestic & Export</div>
+        <!-- SECTION 1: PHYSICAL & ORGANOLEPTIC SPECS -->
+        <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">1. Physical & Organoleptic Parameters</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem;">
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Physical Form / Cut:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.form}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Particle Mesh Size:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.mesh}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Natural Color:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.color}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Aroma & Taste:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.odor}</strong></div>
+        </div>
+
+        <!-- SECTION 2: CHEMICAL & BIOACTIVE PARAMETERS -->
+        <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">2. Chemical & Quality Standards</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem;">
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Moisture Limit:</span><strong style="color: #D97706; font-size: 0.88rem;">${spec.moisture}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Bioactive Marker / Key Content:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.activeMarker}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Solubility / Rehydration:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.brixSolubility}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Microbial Safety:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">TPC &lt; 50,000 CFU/g | Salmonella/E.Coli Absent</strong></div>
+        </div>
+
+        <!-- SECTION 3: COMMERCIAL LOGISTICS & PACKAGING -->
+        <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">3. B2B Packaging & Dispatch Logistics</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.75rem;">
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Standard B2B Packaging:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.packaging}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Shelf Life:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.shelfLife}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Dispatch MOQ:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${spec.moq}</strong></div>
+          <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Plant Origin:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">Yawal, Jalgaon, Maharashtra, India</strong></div>
         </div>
 
         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <button class="btn-primary" style="flex: 1;" onclick="openQuoteModal('${p.name}')">Request Bulk Quotation →</button>
+          <button class="btn-primary" style="flex: 1; padding: 14px;" onclick="openQuoteModal('${p.name}')">Request Price Quote & Batch COA Spec →</button>
         </div>
       </div>
     `);
@@ -495,12 +676,15 @@
         const name = this.getAttribute('data-cert-name');
 
         openModal(`
-          <div style="text-align: center;">
-            <div class="section-badge">QUALITY COMPLIANCE</div>
-            <h2 style="font-size: 1.8rem; margin: 1rem 0; color: var(--primary-dark);">${name}</h2>
-            <img src="${src}" alt="${name}" style="max-width: 100%; max-height: 500px; object-fit: contain; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin-bottom: 1.5rem;">
-            <div>
-              <a href="${src}" download class="btn-primary">Download Certificate File 📥</a>
+          <div style="text-align: center; padding: 0.5rem 0;">
+            <div class="section-badge badge-gold" style="margin-bottom: 0.5rem;">OFFICIAL ACCREDITATION CERTIFICATE</div>
+            <h2 style="font-size: 1.75rem; margin: 0.5rem 0 1.25rem 0; color: var(--primary-dark); font-weight: 800;">${name}</h2>
+            <div style="background: #F8FAFC; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); margin-bottom: 1.5rem;">
+              <img src="${src}" alt="${name}" style="width: 100%; max-height: 600px; object-fit: contain; border-radius: 6px; box-shadow: var(--shadow-md);">
+            </div>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="${src}" target="_blank" download class="btn-primary" style="padding: 12px 24px;">Download Official Certificate 📥</a>
+              <a href="${src}" target="_blank" class="btn-secondary" style="padding: 12px 24px;">Open Full Resolution 🔍</a>
             </div>
           </div>
         `);

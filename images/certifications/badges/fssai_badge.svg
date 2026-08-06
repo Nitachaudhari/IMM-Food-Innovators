@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fssaiGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="fssaiOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+  </defs>
+  <!-- Circle Shield -->
+  <circle cx="80" cy="80" r="76" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="4" />
+  <circle cx="80" cy="80" r="68" fill="none" stroke="url(#fssaiGreen)" stroke-width="3" />
+  
+  <!-- FSSAI Curve graphics -->
+  <path d="M 45 60 C 60 40, 100 40, 115 60 C 100 80, 60 80, 45 60 Z" fill="url(#fssaiOrange)" />
+  <circle cx="80" cy="60" r="12" fill="#FFFFFF" />
+  <circle cx="80" cy="60" r="7" fill="url(#fssaiGreen)" />
+
+  <!-- Text -->
+  <text x="80" y="98" font-family="'Outfit', 'Inter', sans-serif" font-size="18" font-weight="900" fill="#047857" text-anchor="middle" letter-spacing="1">fssai</text>
+  <text x="80" y="112" font-family="'Outfit', 'Inter', sans-serif" font-size="8" font-weight="800" fill="#C2410C" text-anchor="middle" letter-spacing="0.5">LIC. NO. 11524036000000</text>
+  
+  <!-- Bottom Pill -->
+  <rect x="35" y="124" width="90" height="22" rx="11" fill="url(#fssaiGreen)" />
+  <text x="80" y="139" font-family="'Outfit', 'Inter', sans-serif" font-size="9" font-weight="800" fill="#FFFFFF" text-anchor="middle">FOOD SAFETY</text>
+</svg>

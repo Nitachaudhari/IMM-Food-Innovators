@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="msmeNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="msmeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <!-- Circle Frame -->
+  <circle cx="80" cy="80" r="76" fill="url(#msmeNavy)" stroke="url(#msmeGold)" stroke-width="4" />
+  <circle cx="80" cy="80" r="68" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4,2" />
+
+  <!-- Gear & Emblem -->
+  <circle cx="80" cy="55" r="18" fill="none" stroke="url(#msmeGold)" stroke-width="3" />
+  <circle cx="80" cy="55" r="8" fill="url(#msmeGold)" />
+
+  <!-- Text -->
+  <text x="80" y="88" font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">UDYAM</text>
+  <text x="80" y="103" font-family="'Outfit', 'Inter', sans-serif" font-size="10" font-weight="800" fill="url(#msmeGold)" text-anchor="middle" letter-spacing="0.5">MSME REGISTERED</text>
+  <text x="80" y="117" font-family="'Outfit', 'Inter', sans-serif" font-size="7" font-weight="700" fill="#94A3B8" text-anchor="middle">GOVT. OF INDIA ENTERPRISE</text>
+
+  <!-- Bottom Accent -->
+  <path d="M40,130 L120,130" stroke="url(#msmeGold)" stroke-width="2" />
+</svg>
