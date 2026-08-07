@@ -1831,10 +1831,9 @@ footer .logo-img {
   .section-title { font-size: 1.75rem !important; line-height: 1.3; }
   .section-subtitle { font-size: 0.92rem !important; }
 
-  /* Navigation & Mobile Drawer */
-  .top-bar-left { display: none; }
-  .top-bar-container { justify-content: center; text-align: center; }
-  .top-bar-social span { display: none; }
+  /* Navigation & Top Bar */
+  .top-bar-container { justify-content: space-between; padding: 0 1rem; font-size: 0.78rem; }
+  .top-bar-left, .top-bar-right { display: flex; align-items: center; }
 
   /* ── Ultra-Cool Mobile Navigation Drawer System ── */
   #header { height: 70px; }
