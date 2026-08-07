@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <path id="arcTop9" d="M 30,100 A 70,70 0 0,1 170,100" fill="none" />
+    <path id="arcBottom9" d="M 170,100 A 70,70 0 0,1 30,100" fill="none" />
+    
+    <linearGradient id="blueGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#2563EB" stroke-width="4" />
+  <circle cx="100" cy="100" r="70" fill="url(#blueGrad9)" stroke="#1E40AF" stroke-width="2" />
+
+  <text font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#2563EB" letter-spacing="3.5">
+    <textPath href="#arcTop9" startOffset="50%" text-anchor="middle">CERTIFIED</textPath>
+  </text>
+  <text font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#2563EB" letter-spacing="3.5">
+    <textPath href="#arcBottom9" startOffset="50%" text-anchor="middle">COMPANY</textPath>
+  </text>
+
+  <g stroke="#FFFFFF" stroke-opacity="0.35" fill="none" stroke-width="1.2">
+    <circle cx="100" cy="80" r="30" />
+    <line x1="70" y1="80" x2="130" y2="80" />
+    <ellipse cx="100" cy="80" rx="30" ry="14" />
+    <ellipse cx="100" cy="80" rx="14" ry="30" />
+    <line x1="100" y1="50" x2="100" y2="110" />
+  </g>
+
+  <text x="100" y="88" font-family="'Georgia', 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ISO</text>
+  <line x1="72" y1="96" x2="128" y2="96" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8" />
+
+  <text x="100" y="118" font-family="'Georgia', 'Times New Roman', serif" font-size="19" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">9001:2015</text>
+</svg>
