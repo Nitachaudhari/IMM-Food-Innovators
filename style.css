@@ -58,6 +58,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section, [id] {
+  scroll-margin-top: 90px;
+}
   font-size: 16px;
 }
 
@@ -2021,7 +2027,13 @@ footer .logo-img {
   }
 
   /* Hero Banner Mobile */
-  .hero-slider-section { height: auto !important; min-height: 520px; padding: 3rem 0; }
+  .hero-slider-section {
+    height: auto !important;
+    min-height: 550px;
+    padding: 4.5rem 0 3rem 0 !important;
+    scroll-margin-top: 80px;
+  }
+  .hero-content { padding: 1rem 1.25rem !important; }
   .hero-title { font-size: 1.85rem !important; line-height: 1.25; margin-bottom: 1rem; }
   .hero-subtitle { font-size: 0.95rem !important; margin-bottom: 1.5rem; }
   .hero-buttons { flex-direction: column; width: 100%; gap: 0.75rem; }
@@ -2032,7 +2044,7 @@ footer .logo-img {
     padding: 14px 20px;
     font-size: 0.95rem;
   }
-  .hero-text-box { padding: 1.5rem 1rem !important; max-width: 100% !important; }
+  .hero-text-box { padding: 1rem 0 !important; max-width: 100% !important; }
 
   /* About Us Section Mobile Improvements */
   #about { padding: 3.5rem 0 !important; }
