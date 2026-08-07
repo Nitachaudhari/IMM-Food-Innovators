@@ -1836,35 +1836,60 @@ footer .logo-img {
   .top-bar-left, .top-bar-right { display: flex; align-items: center; }
 
   /* ── Ultra-Cool Mobile Navigation Drawer System ── */
-  #header { height: 70px; }
-  .header-container { padding: 0 1.25rem; }
+  /* ── Ultra-Professional Mobile Navigation Menu System ── */
+  #header {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(10, 46, 29, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  .header-container { padding: 0 1rem; }
   .logo-img { width: 42px; height: 42px; }
-  .logo-text { font-size: 1.15rem; }
-  .logo-sub { font-size: 0.55rem; letter-spacing: 1.5px; }
+  .logo-text { font-size: 1.15rem; font-weight: 800; color: var(--primary-dark); }
+  .logo-sub { font-size: 0.55rem; letter-spacing: 1.5px; color: var(--accent-amber); font-weight: 700; }
 
-  /* Animated Morphing Hamburger Icon */
+  /* Styled Hamburger Pill Button Wrapper */
   .hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    background: rgba(10, 46, 29, 0.05);
+    border: 1px solid rgba(10, 46, 29, 0.1);
+    border-radius: 12px;
     cursor: pointer;
     z-index: 1001;
     position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger:hover {
+    background: rgba(10, 46, 29, 0.08);
+  }
+
+  .hamburger.open {
+    background: rgba(245, 158, 11, 0.15);
+    border-color: var(--accent-amber);
   }
 
   .hamburger span {
-    width: 100%;
-    height: 2.5px;
+    width: 22px;
+    height: 2.2px;
     background: var(--primary-dark);
     border-radius: 4px;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
   }
 
+  .hamburger.open span { background: var(--accent-amber); }
+
   .hamburger.open span:nth-child(1) {
-    transform: translateY(8.75px) rotate(45deg);
+    transform: translateY(6.2px) rotate(45deg);
   }
 
   .hamburger.open span:nth-child(2) {
@@ -1873,31 +1898,46 @@ footer .logo-img {
   }
 
   .hamburger.open span:nth-child(3) {
-    transform: translateY(-8.75px) rotate(-45deg);
+    transform: translateY(-6.2px) rotate(-45deg);
   }
 
-  /* Professional Direct Dropdown Mobile Menu Card */
+  /* Executive Floating Dropdown Menu Card */
   nav ul {
     position: absolute;
-    top: calc(100% + 8px);
-    right: 1.25rem;
+    top: calc(100% + 10px);
+    right: 1rem;
     left: auto;
-    width: 280px;
-    max-width: calc(100vw - 2.5rem);
+    width: 290px;
+    max-width: calc(100vw - 2rem);
     bottom: auto;
     background: #FFFFFF;
     flex-direction: column;
-    padding: 0.75rem;
-    gap: 0.4rem;
-    border-radius: 16px;
+    padding: 0.85rem;
+    gap: 0.45rem;
+    border-radius: 18px;
     border: 1px solid rgba(10, 46, 29, 0.12);
-    box-shadow: 0 20px 40px rgba(10, 46, 29, 0.2), 0 0 0 1px rgba(245, 158, 11, 0.15);
-    transform: translateY(-10px) scale(0.96);
+    box-shadow: 0 25px 60px rgba(10, 46, 29, 0.22), 0 0 0 1px rgba(245, 158, 11, 0.2);
+    transform: translateY(-12px) scale(0.95);
     opacity: 0;
     visibility: hidden;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s ease;
-    overflow: hidden;
+    overflow: visible;
     z-index: 1010;
+  }
+
+  /* Top Card Notch Arrow */
+  nav ul::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 18px;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-top: 1px solid rgba(10, 46, 29, 0.12);
+    border-left: 1px solid rgba(10, 46, 29, 0.12);
+    transform: rotate(45deg);
+    z-index: 1011;
   }
 
   nav ul.active {
@@ -1916,9 +1956,10 @@ footer .logo-img {
     align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
-    background: rgba(10, 46, 29, 0.03);
+    background: #FAF8F3;
     border-radius: 10px;
     border: 1px solid rgba(10, 46, 29, 0.05);
+    border-left: 3px solid transparent;
     transition: all 0.25s ease;
   }
 
@@ -1927,8 +1968,11 @@ footer .logo-img {
   .nav-link:hover, .nav-link.active {
     background: linear-gradient(135deg, var(--primary-dark), #051C12);
     color: #FFFFFF !important;
-    box-shadow: 0 6px 18px rgba(10, 46, 29, 0.2);
-    border-color: transparent;
+    border-left-color: var(--accent-amber);
+    box-shadow: 0 4px 14px rgba(10, 46, 29, 0.2);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
   }
 
   .nav-link:hover .dropdown-arrow, .nav-link.active .dropdown-arrow {
@@ -1938,7 +1982,8 @@ footer .logo-img {
   .nav-item.dropdown.mobile-open .nav-link {
     background: var(--primary-dark);
     color: #FFFFFF !important;
-    border-radius: 12px 12px 0 0;
+    border-radius: 10px 10px 0 0;
+    border-left-color: var(--accent-amber);
   }
 
   .nav-item.dropdown.mobile-open .dropdown-arrow {
@@ -1951,16 +1996,16 @@ footer .logo-img {
     opacity: 1;
     visibility: visible;
     transform: none;
-    background: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(10, 46, 29, 0.08);
-    border: 1px solid rgba(10, 46, 29, 0.1);
+    background: #FAF8F3;
+    box-shadow: none;
+    border: 1px solid rgba(10, 46, 29, 0.08);
     border-top: none;
-    padding: 8px 10px;
+    padding: 6px 8px;
     margin-top: 0;
     display: none;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 10px 10px;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
   }
 
   .nav-item.dropdown.mobile-open .dropdown-menu {
@@ -1969,19 +2014,19 @@ footer .logo-img {
 
   .dropdown-item {
     color: #334155 !important;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 600;
-    padding: 10px 14px;
-    border-radius: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
     transition: all 0.2s ease;
-    border-left: 3px solid transparent;
+    border-left: 2px solid transparent;
   }
 
   .dropdown-item:hover {
-    background: #FAF8F3;
+    background: #FFFFFF;
     color: var(--primary-dark) !important;
     border-left-color: var(--accent-amber);
-    padding-left: 18px;
+    padding-left: 16px;
   }
 
   /* Hero Banner Mobile */
