@@ -772,6 +772,26 @@
     });
   }
 
+  function initVideoPlayer() {
+    const playOverlay = document.getElementById('playOverlay');
+    const factoryVideo = document.getElementById('factoryVideo');
+
+    if (playOverlay && factoryVideo) {
+      playOverlay.addEventListener('click', function () {
+        factoryVideo.play();
+        playOverlay.style.opacity = '0';
+        playOverlay.style.pointerEvents = 'none';
+      });
+
+      factoryVideo.addEventListener('pause', function () {
+        if (!factoryVideo.seeking) {
+          playOverlay.style.opacity = '1';
+          playOverlay.style.pointerEvents = 'auto';
+        }
+      });
+    }
+  }
+
   /* ============================================================
      9. INITIALIZATION
   ============================================================ */
@@ -781,9 +801,10 @@
     renderBlogs();
     initCertificates();
     initFAQ();
+    initVideoPlayer();
     initScrollEffects();
 
-    console.log('IMM Food Innovators website v2.1 initialized successfully ✅');
+    console.log('IMM Food Innovators website v3.5 initialized successfully ✅');
   });
 
 })();
