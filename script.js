@@ -739,8 +739,22 @@
 
     if (hamburger && navMenu) {
       hamburger.addEventListener('click', () => {
+        const isOpen = navMenu.classList.contains('active');
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('open');
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+
+      // Close menu when clicking outside or clicking any nav link
+      const links = navMenu.querySelectorAll('a:not(.dropdown > .nav-link)');
+      links.forEach(l => {
+        l.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+          }
+        });
       });
     }
 
