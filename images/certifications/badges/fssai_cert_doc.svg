@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="paperGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FAF8F3" />
+    </linearGradient>
+    <linearGradient id="goldBorderF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="headerGradF" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#92400E" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="docShadowF" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0A2E1D" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <rect x="10" y="10" width="140" height="180" rx="8" fill="url(#paperGradF)" stroke="url(#goldBorderF)" stroke-width="2.5" filter="url(#docShadowF)" />
+  <rect x="16" y="16" width="128" height="168" rx="5" fill="none" stroke="#D97706" stroke-width="1" stroke-dasharray="6,3" />
+
+  <path d="M16,22 Q80,18 144,22 L144,48 L16,48 Z" fill="url(#headerGradF)" />
+  <text x="80" y="38" font-family="'Outfit', 'Inter', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.2">FSSAI LICENSE CERTIFICATE</text>
+
+  <circle cx="80" cy="85" r="28" fill="#1E293B" stroke="url(#goldBorderF)" stroke-width="2" />
+  <circle cx="80" cy="85" r="23" fill="none" stroke="#FCD34D" stroke-width="1" stroke-dasharray="3,1.5" />
+  <text x="80" y="81" font-family="'Outfit', 'Inter', sans-serif" font-size="11" font-weight="900" fill="#FCD34D" text-anchor="middle" letter-spacing="1">fssai</text>
+  <text x="80" y="93" font-family="'Outfit', 'Inter', sans-serif" font-size="7.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">LICENSED</text>
+
+  <line x1="30" y1="125" x2="130" y2="125" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+  <line x1="40" y1="133" x2="120" y2="133" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="45" y1="140" x2="115" y2="140" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" />
+
+  <circle cx="120" cy="160" r="14" fill="url(#goldBorderF)" />
+  <circle cx="120" cy="160" r="11" fill="#92400E" stroke="#FCD34D" stroke-width="1" />
+  <path d="M112,168 L114,180 L120,174 L126,180 L128,168 Z" fill="url(#goldBorderF)" />
+  <text x="120" y="164" font-family="'Outfit', sans-serif" font-size="6.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">GOVT</text>
+  
+  <line x1="30" y1="165" x2="70" y2="165" stroke="#94A3B8" stroke-width="1" />
+  <text x="50" y="173" font-family="'Inter', sans-serif" font-size="6" font-weight="700" fill="#64748B" text-anchor="middle">APPROVED</text>
+</svg>
