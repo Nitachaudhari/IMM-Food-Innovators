@@ -1,32 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
-  <defs>
-    <path id="arcTopF" d="M 30,100 A 70,70 0 0,1 170,100" fill="none" />
-    <path id="arcBottomF" d="M 170,100 A 70,70 0 0,1 30,100" fill="none" />
-    
-    <linearGradient id="blueGradF" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2563EB" />
-      <stop offset="100%" stop-color="#1D4ED8" />
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" width="100%" height="100%">
+  <!-- White Background Container -->
+  <rect width="240" height="140" fill="#FFFFFF" rx="8" />
 
-  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#2563EB" stroke-width="4" />
-  <circle cx="100" cy="100" r="70" fill="url(#blueGradF)" stroke="#1E40AF" stroke-width="2" />
+  <g transform="translate(10, 10)">
+    <!-- Top Orange Horizontal Line -->
+    <line x1="25" y1="42" x2="200" y2="42" stroke="#E65100" stroke-width="4.5" stroke-linecap="square" />
 
-  <text font-family="'Outfit', 'Inter', sans-serif" font-size="15" font-weight="900" fill="#2563EB" letter-spacing="2.5">
-    <textPath href="#arcTopF" startOffset="50%" text-anchor="middle">GOVT APPROVED</textPath>
-  </text>
-  <text font-family="'Outfit', 'Inter', sans-serif" font-size="15" font-weight="900" fill="#2563EB" letter-spacing="3.5">
-    <textPath href="#arcBottomF" startOffset="50%" text-anchor="middle">LICENSED</textPath>
-  </text>
+    <!-- Stylized FSSAI Typography -->
+    <text x="110" y="85" font-family="'Georgia', 'Times New Roman', 'Trebuchet MS', serif" font-size="52" font-weight="900" font-style="italic" fill="#103580" text-anchor="middle" letter-spacing="-2">fssai</text>
 
-  <g stroke="#FFFFFF" stroke-opacity="0.3" fill="none" stroke-width="1.2">
-    <circle cx="100" cy="80" r="28" />
-    <line x1="72" y1="80" x2="128" y2="80" />
-    <ellipse cx="100" cy="80" rx="28" ry="12" />
+    <!-- Brown Seed / Dot above 'i' -->
+    <circle cx="178" cy="34" r="3.5" fill="#6D4C41" />
+
+    <!-- Green Leaf above 'i' -->
+    <path d="M 178,33 C 179,16 195,19 190,34 C 185,38 180,37 178,33 Z" fill="#2E7D32" />
+    <path d="M 180,32 Q 185,25 187,22" fill="none" stroke="#A5D6A7" stroke-width="1.2" />
+
+    <!-- Bottom Green Horizontal Line -->
+    <line x1="15" y1="96" x2="188" y2="96" stroke="#2E7D32" stroke-width="4.5" stroke-linecap="square" />
   </g>
-
-  <text x="100" y="86" font-family="'Georgia', 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">fssai</text>
-  <line x1="72" y1="94" x2="128" y2="94" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8" />
-
-  <text x="100" y="116" font-family="'Outfit', 'Inter', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">FOOD SAFETY</text>
 </svg>

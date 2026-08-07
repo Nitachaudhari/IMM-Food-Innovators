@@ -1,32 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
   <defs>
-    <path id="arcTopG" d="M 30,100 A 70,70 0 0,1 170,100" fill="none" />
-    <path id="arcBottomG" d="M 170,100 A 70,70 0 0,1 30,100" fill="none" />
-    
-    <linearGradient id="blueGradG" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3B82F6" />
-      <stop offset="100%" stop-color="#1D4ED8" />
-    </linearGradient>
+    <path id="arcTopGMPStamp" d="M 24,100 A 76,76 0 0,1 176,100" fill="none" />
+    <path id="arcBottomGMPStamp" d="M 176,100 A 76,76 0 0,1 24,100" fill="none" />
   </defs>
 
-  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#2563EB" stroke-width="4" />
-  <circle cx="100" cy="100" r="70" fill="url(#blueGradG)" stroke="#1E40AF" stroke-width="2" />
+  <!-- Outer Green Stamp Circles -->
+  <circle cx="100" cy="100" r="96" fill="#FFFFFF" stroke="#2E7D32" stroke-width="4" />
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4,2" />
+  <circle cx="100" cy="100" r="68" fill="none" stroke="#2E7D32" stroke-width="2.5" />
+  <circle cx="100" cy="100" r="63" fill="none" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="3,2" />
 
-  <text font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#2563EB" letter-spacing="3.5">
-    <textPath href="#arcTopG" startOffset="50%" text-anchor="middle">CERTIFIED</textPath>
+  <!-- Outer Ring Text: GOOD MANUFACTURING PRACTICE -->
+  <text font-family="'Impact', 'Arial Black', sans-serif" font-size="11.5" font-weight="900" fill="#2E7D32" letter-spacing="1">
+    <textPath href="#arcTopGMPStamp" startOffset="50%" text-anchor="middle">★ GOOD MANUFACTURING PRACTICE ★</textPath>
   </text>
-  <text font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#2563EB" letter-spacing="3.5">
-    <textPath href="#arcBottomG" startOffset="50%" text-anchor="middle">FACILITY</textPath>
+  <text font-family="'Impact', 'Arial Black', sans-serif" font-size="11.5" font-weight="900" fill="#2E7D32" letter-spacing="1">
+    <textPath href="#arcBottomGMPStamp" startOffset="50%" text-anchor="middle">★ GOOD MANUFACTURING PRACTICE ★</textPath>
   </text>
 
-  <g stroke="#FFFFFF" stroke-opacity="0.3" fill="none" stroke-width="1.2">
-    <circle cx="100" cy="80" r="28" />
-    <line x1="72" y1="80" x2="128" y2="80" />
-    <ellipse cx="100" cy="80" rx="28" ry="12" />
-  </g>
-
-  <text x="100" y="86" font-family="'Georgia', 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">GMP</text>
-  <line x1="72" y1="94" x2="128" y2="94" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8" />
-
-  <text x="100" y="116" font-family="'Outfit', 'Inter', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">GOOD MFG PRACTICE</text>
+  <!-- Inner Center Text: GMP CERTIFIED -->
+  <!-- Top Stars -->
+  <text x="100" y="60" font-family="'Arial', sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">★   ★   ★</text>
+  
+  <text x="100" y="100" font-family="'Impact', 'Arial Black', sans-serif" font-size="46" font-weight="900" fill="#2E7D32" text-anchor="middle" letter-spacing="1">GMP</text>
+  <text x="100" y="122" font-family="'Impact', 'Arial Black', sans-serif" font-size="17" font-weight="900" fill="#2E7D32" text-anchor="middle" letter-spacing="2">CERTIFIED</text>
 </svg>

@@ -1,45 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
   <defs>
-    <!-- Text Paths for Circular Curving -->
-    <path id="arcTop" d="M 30,100 A 70,70 0 0,1 170,100" fill="none" />
-    <path id="arcBottom" d="M 170,100 A 70,70 0 0,1 30,100" fill="none" />
-    
-    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3B82F6" />
-      <stop offset="100%" stop-color="#1D4ED8" />
-    </linearGradient>
+    <!-- Text Paths for Circular Arcs -->
+    <path id="arcTopISO22Green" d="M 24,100 A 76,76 0 0,1 176,100" fill="none" />
+    <path id="arcBottomISO22Green" d="M 176,100 A 76,76 0 0,1 24,100" fill="none" />
   </defs>
 
-  <!-- Outer Ring Line -->
-  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#2563EB" stroke-width="4" />
+  <!-- Outer Ring with Green Border -->
+  <circle cx="100" cy="100" r="96" fill="#FFFFFF" stroke="#419F44" stroke-width="4.5" />
+  <circle cx="100" cy="100" r="89" fill="none" stroke="#419F44" stroke-width="1.5" />
 
-  <!-- Inner Solid Blue Circle -->
-  <circle cx="100" cy="100" r="70" fill="url(#blueGrad)" stroke="#1E40AF" stroke-width="2" />
-
-  <!-- Outer Curved Text -->
-  <text font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#2563EB" letter-spacing="3.5">
-    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">CERTIFIED</textPath>
+  <!-- Outer Circular Text: FOOD SAFETY MANAGEMENT SYSTEM (Top) & ★ CERTIFIED ★ (Bottom) -->
+  <text font-family="'Impact', 'Arial Black', 'Outfit', sans-serif" font-size="12.5" font-weight="900" fill="#419F44" letter-spacing="1">
+    <textPath href="#arcTopISO22Green" startOffset="50%" text-anchor="middle">FOOD SAFETY MANAGEMENT SYSTEM</textPath>
   </text>
-  <text font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#2563EB" letter-spacing="3.5">
-    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">COMPANY</textPath>
+  <text font-family="'Impact', 'Arial Black', 'Outfit', sans-serif" font-size="13" font-weight="900" fill="#419F44" letter-spacing="2">
+    <textPath href="#arcBottomISO22Green" startOffset="50%" text-anchor="middle">★ CERTIFIED ★</textPath>
   </text>
 
-  <!-- Globe Wireframe Grid inside Blue Circle -->
-  <g stroke="#FFFFFF" stroke-opacity="0.35" fill="none" stroke-width="1.2">
-    <!-- Globe Outer Ring -->
-    <circle cx="100" cy="80" r="30" />
-    <!-- Latitudes -->
-    <line x1="70" y1="80" x2="130" y2="80" />
-    <ellipse cx="100" cy="80" rx="30" ry="14" />
-    <!-- Longitudes -->
-    <ellipse cx="100" cy="80" rx="14" ry="30" />
-    <line x1="100" y1="50" x2="100" y2="110" />
-  </g>
+  <!-- Inner Vibrant Green Filled Circle -->
+  <circle cx="100" cy="100" r="66" fill="#419F44" />
 
-  <!-- ISO Main Title Text -->
-  <text x="100" y="88" font-family="'Georgia', 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ISO</text>
-  <line x1="72" y1="96" x2="128" y2="96" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8" />
-
-  <!-- Certification Standard Code -->
-  <text x="100" y="118" font-family="'Georgia', 'Times New Roman', serif" font-size="19" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">22000:2018</text>
+  <!-- Center Text: ISO & 22000:2018 -->
+  <text x="100" y="93" font-family="'Impact', 'Arial Black', 'Outfit', sans-serif" font-size="42" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ISO</text>
+  <text x="100" y="122" font-family="'Impact', 'Arial Black', 'Outfit', sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">22000:2018</text>
 </svg>

@@ -12,6 +12,32 @@
   ============================================================ */
   const blogsData = [
     {
+      id: "contract-farming-quality-control",
+      title: "From Field to Factory: How ~100 Acres of Contract Farming Ensures Uncompromising Raw Material Quality",
+      category: "Contract Farming & Origin",
+      date: "August 5, 2026",
+      readTime: "6 min read",
+      image: "images/blog_contract_farming.jpg",
+      excerpt: "Discover how IMM Food Innovators' 100-acre contract farming initiative in Jalgaon provides 60-70% internal raw material supply, guaranteeing field-level quality control, zero pesticide residue, and complete B2B supply chain traceability.",
+      content: `
+        <p>In global B2B food manufacturing, quality control that begins at the factory gate is already too late. Soil health, irrigation purity, harvest timing, and field hygiene directly dictate the nutrient density, moisture retention, and microbial safety of the final dehydrated product.</p>
+
+        <h3>The Power of Self-Sourced Raw Materials</h3>
+        <p>At IMM Food Innovators LLP, we contract-farm approximately 100 acres of prime agricultural land in Jalgaon, Maharashtra. This strategic self-sourcing initiative supplies an estimated 60-70% of our total raw material requirements internally, providing unprecedented operational advantages for wholesale buyers and exporters:</p>
+        <ul>
+          <li><strong>Direct Field-Level Agronomic Oversight:</strong> Our technical team dictates soil enrichment, non-toxic pest management, and natural fertilizer protocols from seed sowing to harvest.</li>
+          <li><strong>Zero Pesticide & Chemical Residue Risk:</strong> By controlling 60-70% of crops internally, we eliminate pesticide contamination risks often found in open mandi wholesale trading networks.</li>
+          <li><strong>Harvest-to-Dehydration Speed:</strong> Cavendish bananas, moringa leaves, and spices are harvested at peak ripeness and transferred to our Yawal facility within hours, preventing post-harvest nutrient breakdown.</li>
+        </ul>
+
+        <h3>Vetted Regional Partner Network</h3>
+        <p>For the remaining 30-40% of specialized raw ingredients, IMM partners exclusively with vetted local farmer collectives under strict agronomic contracts. Every external batch undergoes mandatory laboratory testing for moisture content, heavy metals, and pesticide compliance before entering our processing lines.</p>
+
+        <h3>Why Field Traceability Matters for Exporters</h3>
+        <p>International food brands and FMCGs demand complete supply chain transparency. IMM's integrated contract farming infrastructure provides batch-level traceability back to the specific farm plot, giving our B2B partners total documentation confidence for ISO 9001:2015, FSSAI, and international export audits.</p>
+      `
+    },
+    {
       id: "banana-powder-benefits",
       title: "The Rising Demand for Dehydrated Banana Powder: Health Benefits & B2B Applications",
       category: "Superfoods & Exports",
@@ -48,7 +74,7 @@
       category: "Business Strategy",
       date: "July 15, 2026",
       readTime: "6 min read",
-      image: "images/company.jpg?v=3.2",
+      image: "images/blog_spice_processing.jpg",
       excerpt: "Launching a food brand requires significant capital. Learn how third-party contract manufacturing allows brands to scale efficiently, reduce costs, and accelerate product launches.",
       content: `
         <p>The food industry is experiencing a massive shift toward D2C brands, organic superfoods, and clean-label snacks. However, setting up a processing facility involves massive capital expenditures, regulatory delays, and operational bottlenecks. This is where private label and third-party contract manufacturing comes in as a game-changer for startups and growing FMCG companies.</p>
@@ -72,7 +98,7 @@
       category: "Food Tech",
       date: "July 10, 2026",
       readTime: "5 min read",
-      image: "images/factory.jpg?v=3.2",
+      image: "images/factory.jpg",
       excerpt: "Traditional solar or high-heat oven drying often damages the flavor, color, and nutritional values of food ingredients. Discover how modern low-temperature dehydration preserves quality.",
       content: `
         <p>Drying is one of the oldest methods of food preservation. However, the technology used to dehydrate raw materials plays a critical role in determining the final product's quality, color, aroma, and nutrient density. Modern food processing demands advanced low-temperature dehydration over traditional drying methods.</p>
@@ -106,7 +132,6 @@
     { name: "Bael Powder", category: "herbal", image: "images/powders/Bael.png", description: "Rich in fibre and antioxidants, supports digestion and immunity." },
     { name: "Beetroot Powder", category: "powder", image: "images/powders/Beetroot.png", description: "Vibrant and nutrient-rich for natural coloring and energy blends." },
     { name: "Carrot Powder", category: "powder", image: "images/powders/Carrot.png", description: "High in beta-carotene, adds nutrition and color to foods." },
-    { name: "Carrot Cubes", category: "flakes", image: "images/powders/CarrotCubes.png", description: "Dehydrated carrot cubes for instant meals and soups." },
     { name: "Chaha (Tea Leaf) Powder", category: "powder", image: "images/powders/LemonGrass.png", description: "Rich in antioxidants for instant tea formulations." },
     { name: "Coriander Powder", category: "spices", image: "images/powders/Coriander.png", description: "Warm, citrusy flavor for spice blends and culinary use." },
     { name: "Coriander Leaf Powder", category: "spices", image: "images/powders/Kothimbir.png", description: "Green coriander powder for added flavor and color." },
@@ -115,26 +140,20 @@
     { name: "Dry Dates Powder", category: "herbal", image: "images/powders/DryDates.png", description: "Rich in iron and fibre for energy and wellness." },
     { name: "Date Seed Powder", category: "herbal", image: "images/powders/DatesSeed.png", description: "Roasted date seed powder for digestion and metabolism." },
     { name: "Dry Fruit Powder", category: "powder", image: "images/powders/DryFruits.png", description: "Nutritious blend for baby foods and energy beverages." },
-    { name: "Dry Garlic", category: "flakes", image: "images/powders/DryGarlic.png", description: "Flavorful dried garlic for seasonings and snacks." },
     { name: "Garlic Powder", category: "spices", image: "images/powders/Garlic.png", description: "Export-grade dehydrated garlic powder supplier. Delivers intense natural garlic flavor and aroma for food processing, B2B spice blending, and seasoning manufacturers." },
-    { name: "Garlic Cubes", category: "flakes", image: "images/powders/GarlicCubes.png", description: "Dried garlic cubes for instant cooking." },
     { name: "Ginger Powder", category: "spices", image: "images/powders/Ginger.png", description: "Aromatic powder for digestion and immunity." },
     { name: "Gokharu Powder", category: "herbal", image: "images/powders/Gokharu.png", description: "Traditional herbal powder for kidney health and stamina." },
     { name: "Green Chillies Powder", category: "spices", image: "images/powders/GreenChillies.png", description: "Vibrant and spicy for curries and snacks." },
-    { name: "Green Chillies Flakes", category: "flakes", image: "images/powders/GreenChilliesFlakes.png", description: "Crunchy flakes for pizzas and spice blends." },
     { name: "Harda Powder", category: "herbal", image: "images/powders/Harda.png", description: "Ayurvedic powder for digestion and detoxification." },
     { name: "Okra Powder", category: "powder", image: "images/powders/LadiesFinger.png", description: "Nutrient-rich okra powder for soups and health mixes." },
-    { name: "Okra Flakes", category: "flakes", image: "images/powders/LadiesFingerFlakes.png", description: "Crisp okra flakes for instant meals." },
     { name: "Mint Leaves Powder", category: "herbal", image: "images/powders/Pudina.png", description: "Refreshing mint for teas and beverages." },
     { name: "Moringa Leaves Powder", category: "herbal", image: "images/powders/Moringa.png", description: "Premium dehydrated moringa leaves powder manufacturer in Jalgaon. Sourced from local farm-fresh moringa leaves, processed to preserve 100% of bioactive proteins and antioxidants." },
     { name: "Muskmelon Powder", category: "powder", image: "images/powders/Muskmelon.png", description: "Rich in vitamins for beverages and health mixes." },
     { name: "Neem Powder", category: "herbal", image: "images/powders/Neem.png", description: "Medicinal powder for herbal and wellness applications." },
-    { name: "Onion Flakes", category: "flakes", image: "images/powders/OnionFlakes.png", description: "Premium dehydrated onion flakes supplier in Maharashtra. Made from select white/red onions, processed for maximum flavor retention in instant soups and pre-packed foods." },
     { name: "Red Chillies Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Fiery spice for curries and seasoning." },
     { name: "Red Onion Powder", category: "spices", image: "images/powders/RedOnion.png", description: "Consistent onion taste for spice blends." },
     { name: "White Onion Powder", category: "spices", image: "images/powders/WhiteOnion.png", description: "Milder onion flavor for soups and sauces." },
     { name: "Spring Onion Powder", category: "spices", image: "images/powders/SpringOnion.png", description: "Mild onion flavor for noodles and soups." },
-    { name: "Spring Onion Flakes", category: "flakes", image: "images/powders/SpringOnionFlakes.png", description: "Dried spring onion pieces for instant foods." },
     { name: "Safed Musali Powder", category: "herbal", image: "images/powders/SafedMusali.png", description: "Premium herbal powder for strength and vitality." },
     { name: "Stevia Powder", category: "herbal", image: "images/powders/Stivia.png", description: "Natural zero-calorie sweetener." },
     { name: "Tomato Powder", category: "powder", image: "images/powders/Tomato.png", description: "Natural dehydrated tomato powder manufacturer. Tangy and colorful ingredient perfect for instant soup formulations, sauces, snack seasonings, and bakery uses." },
@@ -218,11 +237,9 @@
   ============================================================ */
   function renderProductCard(p) {
     const categoryName = p.category === 'powder' ? 'Fruit & Veggie' :
-                         p.category === 'flakes' ? 'Flakes & Cubes' :
                          p.category === 'spices' ? 'Pure Spice' : 'Herbal Powder';
     
     const categoryIcon = p.category === 'powder' ? '🍌' :
-                         p.category === 'flakes' ? '🧅' :
                          p.category === 'spices' ? '🌶️' : '🌿';
 
     return `
@@ -230,7 +247,6 @@
         <div class="product-img-wrap">
           <div class="product-card-top-badges">
             <span class="product-category-badge">${categoryIcon} ${categoryName}</span>
-            <span class="product-status-badge"><span class="pulse-dot"></span> Export Grade</span>
           </div>
           <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='images/powders/Banana.png'">
         </div>
@@ -268,7 +284,7 @@
     // Parse URL query parameter for category (e.g. ?category=powder)
     const urlParams = new URLSearchParams(window.location.search);
     const paramCategory = urlParams.get('category');
-    if (paramCategory && ['powder', 'flakes', 'spices', 'herbal', 'all'].includes(paramCategory)) {
+    if (paramCategory && ['powder', 'spices', 'herbal', 'all'].includes(paramCategory)) {
       currentCategory = paramCategory;
       // Sync button states
       filterBtns.forEach(btn => {
@@ -364,7 +380,7 @@
     if (!blogGrid) return;
 
     blogGrid.innerHTML = blogsData.map(b => `
-      <article class="blog-card">
+      <article class="blog-card" style="cursor: pointer;" onclick="window.location.href='blog-detail.html?id=${b.id}'">
         <div class="blog-img-wrap">
           <img src="${b.image}" alt="${b.title}" loading="lazy">
         </div>
@@ -372,14 +388,40 @@
           <div class="blog-meta">${b.category} • ${b.readTime}</div>
           <h3 class="blog-title">${b.title}</h3>
           <p class="blog-excerpt">${b.excerpt}</p>
-          <button class="blog-read-more" onclick="openBlogModal('${b.id}')">Read Full Article →</button>
+          <a href="blog-detail.html?id=${b.id}" class="blog-read-more" onclick="event.stopPropagation();">Read Full Article →</a>
         </div>
       </article>
     `).join('');
   }
 
+  function initBlogDetail() {
+    const container = document.getElementById('fullArticleContainer');
+    if (!container) return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogId = urlParams.get('id') || 'banana-powder-benefits';
+    const blog = blogsData.find(b => b.id === blogId) || blogsData[0];
+
+    const titleElem = document.getElementById('blogDetailTitle');
+    const badgeElem = document.getElementById('blogDetailBadge');
+    const metaElem = document.getElementById('blogDetailMeta');
+    const imgElem = document.getElementById('blogDetailImage');
+    const contentElem = document.getElementById('blogDetailContent');
+
+    if (titleElem) titleElem.textContent = blog.title;
+    if (badgeElem) badgeElem.textContent = blog.category;
+    if (metaElem) metaElem.textContent = `${blog.date} • ${blog.readTime} • Published by IMM Food Innovators LLP Technical Team`;
+    if (imgElem) {
+      imgElem.src = blog.image;
+      imgElem.alt = blog.title;
+    }
+    if (contentElem) contentElem.innerHTML = blog.content;
+
+    document.title = `${blog.title} | IMM Food Innovators LLP`;
+  }
+
   /* ============================================================
-     6. MODAL DIALOG CONTROLLER (BLOG, QUOTE, CERTIFICATES)
+     6. MODAL DIALOG CONTROLLER (QUOTE, CERTIFICATES)
   ============================================================ */
   const modalOverlay = document.getElementById('modalOverlay');
   const modalBody = document.getElementById('modalBody');
@@ -432,7 +474,7 @@
         <div class="section-badge">INQUIRE BULK PRODUCT</div>
         <h2 style="font-size: 1.8rem; margin: 1rem 0; color: var(--primary-dark);">Inquire Bulk Supply</h2>
         <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Fill out the form below and our export sales manager will send specifications and pricing within 24 hours.</p>
-        <form action="https://formspree.io/f/xldobygd" method="POST">
+        <form id="modalQuoteForm">
           <div class="form-group">
             <label>Selected Product *</label>
             <select name="product" required style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-family: inherit; font-size: 0.95rem;">
@@ -457,9 +499,52 @@
             <textarea name="message" required placeholder="e.g. Need 500 kg for export to Dubai..."></textarea>
           </div>
           <button type="submit" class="btn-primary" style="width: 100%;">Submit Bulk Inquiry →</button>
+          <div id="modalQuoteSuccess" style="display:none; color: #0A2E1D; background: #ECFDF5; border: 1px solid #A7F3D0; padding: 1rem; border-radius: var(--radius-sm); margin-top: 1rem; font-weight: 600; text-align: center;">
+            ✓ Thank you! Your inquiry has been sent to info@immfoodinnovators.in.
+          </div>
         </form>
       </div>
     `);
+
+    setTimeout(() => {
+      const modalForm = document.getElementById('modalQuoteForm');
+      const modalSuccess = document.getElementById('modalQuoteSuccess');
+      if (modalForm) {
+        modalForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const submitBtn = modalForm.querySelector('button[type="submit"]');
+          const origText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending Email...';
+          submitBtn.disabled = true;
+
+          const formData = new FormData(modalForm);
+          const formJson = Object.fromEntries(formData.entries());
+
+          fetch('https://formsubmit.co/ajax/info@immfoodinnovators.in', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              _subject: `Bulk Quote Request: ${formJson.product}`,
+              _template: 'table',
+              ...formJson
+            })
+          })
+          .then(res => res.json())
+          .then(data => {
+            submitBtn.textContent = origText;
+            submitBtn.disabled = false;
+            if (modalSuccess) modalSuccess.style.display = 'block';
+            modalForm.reset();
+          })
+          .catch(err => {
+            submitBtn.textContent = origText;
+            submitBtn.disabled = false;
+            if (modalSuccess) modalSuccess.style.display = 'block';
+            modalForm.reset();
+          });
+        });
+      }
+    }, 100);
   };
 
   function getProductSpecs(p) {
@@ -471,7 +556,7 @@
     let activeMarker = "100% Pure Farm-Fresh Dehydrated Extract";
     let color = "Characteristic Natural Color";
     let odor = "Fresh Characteristic Aroma";
-    let packaging = "25 kg Poly-Lined HDPE Drum / Kraft Bag";
+    let packaging = "25 kg Food-Grade Aluminum Foil Lined Bag";
     let shelfLife = "18 Months (Cool & Dry Storage)";
     let moq = "100 kg Domestic & Export";
     let brixSolubility = "Water Dispersible";
@@ -516,7 +601,7 @@
       activeMarker = "Natural Allicin / Alliin Pungent Organosulfur Compounds";
       color = nameLower.includes("white") ? "Off-White Cream" : nameLower.includes("red") ? "Pinkish Buff" : "Creamish Buff";
       odor = "Intense Pungent Characteristic Allium Aroma";
-      packaging = "20 kg Sealed Aluminum Foil Moisture Barrier Carton";
+      packaging = "20 kg Sealed Aluminum Foil Moisture Barrier Bag in Box";
       shelfLife = "12 Months (Hygroscopic - Keep Sealed)";
       moq = "200 kg";
       brixSolubility = "Instant Water Dispersible";
@@ -527,7 +612,7 @@
       activeMarker = "100% Dehydrated Farm-Fresh Slices";
       color = nameLower.includes("carrot") ? "Vibrant Orange" : nameLower.includes("chilli") ? "Deep Emerald Green" : "Light Cream Buff";
       odor = "Fresh Characteristic Dehydrated Flavor";
-      packaging = "15-20 kg 5-Ply Corrugated Cartons with Double PE Liners";
+      packaging = "15-20 kg Double PE Lined Food-Grade Bags in Corrugated Box";
       shelfLife = "12 - 18 Months";
       moq = "200 kg";
       brixSolubility = "Instant Rehydration in Warm Water (5-8 mins)";
@@ -538,7 +623,7 @@
       activeMarker = "Crude Bioactive Protein (>27%) & Rich Chlorophyll";
       color = "Vibrant Deep Emerald Green";
       odor = "Fresh Leafy Herbal Aroma";
-      packaging = "25 kg Vacuum-Sealed Fiber Drum with PE Liner";
+      packaging = "25 kg Vacuum-Sealed Aluminum Foil Lined Bag";
       shelfLife = "18 Months";
       moq = "50 kg";
       brixSolubility = "Dispersible in Water / Juice";
@@ -549,7 +634,7 @@
       activeMarker = "Steroidal Saponins (Shatavarins)";
       color = "Light Beige to Buff Cream";
       odor = "Sweetish Slightly Bitter Herbal Aroma";
-      packaging = "25 kg Sealed Fiber Drum";
+      packaging = "25 kg Sealed Poly-Lined Kraft Bag";
       shelfLife = "24 Months";
       moq = "50 kg";
       brixSolubility = "Partially Soluble in Warm Liquids";
@@ -560,7 +645,7 @@
       activeMarker = "Natural Lycopene (>300 mg/kg) & Brix >90%";
       color = "Brilliant Natural Red";
       odor = "Tangy Ripe Tomato Flavor";
-      packaging = "20 kg Foil-Lined Moisture-Lock Cartons";
+      packaging = "20 kg Foil-Lined Moisture-Lock Bags in Box";
       shelfLife = "12 Months";
       moq = "200 kg";
       brixSolubility = "High Water Solubility (>92%)";
@@ -571,7 +656,7 @@
       activeMarker = "Natural Vitamin C (>4000 mg/100g) & Gallic Acid";
       color = "Tan Brownish Green";
       odor = "Astringent Sour Taste";
-      packaging = "25 kg PE Lined Fiber Drums";
+      packaging = "25 kg PE Lined Food-Grade Kraft Bag";
       shelfLife = "24 Months";
       moq = "100 kg";
       brixSolubility = "Water Dispersible";
@@ -593,7 +678,7 @@
       activeMarker = "Natural Betanin Pigment & Dietary Nitrates";
       color = "Deep Ruby Red / Magenta";
       odor = "Earthy Sweet Beetroot Flavor";
-      packaging = "25 kg Sealed Poly Drums";
+      packaging = "25 kg Sealed Food-Grade Poly Bag in Corrugated Box";
       shelfLife = "18 Months";
       moq = "100 kg";
       brixSolubility = "Fully Water Soluble (>95%)";
@@ -604,7 +689,7 @@
       activeMarker = "100% Pure Standardized Botanical Powder";
       color = "Natural Earthy Tan/Brown";
       odor = "Characteristic Herbal Aroma";
-      packaging = "25 kg Sealed Fiber Drum";
+      packaging = "25 kg Sealed Poly-Lined Kraft Bag";
       shelfLife = "24 Months";
       moq = "50 kg";
       brixSolubility = "Herbal Dispersible";
@@ -673,21 +758,9 @@
     certCards.forEach(card => {
       card.addEventListener('click', function () {
         const src = this.getAttribute('data-cert-src');
-        const name = this.getAttribute('data-cert-name');
-
-        openModal(`
-          <div style="text-align: center; padding: 0.5rem 0;">
-            <div class="section-badge badge-gold" style="margin-bottom: 0.5rem;">OFFICIAL ACCREDITATION CERTIFICATE</div>
-            <h2 style="font-size: 1.75rem; margin: 0.5rem 0 1.25rem 0; color: var(--primary-dark); font-weight: 800;">${name}</h2>
-            <div style="background: #F8FAFC; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); margin-bottom: 1.5rem;">
-              <img src="${src}" alt="${name}" style="width: 100%; max-height: 600px; object-fit: contain; border-radius: 6px; box-shadow: var(--shadow-md);">
-            </div>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-              <a href="${src}" target="_blank" download class="btn-primary" style="padding: 12px 24px;">Download Official Certificate 📥</a>
-              <a href="${src}" target="_blank" class="btn-secondary" style="padding: 12px 24px;">Open Full Resolution 🔍</a>
-            </div>
-          </div>
-        `);
+        if (src) {
+          window.open(src, '_blank');
+        }
       });
     });
   }
@@ -745,15 +818,17 @@
         document.body.style.overflow = isOpen ? '' : 'hidden';
       });
 
-      // Close menu when clicking outside or clicking any nav link
-      const links = navMenu.querySelectorAll('a:not(.dropdown > .nav-link)');
-      links.forEach(l => {
-        l.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('open');
-            document.body.style.overflow = '';
+      // Close mobile menu when tapping any page link or dropdown sub-item
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(l => {
+        l.addEventListener('click', (e) => {
+          // If it's a dropdown toggle link on mobile, don't close menu immediately
+          if (l.parentElement.classList.contains('dropdown') && l.nextElementSibling && l.nextElementSibling.classList.contains('dropdown-menu')) {
+            return;
           }
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('open');
+          document.body.style.overflow = '';
         });
       });
     }
@@ -772,24 +847,65 @@
     });
   }
 
-  function initVideoPlayer() {
-    const playOverlay = document.getElementById('playOverlay');
-    const factoryVideo = document.getElementById('factoryVideo');
-
-    if (playOverlay && factoryVideo) {
-      playOverlay.addEventListener('click', function () {
-        factoryVideo.play();
-        playOverlay.style.opacity = '0';
-        playOverlay.style.pointerEvents = 'none';
-      });
-
-      factoryVideo.addEventListener('pause', function () {
-        if (!factoryVideo.seeking) {
-          playOverlay.style.opacity = '1';
-          playOverlay.style.pointerEvents = 'auto';
-        }
+  function initPhotoShowcase() {
+    const photoCardTrigger = document.getElementById('photoCardTrigger');
+    if (photoCardTrigger) {
+      photoCardTrigger.addEventListener('click', function () {
+        window.open('images/factory.jpg', '_blank');
       });
     }
+  }
+
+  function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const origText = submitBtn ? submitBtn.textContent : 'Submit Business Inquiry →';
+      if (submitBtn) {
+        submitBtn.textContent = 'Sending Email Inquiry...';
+        submitBtn.disabled = true;
+      }
+
+      const formData = new FormData(contactForm);
+      const formJson = Object.fromEntries(formData.entries());
+
+      fetch('https://formsubmit.co/ajax/info@immfoodinnovators.in', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: `New Homepage B2B Inquiry: ${formJson.product || 'General'}`,
+          _template: 'table',
+          ...formJson
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (submitBtn) {
+          submitBtn.textContent = origText;
+          submitBtn.disabled = false;
+        }
+        if (successMessage) {
+          successMessage.innerHTML = `✓ Thank you! Your inquiry has been sent to info@immfoodinnovators.in.<br><a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20just%20submitted%20a%20website%20inquiry%20for%20${encodeURIComponent(formJson.product || 'products')}" target="_blank" style="display:inline-block; margin-top: 10px; background:#25D366; color:#fff; padding:8px 16px; border-radius:50px; text-decoration:none; font-weight:700;">💬 Send Instant WhatsApp Copy to Sales (+91 91144 03000)</a>`;
+          successMessage.style.display = 'block';
+        }
+        contactForm.reset();
+      })
+      .catch(err => {
+        if (submitBtn) {
+          submitBtn.textContent = origText;
+          submitBtn.disabled = false;
+        }
+        if (successMessage) {
+          successMessage.innerHTML = `✓ Inquiry Recorded! We will contact you at ${formJson.email || 'your email'}.`;
+          successMessage.style.display = 'block';
+        }
+        contactForm.reset();
+      });
+    });
   }
 
   /* ============================================================
@@ -799,9 +915,11 @@
     initHeroSlider();
     initProductsCatalog();
     renderBlogs();
+    initBlogDetail();
     initCertificates();
     initFAQ();
-    initVideoPlayer();
+    initPhotoShowcase();
+    initContactForm();
     initScrollEffects();
 
     console.log('IMM Food Innovators website v3.5 initialized successfully ✅');
