@@ -38,6 +38,27 @@
   
   --font-heading: 'Outfit', sans-serif;
   --font-body:    'Inter', sans-serif;
+
+  /* ── Modular Typography Scale ── */
+  --font-size-xs:   0.8rem;    /* 12.8px - Micro tags, badges, caption */
+  --font-size-sm:   0.875rem;  /* 14.0px - Secondary text, meta, small body */
+  --font-size-base: 1.0rem;    /* 16.0px - Primary body text, UI inputs */
+  --font-size-lg:   1.125rem;  /* 18.0px - Lead copy, H4 sub-headings */
+  --font-size-xl:   1.35rem;   /* 21.6px - H3 card titles, component headings */
+  --font-size-2xl:  2.0rem;    /* 32.0px - H2 major section titles */
+  --font-size-3xl:  2.2rem;    /* 35.2px - H1 page hero headings */
+  --font-size-4xl:  2.75rem;   /* 44.0px - H1 homepage display title */
+
+  /* ── Typography Weights & Line Heights ── */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  --leading-tight:  1.2;
+  --leading-snug:   1.35;
+  --leading-normal: 1.6;
   
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -57,6 +78,7 @@
 }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
@@ -64,15 +86,50 @@ html {
 section, [id] {
   scroll-margin-top: 90px;
 }
-  font-size: 16px;
-}
 
 body {
   font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
   background-color: var(--bg-linen);
   color: var(--text-primary);
-  line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* ── Heading Hierarchy Defaults ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  line-height: var(--leading-snug);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--weight-bold);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--weight-bold);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--weight-semibold);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
 }
 
 img {
@@ -133,8 +190,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(200, 75, 49, 0.2);
   color: var(--accent-red);
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-bold);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: 50px;
@@ -160,17 +217,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--weight-bold);
   letter-spacing: -0.5px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--primary-dark);
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   color: var(--text-secondary);
-  font-weight: 400;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
 }
 
 /* ── Buttons ── */
@@ -2531,14 +2589,14 @@ footer .logo-img {
   }
   .filter-btn {
     padding: 8px 16px;
-    font-size: 0.85rem;
+    font-size: var(--font-size-sm);
     flex-shrink: 0;
   }
 
   /* Inner Pages & Modals - Compact Banners */
   .inner-page-hero { padding: 1.75rem 1.25rem !important; }
   .inner-page-hero h1 { font-size: 1.6rem !important; margin-bottom: 0.35rem !important; }
-  .inner-page-hero p { font-size: 0.88rem !important; line-height: 1.45 !important; }
+  .inner-page-hero p { font-size: var(--font-size-sm) !important; line-height: 1.5 !important; }
 
   .modal-container {
     padding: 1.5rem 1.25rem !important;
