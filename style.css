@@ -60,6 +60,16 @@
   --leading-snug:   1.35;
   --leading-normal: 1.6;
   
+  /* ── Geometric Spacing System (4-point & 8-point scale) ── */
+  --space-3xs: 0.25rem; /*  4px - Micro gaps */
+  --space-2xs: 0.5rem;  /*  8px - Badge padding & pill gaps */
+  --space-xs:  0.75rem; /* 12px - Input padding & small margins */
+  --space-sm:  1.0rem;  /* 16px - Component inner spacing */
+  --space-md:  1.5rem;  /* 24px - Standard card padding & grid gaps */
+  --space-lg:  2.0rem;  /* 32px - Container padding & section margins */
+  --space-xl:  3.0rem;  /* 48px - Section headers & component gaps */
+  --space-2xl: 4.0rem;  /* 64px - Major section vertical padding */
+
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   
@@ -775,7 +785,7 @@ nav ul {
    3. WHY IMM FOOD INNOVATORS (CORE VALUE PILLARS GRID)
 ================================================================ */
 .why-us-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--bg-linen);
   position: relative;
 }
@@ -783,16 +793,16 @@ nav ul {
 .why-grid {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-lg);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: var(--space-md);
 }
 
 .why-card {
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  padding: 2.5rem 2rem;
+  padding: var(--space-md);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
   transition: all 0.4s var(--ease-smooth);
@@ -872,7 +882,7 @@ nav ul {
    4. OPERATIONAL CYCLE (VYAPAR CHAKRA PIPELINE)
 ================================================================ */
 .operating-cycle-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--primary-dark);
   color: #FFFFFF;
   position: relative;
@@ -890,10 +900,10 @@ nav ul {
 .cycle-grid {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-lg);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: var(--space-md);
 }
 
 .cycle-card {
@@ -901,7 +911,7 @@ nav ul {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  padding: 2.2rem;
+  padding: var(--space-md);
   position: relative;
   transition: all 0.3s var(--ease-smooth);
 }
@@ -1220,7 +1230,7 @@ nav ul {
    6. OUR SERVICES SECTION
 ================================================================ */
 .services-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--bg-linen);
 }
 
@@ -1352,7 +1362,7 @@ nav ul {
    7. QUALITY & CERTIFICATIONS SECTION
 ================================================================ */
 .certifications-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--primary-dark);
   color: #FFFFFF;
 }
@@ -1440,7 +1450,7 @@ nav ul {
 
 /* ── FACTORY PROCESSING & QUALITY SHOWCASE VIDEO SECTION ── */
 .video-showcase-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: #FAF8F3;
   border-top: 1px solid rgba(10, 46, 29, 0.08);
 }
@@ -1633,17 +1643,17 @@ nav ul {
    8. BLOGS & FAQ SECTION
 ================================================================ */
 .blogs-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--bg-alt);
 }
 
 .blog-grid {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-lg);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: var(--space-md);
 }
 
 .blog-card {
@@ -1718,14 +1728,14 @@ nav ul {
 
 /* FAQ */
 .faq-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--bg-linen);
 }
 
 .faq-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-lg);
 }
 
 .faq-item {
@@ -1796,14 +1806,14 @@ nav ul {
    9. CONTACT SECTION & INQUIRY FORM
 ================================================================ */
 .contact-section {
-  padding: 6rem 0;
+  padding: var(--space-2xl) 0;
   background: var(--bg-alt);
 }
 
 .contact-grid {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-lg);
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
@@ -2706,11 +2716,11 @@ footer .logo-img {
   .footer-col h4 { margin-bottom: 1rem; }
   
   .top-bar-container {
-    padding: 0 0.5rem !important;
-    font-size: 0.7rem !important;
+    padding: 0 0.75rem !important;
+    font-size: 0.78rem !important;
   }
   .top-bar-item {
-    font-size: 0.68rem !important;
+    font-size: 0.78rem !important;
   }
   
   .video-showcase-container {
