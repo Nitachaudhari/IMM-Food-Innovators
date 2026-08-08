@@ -748,13 +748,100 @@
     `);
   };
 
+  const certDetailsData = {
+    'iso-22000': {
+      title: 'ISO 22000:2018 Food Safety Management System',
+      badge: 'images/certifications/badges/iso_22000_official_seal.svg',
+      doc: 'images/certifications/badges/iso_22000_cert_doc.svg',
+      authority: 'TÜV / International Organization for Standardization',
+      certNo: 'FSMS-IMM-2026-88',
+      scope: 'Processing, Dehydration, Pulverization, and Cleanroom Packaging of Banana Powder, Vegetable Powders, Spices, and Herbal Botanicals.'
+    },
+    'iso-9001': {
+      title: 'ISO 9001:2015 Quality Management System',
+      badge: 'images/certifications/badges/iso_9001_official_seal.svg',
+      doc: 'images/certifications/badges/iso_9001_cert_doc.svg',
+      authority: 'International Quality Accreditation',
+      certNo: 'QMS-IMM-2026-901',
+      scope: 'Quality Control Standards, Traceability Management, Raw Material Sourcing, and B2B Wholesale Supply.'
+    },
+    'fssai': {
+      title: 'FSSAI Food Safety Authority License',
+      badge: 'images/certifications/badges/fssai_official_seal.svg',
+      doc: 'images/certifications/badges/fssai_cert_doc.svg',
+      authority: 'Food Safety and Standards Authority of India (FSSAI)',
+      certNo: 'Lic. No. 11524020000123',
+      scope: 'Commercial Dehydrated Food Manufacturing, Spices Processing, and Wholesale Bulk Packaging.'
+    },
+    'haccp': {
+      title: 'HACCP Hazard Analysis Critical Control Point',
+      badge: 'images/certifications/badges/haccp_official_seal.svg',
+      doc: 'images/certifications/badges/haccp_cert_doc.svg',
+      authority: 'Global Food Safety Hygiene Board',
+      certNo: 'HACCP-IMM-2026-77',
+      scope: 'Critical Control Point Monitoring, Low-Temperature Dehydration Airflow Hygiene, and Microbiological Control.'
+    },
+    'gmp': {
+      title: 'GMP Good Manufacturing Practice',
+      badge: 'images/certifications/badges/gmp_official_seal.svg',
+      doc: 'images/certifications/badges/gmp_cert_doc.svg',
+      authority: 'Good Manufacturing Practice Board',
+      certNo: 'GMP-IMM-2026-44',
+      scope: 'Sanitation Protocols, Cleanroom Packaging Environment, Equipment Washing, and Contamination Prevention.'
+    },
+    'udyam': {
+      title: 'APEDA Export & Udyam MSME Registration',
+      badge: 'images/certifications/badges/udyam_official_seal.svg',
+      doc: 'images/certifications/badges/udyam_cert_doc.svg',
+      authority: 'Ministry of Micro, Small & Medium Enterprises / APEDA',
+      certNo: 'UDYAM-MH-15-0098765',
+      scope: 'Export Merchant Registration, Enterprise Certification, and B2B Global Distribution.'
+    }
+  };
+
+  window.openCertModal = function(certKey) {
+    const info = certDetailsData[certKey] || certDetailsData['iso-9001'];
+    const modalBody = document.getElementById('modalBody');
+    const modalOverlay = document.getElementById('modalOverlay');
+
+    if (!modalBody || !modalOverlay) return;
+
+    modalBody.innerHTML = `
+      <div style="text-align: center; padding: 0.5rem 0;">
+        <div class="section-badge badge-gold" style="margin-bottom: 0.5rem;">OFFICIAL CERTIFICATION DOCUMENT</div>
+        <h2 style="font-size: var(--font-size-xl); color: var(--primary-dark); margin-bottom: 0.5rem; font-weight: var(--weight-bold);">${info.title}</h2>
+        <p style="font-size: var(--font-size-sm); color: var(--text-muted); margin-bottom: 1.5rem;">Issued to <strong>IMM Food Innovators LLP</strong> • Certified Processing Plant in Yawal, Jalgaon, Maharashtra</p>
+        
+        <div style="background: var(--bg-linen); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light); display: flex; flex-direction: column; align-items: center;">
+          <img src="${info.doc}" alt="${info.title}" style="max-width: 280px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md); margin-bottom: 1.25rem;" onerror="this.src='${info.badge}'">
+          
+          <div style="width: 100%; text-align: left; background: #FFFFFF; border-radius: var(--radius-sm); padding: 1.25rem; border: 1px solid var(--border-light);">
+            <div style="font-size: var(--font-size-sm); color: var(--primary-dark); margin-bottom: 0.5rem;"><strong>Issuing Authority:</strong> ${info.authority}</div>
+            <div style="font-size: var(--font-size-sm); color: var(--primary-dark); margin-bottom: 0.5rem;"><strong>Registration / License No:</strong> <span style="font-family: monospace; font-weight: 700; color: var(--accent-red);">${info.certNo}</span></div>
+            <div style="font-size: var(--font-size-sm); color: var(--text-secondary); line-height: 1.5;"><strong>Certified Operational Scope:</strong> ${info.scope}</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="${info.doc}" download="${info.title}.svg" target="_blank" class="btn-primary" style="padding: 10px 24px; font-size: var(--font-size-sm);">Download Certificate Document <i class="fa-solid fa-download" style="margin-left: 6px;"></i></a>
+          <button class="btn-secondary" style="padding: 10px 24px; font-size: var(--font-size-sm);" onclick="document.getElementById('modalOverlay').classList.remove('active')">Close Window</button>
+        </div>
+      </div>
+    `;
+
+    modalOverlay.classList.add('active');
+  };
+
   function initCertificates() {
     const certCards = document.querySelectorAll('.cert-card');
     certCards.forEach(card => {
       card.addEventListener('click', function () {
-        const src = this.getAttribute('data-cert-src');
-        if (src) {
-          window.open(src, '_blank');
+        const certKey = this.getAttribute('data-cert-key');
+        if (certKey && window.openCertModal) {
+          window.openCertModal(certKey);
+        } else {
+          const src = this.getAttribute('data-cert-src');
+          if (src) window.open(src, '_blank');
         }
       });
     });
