@@ -233,8 +233,9 @@
     const categoryName = p.category === 'powder' ? 'Fruit & Veggie' :
                          p.category === 'spices' ? 'Pure Spice' : 'Herbal Powder';
     
-    const categoryIcon = p.category === 'powder' ? '🍌' :
-                         p.category === 'spices' ? '🌶️' : '🌿';
+    const categoryIcon = p.category === 'powder' ? '<i class="fa-solid fa-lemon" style="color: var(--accent-gold); margin-right: 4px;"></i>' :
+                         p.category === 'spices' ? '<i class="fa-solid fa-pepper-hot" style="color: var(--accent-red); margin-right: 4px;"></i>' :
+                         '<i class="fa-solid fa-leaf" style="color: #10B981; margin-right: 4px;"></i>';
 
     return `
       <div class="product-card" data-category="${p.category}">
