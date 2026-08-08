@@ -574,9 +574,9 @@ nav ul {
 .hero-slider-section {
   position: relative;
   background: var(--primary-dark);
-  min-height: 600px;
-  height: calc(100vh - var(--nav-height) - var(--topbar-height));
-  max-height: 750px;
+  min-height: 380px;
+  height: 440px;
+  max-height: 480px;
   overflow: hidden;
 }
 
@@ -2046,7 +2046,7 @@ footer .logo-img {
 /* Page Header for Inner Pages */
 .inner-page-hero {
   background: var(--primary-dark);
-  padding: 5rem 0;
+  padding: 2.2rem 1.5rem;
   text-align: center;
   color: #FFFFFF;
   position: relative;
@@ -2054,16 +2054,17 @@ footer .logo-img {
 }
 
 .inner-page-hero h1 {
-  font-size: 3rem;
+  font-size: 2.1rem;
   color: #FFFFFF;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .inner-page-hero p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.15rem;
-  max-width: 700px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.98rem;
+  max-width: 680px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
 /* ── Responsive Grid Utility System ── */
@@ -2322,12 +2323,12 @@ footer .logo-img {
     text-align: left !important;
   }
 
-  /* Hero Banner Mobile - Matching Desktop UI 100% */
+  /* Hero Banner Mobile - Compact Height */
   .hero-slider-section {
     position: relative !important;
-    min-height: 520px !important;
-    height: calc(100vh - 110px) !important;
-    max-height: 650px !important;
+    min-height: 320px !important;
+    height: 360px !important;
+    max-height: 380px !important;
     overflow: hidden !important;
   }
 
@@ -2538,10 +2539,10 @@ footer .logo-img {
     flex-shrink: 0;
   }
 
-  /* Inner Pages & Modals */
-  .inner-page-hero { padding: 3rem 1.25rem !important; }
-  .inner-page-hero h1 { font-size: 1.85rem !important; }
-  .inner-page-hero p { font-size: 0.95rem !important; }
+  /* Inner Pages & Modals - Compact Banners */
+  .inner-page-hero { padding: 1.75rem 1.25rem !important; }
+  .inner-page-hero h1 { font-size: 1.6rem !important; margin-bottom: 0.35rem !important; }
+  .inner-page-hero p { font-size: 0.88rem !important; line-height: 1.45 !important; }
 
   .modal-container {
     padding: 1.5rem 1.25rem !important;
