@@ -137,8 +137,8 @@
     { name: "Ginger Powder", category: "spices", image: "images/powders/Ginger.png", description: "Aromatic powder for digestion and immunity." },
     { name: "Green Chillies Powder", category: "spices", image: "images/powders/GreenChillies.png", description: "Vibrant and spicy for curries and snacks." },
     { name: "Rasgulla Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Specialized vibrant red Rasgulla chilli variety powder known for rich color and medium heat." },
-    { name: "Chatpata Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Tangy and spicy chatpata red chilli blend crafted for snacks, seasonings, and street food applications." },
-    { name: "Chatpata + Rasgulla Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Exclusive signature combination blend of Rasgulla red chilli and chatpata seasoning." },
+    { name: "Chapata Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Tangy and spicy chatpata red chilli blend crafted for snacks, seasonings, and street food applications." },
+    { name: "Chapata + Rasgulla Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Exclusive signature combination blend of Rasgulla red chilli and chatpata seasoning." },
     { name: "Gavran Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Traditional authentic Desi Gavran red chilli powder with rich pungent taste and deep natural red color." },
     { name: "Mix Chilli Powder (Spicy)", category: "spices", image: "images/powders/RedChillie.png", description: "Extra-spicy commercial blend of premium red chillies for hot culinary formulations." },
     { name: "Mix Chilli Powder (Normal)", category: "spices", image: "images/powders/RedChillie.png", description: "Balanced mild-to-medium spicy red chilli powder blend for everyday cooking and commercial processing." },
@@ -168,7 +168,7 @@
     const dots = document.querySelectorAll('.hero-dot');
     const prevBtn = document.getElementById('heroPrevBtn');
     const nextBtn = document.getElementById('heroNextBtn');
-    
+
     if (!slides.length) return;
 
     let currentSlide = 0;
@@ -230,11 +230,11 @@
   ============================================================ */
   function renderProductCard(p) {
     const categoryName = p.category === 'powder' ? 'Fruit & Veggie' :
-                         p.category === 'spices' ? 'Pure Spice' : 'Herbal Powder';
-    
+      p.category === 'spices' ? 'Pure Spice' : 'Herbal Powder';
+
     const categoryIcon = p.category === 'powder' ? '<i class="fa-solid fa-lemon" style="color: var(--accent-gold); margin-right: 4px;"></i>' :
-                         p.category === 'spices' ? '<i class="fa-solid fa-pepper-hot" style="color: var(--accent-red); margin-right: 4px;"></i>' :
-                         '<i class="fa-solid fa-leaf" style="color: #10B981; margin-right: 4px;"></i>';
+      p.category === 'spices' ? '<i class="fa-solid fa-pepper-hot" style="color: var(--accent-red); margin-right: 4px;"></i>' :
+        '<i class="fa-solid fa-leaf" style="color: #10B981; margin-right: 4px;"></i>';
 
     return `
       <div class="product-card" data-category="${p.category}">
@@ -306,8 +306,8 @@
 
       const filtered = productsData.filter(p => {
         const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
-        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              p.description.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
       });
 
@@ -459,7 +459,7 @@
   };
 
   window.openQuoteModal = function (productName) {
-    const productOptionsHtml = productsData.map(p => 
+    const productOptionsHtml = productsData.map(p =>
       `<option value="${p.name}" ${p.name === productName ? 'selected' : ''}>${p.name}</option>`
     ).join('');
 
@@ -523,19 +523,19 @@
               ...formJson
             })
           })
-          .then(res => res.json())
-          .then(data => {
-            submitBtn.textContent = origText;
-            submitBtn.disabled = false;
-            if (modalSuccess) modalSuccess.style.display = 'block';
-            modalForm.reset();
-          })
-          .catch(err => {
-            submitBtn.textContent = origText;
-            submitBtn.disabled = false;
-            if (modalSuccess) modalSuccess.style.display = 'block';
-            modalForm.reset();
-          });
+            .then(res => res.json())
+            .then(data => {
+              submitBtn.textContent = origText;
+              submitBtn.disabled = false;
+              if (modalSuccess) modalSuccess.style.display = 'block';
+              modalForm.reset();
+            })
+            .catch(err => {
+              submitBtn.textContent = origText;
+              submitBtn.disabled = false;
+              if (modalSuccess) modalSuccess.style.display = 'block';
+              modalForm.reset();
+            });
         });
       }
     }, 100);
@@ -792,7 +792,7 @@
     }
   };
 
-  window.openCertModal = function(certKey) {
+  window.openCertModal = function (certKey) {
     const info = certDetailsData[certKey] || certDetailsData['iso-9001'];
     const modalBody = document.getElementById('modalBody');
     const modalOverlay = document.getElementById('modalOverlay');
@@ -957,29 +957,29 @@
           ...formJson
         })
       })
-      .then(res => res.json())
-      .then(data => {
-        if (submitBtn) {
-          submitBtn.textContent = origText;
-          submitBtn.disabled = false;
-        }
-        if (successMessage) {
-          successMessage.innerHTML = `✓ Thank you! Your inquiry has been sent to info@immfoodinnovators.in.<br><a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20just%20submitted%20a%20website%20inquiry%20for%20${encodeURIComponent(formJson.product || 'products')}" target="_blank" style="display:inline-block; margin-top: 10px; background:#25D366; color:#fff; padding:8px 16px; border-radius:50px; text-decoration:none; font-weight:700;">💬 Send Instant WhatsApp Copy to Sales (+91 91144 03000)</a>`;
-          successMessage.style.display = 'block';
-        }
-        contactForm.reset();
-      })
-      .catch(err => {
-        if (submitBtn) {
-          submitBtn.textContent = origText;
-          submitBtn.disabled = false;
-        }
-        if (successMessage) {
-          successMessage.innerHTML = `✓ Inquiry Recorded! We will contact you at ${formJson.email || 'your email'}.`;
-          successMessage.style.display = 'block';
-        }
-        contactForm.reset();
-      });
+        .then(res => res.json())
+        .then(data => {
+          if (submitBtn) {
+            submitBtn.textContent = origText;
+            submitBtn.disabled = false;
+          }
+          if (successMessage) {
+            successMessage.innerHTML = `✓ Thank you! Your inquiry has been sent to info@immfoodinnovators.in.<br><a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20just%20submitted%20a%20website%20inquiry%20for%20${encodeURIComponent(formJson.product || 'products')}" target="_blank" style="display:inline-block; margin-top: 10px; background:#25D366; color:#fff; padding:8px 16px; border-radius:50px; text-decoration:none; font-weight:700;">💬 Send Instant WhatsApp Copy to Sales (+91 91144 03000)</a>`;
+            successMessage.style.display = 'block';
+          }
+          contactForm.reset();
+        })
+        .catch(err => {
+          if (submitBtn) {
+            submitBtn.textContent = origText;
+            submitBtn.disabled = false;
+          }
+          if (successMessage) {
+            successMessage.innerHTML = `✓ Inquiry Recorded! We will contact you at ${formJson.email || 'your email'}.`;
+            successMessage.style.display = 'block';
+          }
+          contactForm.reset();
+        });
     });
   }
 
