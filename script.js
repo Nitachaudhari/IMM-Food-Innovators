@@ -551,7 +551,7 @@
     let color = "Characteristic Natural Color";
     let odor = "Fresh Characteristic Aroma";
     let packaging = "25 kg Food-Grade Aluminum Foil Lined Bag";
-    let shelfLife = "18 Months (Cool & Dry Storage)";
+    let shelfLife = "12 Months (Cool & Dry Storage)";
     let moq = "100 kg Domestic & Export";
     let brixSolubility = "Water Dispersible";
 
@@ -563,7 +563,7 @@
       color = "Off-White to Pale Creamy Yellow";
       odor = "Sweet Natural Cavendish Banana Aroma";
       packaging = "25 kg Triple-Barrier Aluminum Foil Lined Kraft Bag";
-      shelfLife = "18 Months";
+      shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Smooth Dispersible / Non-Clumping";
     } else if (nameLower.includes("turmeric")) {
@@ -574,7 +574,7 @@
       color = "Vibrant Deep Golden Yellow";
       odor = "Warm, Pungent & Earthy Aroma";
       packaging = "25 kg Moisture-Proof PP Woven Bag with Inner PE Liner";
-      shelfLife = "24 Months";
+      shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Dispersible in Warm Water & Fats";
     } else if (nameLower.includes("ginger")) {
@@ -585,7 +585,7 @@
       color = "Light Tan to Pale Buff Yellow";
       odor = "Strong Spicy Pungent Aroma";
       packaging = "25 kg Moisture-Proof Poly-Lined Kraft Bag";
-      shelfLife = "24 Months";
+      shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Earthy Dispersible";
     } else if (nameLower.includes("garlic powder") || nameLower.includes("red onion powder") || nameLower.includes("white onion powder") || nameLower.includes("spring onion powder")) {
@@ -607,7 +607,7 @@
       color = nameLower.includes("carrot") ? "Vibrant Orange" : nameLower.includes("chilli") ? "Deep Emerald Green" : "Light Cream Buff";
       odor = "Fresh Characteristic Dehydrated Flavor";
       packaging = "15-20 kg Double PE Lined Food-Grade Bags in Corrugated Box";
-      shelfLife = "12 - 18 Months";
+      shelfLife = "12 Months";
       moq = "200 kg";
       brixSolubility = "Instant Rehydration in Warm Water (5-8 mins)";
     } else if (nameLower.includes("moringa")) {
@@ -618,7 +618,7 @@
       color = "Vibrant Deep Emerald Green";
       odor = "Fresh Leafy Herbal Aroma";
       packaging = "25 kg Vacuum-Sealed Aluminum Foil Lined Bag";
-      shelfLife = "18 Months";
+      shelfLife = "12 Months";
       moq = "50 kg";
       brixSolubility = "Dispersible in Water / Juice";
     } else if (nameLower.includes("shatavari")) {
@@ -629,7 +629,7 @@
       color = "Light Beige to Buff Cream";
       odor = "Sweetish Slightly Bitter Herbal Aroma";
       packaging = "25 kg Sealed Poly-Lined Kraft Bag";
-      shelfLife = "24 Months";
+      shelfLife = "12 Months";
       moq = "50 kg";
       brixSolubility = "Partially Soluble in Warm Liquids";
     } else if (nameLower.includes("tomato")) {
@@ -651,7 +651,7 @@
       color = "Tan Brownish Green";
       odor = "Astringent Sour Taste";
       packaging = "25 kg PE Lined Food-Grade Kraft Bag";
-      shelfLife = "24 Months";
+      shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Water Dispersible";
     } else if (nameLower.includes("chilli") || nameLower.includes("chillie")) {
@@ -662,7 +662,7 @@
       color = nameLower.includes("green") ? "Vibrant Green" : "Bright Red";
       odor = "Pungent Spicy Heat";
       packaging = "25 kg PP Bags with Moisture Barrier Liner";
-      shelfLife = "18 Months";
+      shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Dispersible in Oils & Water";
     } else if (nameLower.includes("beetroot")) {
@@ -673,7 +673,7 @@
       color = "Deep Ruby Red / Magenta";
       odor = "Earthy Sweet Beetroot Flavor";
       packaging = "25 kg Sealed Food-Grade Poly Bag in Corrugated Box";
-      shelfLife = "18 Months";
+      shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Fully Water Soluble (>95%)";
     } else if (nameLower.includes("safed musali") || nameLower.includes("gokharu") || nameLower.includes("harda") || nameLower.includes("triphala") || nameLower.includes("bhumi amla")) {
@@ -684,7 +684,7 @@
       color = "Natural Earthy Tan/Brown";
       odor = "Characteristic Herbal Aroma";
       packaging = "25 kg Sealed Poly-Lined Kraft Bag";
-      shelfLife = "24 Months";
+      shelfLife = "12 Months";
       moq = "50 kg";
       brixSolubility = "Herbal Dispersible";
     }
