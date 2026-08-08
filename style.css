@@ -1402,12 +1402,14 @@ nav ul {
 }
 
 .cert-card img {
-  width: 115px;
-  height: 115px;
-  object-fit: contain;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
   margin: 0 auto 0.75rem auto;
   transition: transform 0.3s var(--ease-smooth, ease);
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .cert-card:hover img {

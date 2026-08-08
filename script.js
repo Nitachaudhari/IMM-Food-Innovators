@@ -751,48 +751,42 @@
   const certDetailsData = {
     'iso-22000': {
       title: 'ISO 22000:2018 Food Safety Management System',
-      badge: 'images/certifications/badges/iso_22000_official_seal.svg',
-      doc: 'images/certifications/badges/iso_22000_cert_doc.svg',
+      doc: 'images/certifications/iso_22000.jpg',
       authority: 'TÜV / International Organization for Standardization',
       certNo: 'FSMS-IMM-2026-88',
       scope: 'Processing, Dehydration, Pulverization, and Cleanroom Packaging of Banana Powder, Vegetable Powders, Spices, and Herbal Botanicals.'
     },
     'iso-9001': {
       title: 'ISO 9001:2015 Quality Management System',
-      badge: 'images/certifications/badges/iso_9001_official_seal.svg',
-      doc: 'images/certifications/badges/iso_9001_cert_doc.svg',
+      doc: 'images/certifications/iso_9001.jpg',
       authority: 'International Quality Accreditation',
       certNo: 'QMS-IMM-2026-901',
       scope: 'Quality Control Standards, Traceability Management, Raw Material Sourcing, and B2B Wholesale Supply.'
     },
     'fssai': {
       title: 'FSSAI Food Safety Authority License',
-      badge: 'images/certifications/badges/fssai_official_seal.svg',
-      doc: 'images/certifications/badges/fssai_cert_doc.svg',
+      doc: 'images/certifications/fssai.jpg',
       authority: 'Food Safety and Standards Authority of India (FSSAI)',
       certNo: 'Lic. No. 11524020000123',
       scope: 'Commercial Dehydrated Food Manufacturing, Spices Processing, and Wholesale Bulk Packaging.'
     },
     'haccp': {
       title: 'HACCP Hazard Analysis Critical Control Point',
-      badge: 'images/certifications/badges/haccp_official_seal.svg',
-      doc: 'images/certifications/badges/haccp_cert_doc.svg',
+      doc: 'images/certifications/haccp.jpg',
       authority: 'Global Food Safety Hygiene Board',
       certNo: 'HACCP-IMM-2026-77',
       scope: 'Critical Control Point Monitoring, Low-Temperature Dehydration Airflow Hygiene, and Microbiological Control.'
     },
     'gmp': {
       title: 'GMP Good Manufacturing Practice',
-      badge: 'images/certifications/badges/gmp_official_seal.svg',
-      doc: 'images/certifications/badges/gmp_cert_doc.svg',
+      doc: 'images/certifications/gmp.jpg',
       authority: 'Good Manufacturing Practice Board',
       certNo: 'GMP-IMM-2026-44',
       scope: 'Sanitation Protocols, Cleanroom Packaging Environment, Equipment Washing, and Contamination Prevention.'
     },
     'udyam': {
       title: 'APEDA Export & Udyam MSME Registration',
-      badge: 'images/certifications/badges/udyam_official_seal.svg',
-      doc: 'images/certifications/badges/udyam_cert_doc.svg',
+      doc: 'images/certifications/apeda_udyam.jpg',
       authority: 'Ministry of Micro, Small & Medium Enterprises / APEDA',
       certNo: 'UDYAM-MH-15-0098765',
       scope: 'Export Merchant Registration, Enterprise Certification, and B2B Global Distribution.'
