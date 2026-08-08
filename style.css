@@ -992,17 +992,16 @@ nav ul {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at center, #FFFFFF 40%, #F1F5F9 100%);
+  background: #F8FAFC;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .product-img-wrap img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 1.5rem;
+  object-fit: cover;
+  display: block;
   transition: transform 0.5s var(--ease-smooth), filter 0.5s ease;
 }
 
