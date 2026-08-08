@@ -604,14 +604,10 @@ nav ul {
 .hero-slide-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center top;
-  transform: scale(1.05);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
   transition: transform 6s ease-out;
-}
-
-.hero-slide.active .hero-slide-bg {
-  transform: scale(1);
 }
 
 .hero-overlay {
@@ -2346,8 +2342,9 @@ footer .logo-img {
   }
 
   .hero-slide-bg {
-    background-position: center top !important;
-    background-size: cover !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
     filter: brightness(1.05) contrast(1.05) !important;
   }
 
