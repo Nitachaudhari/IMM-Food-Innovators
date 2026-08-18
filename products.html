@@ -14,7 +14,7 @@
     <link rel="canonical" href="https://www.immfoodinnovators.in/products.html">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=10.0">
+    <link rel="stylesheet" href="style.css?v=10.5">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -192,11 +192,11 @@
                     </div>
                 </aside>
 
-                <!-- RIGHT PRODUCT PANEL (NATURAL GRID, NO SCROLLBAR) -->
-                <div class="product-panel" style="flex: 1; min-width: 0; background: #FFFFFF; border-radius: 16px; border: 1px solid var(--border-light); box-shadow: 0 8px 30px rgba(10, 46, 29, 0.06); padding: 1.5rem 1.75rem;">
+                <!-- RIGHT PRODUCT PANEL (LEFT CATEGORY SIDEBAR + SCROLLABLE PRODUCT PANEL) -->
+                <div class="product-panel" style="flex: 1; min-width: 0; background: #FFFFFF; border-radius: 16px; border: 1px solid var(--border-light); box-shadow: 0 8px 30px rgba(10, 46, 29, 0.06); padding: 1.5rem 1.75rem; display: flex; flex-direction: column;">
                     
                     <!-- HEADER BAR WITH TITLE, SEARCH & COUNT -->
-                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-bottom: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-light);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-bottom: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-light); position: sticky; top: 0; background: #FFFFFF; z-index: 5;">
                         <div>
                             <span style="font-size: 0.7rem; font-weight: 700; color: var(--accent-gold); letter-spacing: 1px; text-transform: uppercase;">CATEGORY VIEW</span>
                             <h3 id="currentCategoryTitle" style="font-size: 1.3rem; color: var(--primary-dark); font-weight: 800; margin: 2px 0 0 0;">All Products</h3>
@@ -209,12 +209,12 @@
                         </div>
 
                         <span id="currentCategoryCount" style="background: rgba(10, 46, 29, 0.08); color: var(--primary-dark); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 50px; border: 1px solid rgba(10, 46, 29, 0.12);">
-                            Showing 25 Items
+                            Showing 26 Ingredients
                         </span>
                     </div>
 
-                    <!-- PRODUCTS GRID (4 COLUMNS DESKTOP, NO INNER SCROLLBAR) -->
-                    <div class="product-scroll-area" id="fullProductsGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; transition: opacity 0.3s ease;">
+                    <!-- PRODUCTS GRID (SCROLLABLE RIGHT PANEL) -->
+                    <div class="product-scroll-area" id="fullProductsGrid">
                         <!-- Product Cards Rendered via JS -->
                     </div>
 
@@ -339,7 +339,7 @@
         </div>
     </div>
 
-    <script src="script.js?v=10.0"></script>
+    <script src="script.js?v=10.5"></script>
 </body>
 
 </html>

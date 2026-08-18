@@ -281,12 +281,40 @@
     const urlParams = new URLSearchParams(window.location.search);
     const paramCategory = urlParams.get('category');
     if (paramCategory) {
-      if (paramCategory === 'herbal') activeCategory = 'Herbal Powders';
-      else if (paramCategory === 'spices') activeCategory = 'Pure Spices';
-      else if (paramCategory === 'veggies' || paramCategory === 'powder') activeCategory = 'Vegetables';
+      const lowerParam = paramCategory.toLowerCase();
+      if (lowerParam.includes('herbal') || lowerParam.includes('wellness')) {
+        activeCategory = 'Herbal & Wellness';
+      } else if (lowerParam.includes('spice')) {
+        activeCategory = 'Pure Spices';
+      } else if (lowerParam.includes('veggie') || lowerParam.includes('fruit') || lowerParam.includes('powder')) {
+        activeCategory = 'Fruit & Veggie Powders';
+      }
     }
 
-    // Render for home page (8 featured items)
+    // Render & handle Home page filter buttons & featured grid
+    const homepageFilterBtns = document.querySelectorAll('.products-filter-bar .filter-btn');
+    if (homepageFilterBtns.length && mainGrid) {
+      homepageFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          homepageFilterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const selectedCat = btn.getAttribute('data-category');
+          mainGrid.style.opacity = '0.3';
+          setTimeout(() => {
+            let filteredHome = productsData;
+            if (selectedCat && selectedCat !== 'all' && selectedCat !== 'All Products') {
+              filteredHome = productsData.filter(p => p.category === selectedCat || p.category.toLowerCase().includes(selectedCat.toLowerCase()));
+            } else {
+              filteredHome = productsData.slice(0, 8);
+            }
+            mainGrid.innerHTML = filteredHome.map(p => renderProductCard(p)).join('');
+            mainGrid.style.opacity = '1';
+          }, 150);
+        });
+      });
+    }
+
     if (mainGrid) {
       const featured = productsData.slice(0, 8);
       mainGrid.innerHTML = featured.map(p => renderProductCard(p)).join('');
@@ -340,7 +368,7 @@
       if (currentCategoryCount) currentCategoryCount.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? 'Ingredient' : 'Ingredients'}`;
       if (searchCountBadge) searchCountBadge.textContent = `${filtered.length} Products`;
 
-      // Smooth Fade Transition
+      // Smooth Fade Transition & Scroll Reset
       fullGrid.style.opacity = '0.3';
       setTimeout(() => {
         if (filtered.length === 0) {
@@ -352,6 +380,7 @@
           fullGrid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
         }
         fullGrid.style.opacity = '1';
+        fullGrid.scrollTop = 0;
       }, 150);
     }
 

@@ -2828,8 +2828,28 @@ footer .logo-img {
 .product-scroll-area {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
-  gap: 1rem !important;
-  overflow: visible !important;
+  gap: 1.15rem !important;
+  max-height: 680px !important;
+  overflow-y: auto !important;
+  padding-right: 8px !important;
+  scroll-behavior: smooth !important;
+  transition: opacity 0.3s ease;
+}
+
+/* Custom Scrollbar for Right Product Panel */
+.product-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+.product-scroll-area::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 10px;
+}
+.product-scroll-area::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 10px;
+}
+.product-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
 }
 
 .product-card.b2b-card {
