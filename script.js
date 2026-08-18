@@ -13,17 +13,17 @@
   const blogsData = [
     {
       id: "contract-farming-quality-control",
-      title: "From Field to Factory: How ~100 Acres of Contract Farming Ensures Uncompromising Raw Material Quality",
+      title: "From Field to Factory: How ~250 Acres of Contract Farming Ensures Uncompromising Raw Material Quality",
       category: "Contract Farming & Origin",
-      date: "August 5, 2026",
-      readTime: "6 min read",
+      date: "August 12, 2026",
+      readTime: "5 min read",
       image: "images/blog_contract_farming.jpg",
-      excerpt: "Discover how IMM Food Innovators' 100-acre contract farming initiative in Jalgaon provides 60-70% internal raw material supply, guaranteeing field-level quality control, zero pesticide residue, and complete B2B supply chain traceability.",
+      excerpt: "Sourcing 60-70% of raw materials from ~250 acres in Jalgaon guarantees batch traceability and zero pesticide residue.",
       content: `
         <p>In global B2B food manufacturing, quality control that begins at the factory gate is already too late. Soil health, irrigation purity, harvest timing, and field hygiene directly dictate the nutrient density, moisture retention, and microbial safety of the final dehydrated product.</p>
 
         <h3>The Power of Self-Sourced Raw Materials</h3>
-        <p>At IMM Food Innovators LLP, we contract-farm approximately 100 acres of prime agricultural land in Jalgaon, Maharashtra. This strategic self-sourcing initiative supplies an estimated 60-70% of our total raw material requirements internally, providing unprecedented operational advantages for wholesale buyers and exporters:</p>
+        <p>At IMM Food Innovators LLP, we contract-farm approximately 250 acres of prime agricultural land in Jalgaon, Maharashtra. This strategic self-sourcing initiative supplies an estimated 60-70% of our total raw material requirements internally, providing unprecedented operational advantages for wholesale buyers and exporters:</p>
         <ul>
           <li><strong>Direct Field-Level Agronomic Oversight:</strong> Our technical team dictates soil enrichment, non-toxic pest management, and natural fertilizer protocols from seed sowing to harvest.</li>
           <li><strong>Zero Pesticide & Chemical Residue Risk:</strong> By controlling 60-70% of crops internally, we eliminate pesticide contamination risks often found in open mandi wholesale trading networks.</li>
@@ -43,7 +43,7 @@
       category: "Superfoods & Exports",
       date: "July 20, 2026",
       readTime: "5 min read",
-      image: "images/banana.jpg",
+      image: "images/banana_packaging_imm.png",
       excerpt: "Dehydrated banana powder is rapidly gaining traction in B2B markets. Explore why this nutrient-dense superfood is becoming a vital ingredient for baby foods, gluten-free baking, and wellness blends.",
       content: `
         <p>Dehydrated banana powder is rapidly transitioning from a niche ingredient to a global B2B powerhouse. Produced from ripe or unripe Cavendish bananas using advanced low-temperature dehydration technology, it retains the essential vitamins, minerals, and prebiotic fibers of the fresh fruit while offering a stable shelf life and versatility for food formulation.</p>
@@ -123,42 +123,86 @@
   ];
 
   /* ============================================================
-     2. PRODUCT DATA (COMPLETE 51 PRODUCTS)
+     2. PRODUCT DATA (COMPLETE B2B INGREDIENTS - 4 CATEGORIES ONLY)
   ============================================================ */
-  const productsData = [
-    { name: "Banana Powder", category: "powder", image: "images/powders/Banana.png", description: "Premium dehydrated banana powder manufactured in Jalgaon, India. Pure, naturally sweet, and rich in nutrients; ideal for baby foods, organic smoothies, and gluten-free baking." },
-    { name: "Moringa Leaves Powder", category: "herbal", image: "images/powders/Moringa.png", description: "Premium dehydrated moringa leaves powder manufacturer in Jalgaon. Sourced from local farm-fresh moringa leaves, processed to preserve 100% of bioactive proteins and antioxidants." },
-    { name: "Turmeric Powder", category: "spices", image: "images/powders/Turmeric.png", description: "Premium high-curcumin pure dehydrated turmeric powder (Haldi). Brilliant golden yellow color, rich natural aroma, and anti-inflammatory benefits; essential for culinary curry mixes, food processing, and wellness products." },
-    { name: "Beetroot Powder", category: "powder", image: "images/powders/Beetroot.png", description: "Vibrant and nutrient-rich for natural coloring and energy blends." },
-    { name: "Coriander Powder", category: "spices", image: "images/powders/Coriander.png", description: "Warm, citrusy flavor for spice blends and culinary use." },
-    { name: "Chaha (Tea Leaf) Powder", category: "powder", image: "images/powders/LemonGrass.png", description: "Rich in antioxidants for instant tea formulations." },
-    { name: "Curry Leaves Powder", category: "spices", image: "images/powders/CurryLeaves.png", description: "Rich in iron and antioxidants for chutneys and curries." },
-    { name: "Garlic Powder", category: "spices", image: "images/powders/Garlic.png", description: "Export-grade dehydrated garlic powder supplier. Delivers intense natural garlic flavor and aroma for food processing, B2B spice blending, and seasoning manufacturers." },
-    { name: "Ginger Powder", category: "spices", image: "images/powders/Ginger.png", description: "Aromatic powder for digestion and immunity." },
-    { name: "Green Chillies Powder", category: "spices", image: "images/powders/GreenChillies.png", description: "Vibrant and spicy for curries and snacks." },
-    { name: "Rasgulla Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Specialized vibrant red Rasgulla chilli variety powder known for rich color and medium heat." },
-    { name: "Chapata Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Tangy and spicy chatpata red chilli blend crafted for snacks, seasonings, and street food applications." },
-    { name: "Chapata + Rasgulla Red Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Exclusive signature combination blend of Rasgulla red chilli and chatpata seasoning." },
-    { name: "Gavran Chilli Powder", category: "spices", image: "images/powders/RedChillie.png", description: "Traditional authentic Desi Gavran red chilli powder with rich pungent taste and deep natural red color." },
-    { name: "Mix Chilli Powder (Spicy)", category: "spices", image: "images/powders/RedChillie.png", description: "Extra-spicy commercial blend of premium red chillies for hot culinary formulations." },
-    { name: "Mix Chilli Powder (Normal)", category: "spices", image: "images/powders/RedChillie.png", description: "Balanced mild-to-medium spicy red chilli powder blend for everyday cooking and commercial processing." },
-    { name: "Amla Powder", category: "herbal", image: "images/powders/Amla.png", description: "Loaded with vitamin C and antioxidants for health drinks and herbal formulations." },
-    { name: "Bael Powder", category: "herbal", image: "images/powders/Bael.png", description: "Rich in fibre and antioxidants, supports digestion and immunity." },
-    { name: "Carrot Powder", category: "powder", image: "images/powders/Carrot.png", description: "High in beta-carotene, adds nutrition and color to foods." },
-    { name: "Coriander Leaf Powder", category: "spices", image: "images/powders/Kothimbir.png", description: "Green coriander powder for added flavor and color." },
-    { name: "Gokharu Powder", category: "herbal", image: "images/powders/Gokharu.png", description: "Traditional herbal powder for kidney health and stamina." },
-    { name: "Harda Powder", category: "herbal", image: "images/powders/Harda.png", description: "Ayurvedic powder for digestion and detoxification." },
-    { name: "Okra Powder", category: "powder", image: "images/powders/LadiesFinger.png", description: "Nutrient-rich okra powder for soups and health mixes." },
-    { name: "Mint Leaves Powder", category: "herbal", image: "images/powders/Pudina.png", description: "Refreshing mint for teas and beverages." },
-    { name: "Neem Powder", category: "herbal", image: "images/powders/Neem.png", description: "Medicinal powder for herbal and wellness applications." },
-    { name: "Red Onion Powder", category: "spices", image: "images/powders/RedOnion.png", description: "Consistent onion taste for spice blends." },
-    { name: "Safed Musali Powder", category: "herbal", image: "images/powders/SafedMusali.png", description: "Premium herbal powder for strength and vitality." },
-    { name: "Tomato Powder", category: "powder", image: "images/powders/Tomato.png", description: "Natural dehydrated tomato powder manufacturer. Tangy and colorful ingredient perfect for instant soup formulations, sauces, snack seasonings, and bakery uses." },
-    { name: "Triphala Powder", category: "herbal", image: "images/powders/Triphala.png", description: "Traditional Ayurvedic blend for digestion and detox." },
-    { name: "Bhumi Amla Powder", category: "herbal", image: "images/powders/BhumiAmla.png", description: "Ayurvedic liver-supporting herb for detoxification." },
-    { name: "Shatavari Powder", category: "herbal", image: "images/powders/Shatavari.png", description: "Pure dehydrated Shatavari (Asparagus racemosus) root powder. Traditional Ayurvedic herbal supplement for vitality, hormonal balance, lactation support, and general immunity." },
-    { name: "Yashtimadhu Powder", category: "herbal", image: "images/powders/Yashtimadhu.png", description: "Soothing herbal powder for throat and digestion." }
+  const B2B_CATEGORIES = [
+    { label: "All Products", icon: "📦" },
+    { label: "Fruit & Veggie Powders", icon: "🍌" },
+    { label: "Pure Spices", icon: "🌶️" },
+    { label: "Herbal & Wellness", icon: "🌿" }
   ];
+
+  const productsData = [
+    // 1. Banana Powder
+    { id: 1, name: "Banana Powder", category: "Fruit & Veggie Powders", image: "images/powders/Banana Powder.png", description: "100% pure green Cavendish banana powder. Rich in prebiotic resistant starch for infant nutrition & gluten-free baking.", spec: "80-100 Mesh • Moisture < 4.5%" },
+
+    // 2. Moringa Leaf Powder
+    { id: 2, name: "Moringa Leaf Powder", category: "Herbal & Wellness", image: "images/powders/Moringa Powder.jpg", description: "100% pure moringa leaf powder. Packed with 27% plant protein & 46 antioxidants.", spec: "Micro-Fine Mesh • Chlorophyll Rich" },
+
+    // 3. Salem Turmeric Powder
+    { id: 3, name: "Salem Turmeric Powder", category: "Pure Spices", image: "images/powders/Salem Turmeric Powder.png", description: "High-curcumin (3%+) pure turmeric powder for food processing, curry formulations & nutraceuticals.", spec: "Curcumin 3.0%+ • 80 Mesh" },
+
+    // 4. Beetroot Powder
+    { id: 4, name: "Beetroot Powder", category: "Fruit & Veggie Powders", image: "images/powders/Beetroot Powder.JPG", description: "Vibrant natural red betanin pigment for natural food coloring, meat processing & health beverages.", spec: "80 Mesh • 100% Water Soluble" },
+
+    // 5. Tea Masala
+    { id: 5, name: "Chaha (Tea) Masala", category: "Pure Spices", image: "images/powders/Tea Masala.JPG", description: "Proprietary aromatic tea masala spice formulation for instant chai premixes.", spec: "Custom Spice Ratio" },
+
+    // 6. Curry Leaves Powder
+    { id: 6, name: "Curry Leaves Powder", category: "Pure Spices", image: "images/powders/Curry Leaves Powder.JPG", description: "Pure Murraya koenigii leaf powder rich in essential oils for authentic curry mixes.", spec: "Fine Mesh • Rich Essential Oils" },
+
+    // 7. Garlic Powder
+    { id: 7, name: "Garlic Powder", category: "Pure Spices", image: "images/powders/Garlic Powder.JPG", description: "Pungent natural allicin garlic powder for meat seasonings, sausage premixes & instant gravies.", spec: "80-100 Mesh • Pure Allium" },
+
+    // 8. Ginger Powder
+    { id: 8, name: "Ginger Powder", category: "Pure Spices", image: "images/powders/Ginger Powder.JPG", description: "Aromatic gingerol-rich powder for tea premixes, bakery, confectionery & digestive formulations.", spec: "Pungency High • 80 Mesh" },
+
+    // 9-12. Chillies
+    { id: 9, name: "Bedgi Red Chilli Powder", category: "Pure Spices", image: "images/powders/Bedgyi Mirchi Powder.png", description: "Vibrant deep red Bedgi chilli variety, prized for intense natural color (ASTA 100+) & medium heat.", spec: "ASTA 100+ • Medium Heat" },
+    { id: 10, name: "Chapata Red Chilli Powder", category: "Pure Spices", image: "images/powders/Chapata Mirchi Powder.png", description: "High-spiciness Chapata chilli powder for intense heat profiles in hot sauces & snacks.", spec: "High Capsaicin • Rich Red" },
+    { id: 11, name: "Bedgi & Chapata Mix Powder", category: "Pure Spices", image: "images/powders/Bedgi and Chapata Mix Powder.JPG", description: "Balanced blend of Bedgi color and Chapata heat for commercial food manufacturers.", spec: "Color & Heat Synergistic Blend" },
+    { id: 12, name: "Yellow Chilli Powder", category: "Pure Spices", image: "images/powders/Yellow Chilli Powder.jpg", description: "Mild, aromatic yellow chilli powder for light gravies, pickles, marinades & yellow sauces.", spec: "100% Pure Yellow Variety" },
+
+    // 13-14. Veggie Powders
+    { id: 13, name: "Tomato Powder", category: "Fruit & Veggie Powders", image: "images/powders/Tomato Powder.png", description: "Tangy, rich lycopene-packed tomato powder for instant soup mixes, snack seasonings & tomato pastes.", spec: "Low-Temp Dried • Free Flowing" },
+    { id: 14, name: "Potato Powder", category: "Fruit & Veggie Powders", image: "images/powders/Potato Powder.JPG", description: "Smooth potato powder for thickeners, instant mashed potatoes & extruded snacks.", spec: "Food Grade • Low Moisture" },
+
+    // 15-17. Spices & RTC
+    { id: 15, name: "Red Onion Powder", category: "Pure Spices", image: "images/powders/Red Onion Powder.JPG", description: "Consistent onion flavor without moisture clumps for commercial seasonings & dry rub mixes.", spec: "80 Mesh • Free Flowing" },
+    { id: 16, name: "Garam Masala Blend", category: "Pure Spices", image: "images/powders/Garam Masala.JPG", description: "Roasted multi-spice Indian garam masala blend for food processors & commercial kitchens.", spec: "Custom Roasted Ratio" },
+    { id: 17, name: "Green Curry RTC Masala", category: "Pure Spices", image: "images/powders/Green Curry RTC Masala.JPG", description: "Ready-to-cook green curry spice formulation for instant meals.", spec: "Instant RTC Formulation" },
+
+    // 18-25. Herbal & Wellness
+    { id: 18, name: "Shatavari Powder", category: "Herbal & Wellness", image: "images/powders/Shatavari Powder.JPG", description: "Pure Asparagus racemosus root powder for vitality, hormonal health & nutraceutical drinks.", spec: "Saponins Rich • Pure Root" },
+    { id: 19, name: "Ashwagandha Powder", category: "Herbal & Wellness", image: "images/powders/Ashwagandha Powder.JPG", description: "Withanolide-rich Ayurvedic adaptogen root powder for energy, stress relief & wellness blends.", spec: "Withanolide 2.5%+ • Root Extract" },
+    { id: 20, name: "Lemongrass Powder", category: "Herbal & Wellness", image: "images/powders/Lemongrass Powder.JPG", description: "Aromatic citral-rich lemongrass powder for herbal teas, functional beverages & seasonings.", spec: "Citral Rich • Pure Leaf" },
+    { id: 21, name: "Guduchi (Giloy) Powder", category: "Herbal & Wellness", image: "images/powders/Guduchi Powder.JPG", description: "Immunity booster Tinospora cordifolia stem powder for wellness shots & herbal formulations.", spec: "Bitter Active • 100% Pure" },
+    { id: 22, name: "Neem Powder", category: "Herbal & Wellness", image: "images/powders/Neem Powder.JPG", description: "Medicinal Azadirachta indica leaf powder for health detox, cosmetics & organic agriculture.", spec: "Azadirachtin Active • Fine Mesh" },
+    { id: 23, name: "Triphala Powder", category: "Herbal & Wellness", image: "images/powders/Triphala Powder.JPG", description: "Synergistic 3-fruit Ayurvedic blend (Amla + Harda + Behda) for digestive wellness.", spec: "Classic 1:1:1 Traditional Ratio" },
+    { id: 24, name: "Harda (Haritaki) Powder", category: "Herbal & Wellness", image: "images/powders/Harda Powder.JPG", description: "Purifying Haritaki fruit powder for traditional Ayurvedic digestive formulations.", spec: "Tannin Rich • Clean Grinding" },
+    { id: 25, name: "Bael Powder", category: "Herbal & Wellness", image: "images/powders/Bael Powder.jpg", description: "Aegle marmelos fruit pulp powder rich in mucilage & fiber for gut health products.", spec: "High Mucilage • Gut Health" },
+    { id: 26, name: "Amla Powder", category: "Herbal & Wellness", image: "images/powders/Amla Powder.JPG", description: "High natural Vitamin C concentration for nutraceutical blends, immunity drinks & Ayurvedic formulations.", spec: "Fine Powder • Vitamin C 300mg+" }
+  ];
+
+  /* Render Individual Short B2B Product Card HTML */
+  function renderProductCard(p) {
+    return `
+      <div class="product-card b2b-card compact-card" onclick="openSpecModal('${p.name}')" data-category="${p.category}" style="cursor: pointer;">
+        <div class="product-img-wrap" style="width: 100%; aspect-ratio: 1 / 1; position: relative; overflow: hidden; background: #F8FAFC;">
+          <div class="product-card-top-badges" style="position: absolute; top: 10px; left: 10px; z-index: 5;">
+            <span class="product-category-badge" style="font-size: 0.68rem; font-weight: 700; background: rgba(10, 46, 29, 0.88); color: var(--accent-gold); padding: 3px 8px; border-radius: 6px;">${p.category}</span>
+          </div>
+          <img src="${p.image}" alt="${p.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" onerror="this.src='images/powders/Banana Powder.png'">
+        </div>
+        <div class="product-body" style="padding: 0.85rem 1rem 1rem 1rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
+          <h3 class="product-title" style="font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin: 0; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${p.name}</h3>
+          <button class="btn-quick-view" style="width: 100%; padding: 7px 10px; font-size: 0.78rem; font-weight: 700; background: var(--bg-linen); border: 1px solid var(--border-light); color: var(--primary-dark); border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
+            📋 View Details & Specs
+          </button>
+        </div>
+      </div>
+    `;
+  }
 
   /* ============================================================
      3. HERO BANNER SLIDER
@@ -172,126 +216,74 @@
     if (!slides.length) return;
 
     let currentSlide = 0;
-    let slideTimer = null;
+    let slideInterval;
 
     function goToSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
 
       currentSlide = (index + slides.length) % slides.length;
-
       slides[currentSlide].classList.add('active');
       if (dots[currentSlide]) dots[currentSlide].classList.add('active');
     }
 
-    function nextSlide() {
-      goToSlide(currentSlide + 1);
+    function startAutoplay() {
+      stopAutoplay();
+      slideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, 5000);
     }
 
-    function prevSlide() {
-      goToSlide(currentSlide - 1);
-    }
-
-    function startTimer() {
-      stopTimer();
-      slideTimer = setInterval(nextSlide, 5000);
-    }
-
-    function stopTimer() {
-      if (slideTimer) clearInterval(slideTimer);
+    function stopAutoplay() {
+      if (slideInterval) clearInterval(slideInterval);
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        nextSlide();
-        startTimer();
+        goToSlide(currentSlide + 1);
+        startAutoplay();
       });
     }
 
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        prevSlide();
-        startTimer();
+        goToSlide(currentSlide - 1);
+        startAutoplay();
       });
     }
 
     dots.forEach((dot, idx) => {
       dot.addEventListener('click', () => {
         goToSlide(idx);
-        startTimer();
+        startAutoplay();
       });
     });
 
-    startTimer();
+    startAutoplay();
   }
 
   /* ============================================================
-     4. RENDER PRODUCTS GRID & FILTERS
+     4. RENDER PRODUCTS GRID & SIDEBAR FILTERS
   ============================================================ */
-  function renderProductCard(p) {
-    const categoryName = p.category === 'powder' ? 'Fruit & Veggie' :
-      p.category === 'spices' ? 'Pure Spice' : 'Herbal Powder';
-
-    const categoryIcon = p.category === 'powder' ? '<i class="fa-solid fa-lemon" style="color: var(--accent-gold); margin-right: 4px;"></i>' :
-      p.category === 'spices' ? '<i class="fa-solid fa-pepper-hot" style="color: var(--accent-red); margin-right: 4px;"></i>' :
-        '<i class="fa-solid fa-leaf" style="color: #10B981; margin-right: 4px;"></i>';
-
-    return `
-      <div class="product-card" data-category="${p.category}">
-        <div class="product-img-wrap">
-          <div class="product-card-top-badges">
-            <span class="product-category-badge">${categoryIcon} ${categoryName}</span>
-          </div>
-          <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='images/powders/Banana.png'">
-        </div>
-        <div class="product-body">
-          <h3 class="product-title">${p.name}</h3>
-          <p class="product-desc">${p.description}</p>
-          <div class="product-feature-pills">
-            <span class="pill">🍃 100% Pure</span>
-            <span class="pill">⚡ Low-Temp Dried</span>
-          </div>
-          <div class="product-action-bar">
-            <button class="product-btn btn-primary-card" onclick="openQuoteModal('${p.name}')">
-              <span>Inquire Supply</span> <span class="arrow">→</span>
-            </button>
-            <button class="product-btn btn-quick-view" onclick="openSpecModal('${p.name}')" title="View Product Specifications">
-              📋 Specs
-            </button>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
   function initProductsCatalog() {
     const mainGrid = document.getElementById('mainProductsGrid');
     const fullGrid = document.getElementById('fullProductsGrid');
-    const filterBtns = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('productSearchInput');
+    const categoryNavList = document.getElementById('categoryNavList');
+    const currentCategoryTitle = document.getElementById('currentCategoryTitle');
+    const currentCategoryCount = document.getElementById('currentCategoryCount');
+    const searchCountBadge = document.getElementById('searchCountBadge');
 
-    const categorySelect = document.getElementById('productCategorySelect');
-
-    let currentCategory = 'all';
+    let activeCategory = 'All Products';
     let searchQuery = '';
 
-    // Parse URL query parameter for category (e.g. ?category=powder)
+    // Parse URL query parameter for category (e.g. ?category=herbal)
     const urlParams = new URLSearchParams(window.location.search);
     const paramCategory = urlParams.get('category');
-    if (paramCategory && ['powder', 'spices', 'herbal', 'all'].includes(paramCategory)) {
-      currentCategory = paramCategory;
-      // Sync button states
-      filterBtns.forEach(btn => {
-        if (btn.getAttribute('data-category') === currentCategory) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-      // Sync dropdown selector if present
-      if (categorySelect) {
-        categorySelect.value = currentCategory;
-      }
+    if (paramCategory) {
+      if (paramCategory === 'herbal') activeCategory = 'Herbal Powders';
+      else if (paramCategory === 'spices') activeCategory = 'Pure Spices';
+      else if (paramCategory === 'veggies' || paramCategory === 'powder') activeCategory = 'Vegetables';
     }
 
     // Render for home page (8 featured items)
@@ -300,69 +292,78 @@
       mainGrid.innerHTML = featured.map(p => renderProductCard(p)).join('');
     }
 
+    // Render Left Category Sidebar List
+    function renderCategorySidebar() {
+      if (!categoryNavList) return;
+
+      categoryNavList.innerHTML = B2B_CATEGORIES.map(cat => {
+        const count = cat.label === 'All Products' 
+          ? productsData.length 
+          : productsData.filter(p => p.category === cat.label).length;
+        
+        const isActive = activeCategory === cat.label;
+        return `
+          <li class="b2b-category-item ${isActive ? 'active' : ''}" data-cat="${cat.label}">
+            <span class="cat-label-wrap">
+              <span class="cat-icon">${cat.icon}</span>
+              <span>${cat.label}</span>
+            </span>
+            <span class="cat-badge">${count}</span>
+          </li>
+        `;
+      }).join('');
+
+      // Add Click Listeners to Sidebar Items
+      const items = categoryNavList.querySelectorAll('.b2b-category-item');
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          activeCategory = item.getAttribute('data-cat');
+          renderCategorySidebar();
+          updateFullGrid();
+        });
+      });
+    }
+
     // Function to update full catalog grid
     function updateFullGrid() {
       if (!fullGrid) return;
 
       const filtered = productsData.filter(p => {
-        const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+        const matchesCategory = activeCategory === 'All Products' || p.category === activeCategory;
         const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           p.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
       });
 
-      if (filtered.length === 0) {
-        fullGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 4rem; color: var(--text-muted);">
-          <h3>No products found</h3>
-          <p>Try searching for a different keyword or selecting 'All Products'</p>
-        </div>`;
-      } else {
-        fullGrid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
-      }
-    }
+      // Update Header Text & Count
+      if (currentCategoryTitle) currentCategoryTitle.textContent = activeCategory;
+      if (currentCategoryCount) currentCategoryCount.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? 'Ingredient' : 'Ingredients'}`;
+      if (searchCountBadge) searchCountBadge.textContent = `${filtered.length} Products`;
 
-    // Filter button handlers
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        currentCategory = this.getAttribute('data-category');
-
-        if (categorySelect) categorySelect.value = currentCategory;
-
-        if (mainGrid) {
-          const filtered = currentCategory === 'all' ? productsData.slice(0, 8) : productsData.filter(p => p.category === currentCategory);
-          mainGrid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
+      // Smooth Fade Transition
+      fullGrid.style.opacity = '0.3';
+      setTimeout(() => {
+        if (filtered.length === 0) {
+          fullGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 4rem; background:#FFFFFF; border-radius:16px; border:1px solid var(--border-light);">
+            <h3 style="color:var(--primary-dark); font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">No food ingredients found</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Try adjusting your search keyword or selecting 'All Products' from the left sidebar.</p>
+          </div>`;
+        } else {
+          fullGrid.innerHTML = filtered.map(p => renderProductCard(p)).join('');
         }
-
-        updateFullGrid();
-      });
-    });
-
-    // Category dropdown selector handler
-    if (categorySelect) {
-      categorySelect.addEventListener('change', function (e) {
-        currentCategory = e.target.value;
-        filterBtns.forEach(b => {
-          if (b.getAttribute('data-category') === currentCategory) {
-            b.classList.add('active');
-          } else {
-            b.classList.remove('active');
-          }
-        });
-        updateFullGrid();
-      });
+        fullGrid.style.opacity = '1';
+      }, 150);
     }
 
-    // Search input handler
+    // Search Input Listener
     if (searchInput) {
-      searchInput.addEventListener('input', function (e) {
+      searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value;
         updateFullGrid();
       });
     }
 
-    // Initial load for full grid
+    renderCategorySidebar();
     updateFullGrid();
   }
 
@@ -458,6 +459,43 @@
     `);
   };
 
+  window.openSpecModal = function (productName) {
+    const p = productsData.find(item => item.name.toLowerCase() === productName.toLowerCase());
+    if (!p) return;
+
+    openModal(`
+      <div class="product-spec-modal" style="display: flex; flex-direction: column; gap: 1.25rem; text-align: left; padding: 0.5rem;">
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start;">
+          <img src="${p.image}" alt="${p.name}" style="width: 220px; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border-light);" onerror="this.src='images/powders/Banana Powder.png'">
+          <div style="flex: 1; min-width: 220px;">
+            <span style="background: rgba(10, 46, 29, 0.1); color: var(--primary-dark); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">${p.category}</span>
+            <h2 style="font-size: 1.6rem; color: var(--primary-dark); font-weight: 800; margin: 0.5rem 0 0.25rem 0;">${p.name}</h2>
+            <div style="font-size: 0.8rem; color: #166534; font-weight: 700; margin-bottom: 0.75rem;">● 100% Pure • Low-Temp Dehydrated • Farm Direct</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">${p.description}</p>
+          </div>
+        </div>
+        
+        <div style="background: #F8FAFC; border-radius: 10px; padding: 1rem; border: 1px solid var(--border-light);">
+          <h4 style="font-size: 0.85rem; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; margin: 0 0 0.5rem 0;">⚡ Technical Specifications</h4>
+          <div style="font-size: 0.85rem; color: var(--primary-dark); font-weight: 700;">${p.spec || '80-100 Mesh • Food Grade • Export Ready'}</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; font-size: 0.8rem; color: var(--text-secondary);">
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); padding: 8px 12px; border-radius: 8px;"><strong>Moisture Content:</strong> &lt; 5.0%</div>
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); padding: 8px 12px; border-radius: 8px;"><strong>Origin:</strong> Jalgaon, Maharashtra</div>
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); padding: 8px 12px; border-radius: 8px;"><strong>Shelf Life:</strong> 24 Months</div>
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); padding: 8px 12px; border-radius: 8px;"><strong>Packaging:</strong> 25kg HDPE / Bag-in-Box</div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 0.5rem;">
+          <button class="btn btn-primary" onclick="closeModal(); openQuoteModal('${p.name}');" style="flex: 1; padding: 12px; text-align: center; border-radius: 8px; font-weight: 700;">
+            Send Enquiry for ${p.name} →
+          </button>
+        </div>
+      </div>
+    `);
+  };
+
   window.openQuoteModal = function (productName) {
     const productOptionsHtml = productsData.map(p =>
       `<option value="${p.name}" ${p.name === productName ? 'selected' : ''}>${p.name}</option>`
@@ -514,12 +552,13 @@
           const formData = new FormData(modalForm);
           const formJson = Object.fromEntries(formData.entries());
 
-          fetch('https://formsubmit.co/ajax/info@immfoodinnovators.in', {
+          fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify({
-              _subject: `Bulk Quote Request: ${formJson.product}`,
-              _template: 'table',
+              access_key: '4d0c3c98-6bd6-4751-88f0-353b9ad95f9c',
+              subject: `Bulk Quote Request: ${formJson.product || 'Products'}`,
+              from_name: 'IMM Food Innovators Website',
               ...formJson
             })
           })
@@ -769,56 +808,33 @@
       certNo: 'Lic. No. 11524020000123',
       scope: 'Commercial Dehydrated Food Manufacturing, Spices Processing, and Wholesale Bulk Packaging.'
     },
-    'haccp': {
-      title: 'HACCP Hazard Analysis Critical Control Point',
-      doc: 'images/certifications/haccp.jpg',
-      authority: 'Global Food Safety Hygiene Board',
-      certNo: 'HACCP-IMM-2026-77',
-      scope: 'Critical Control Point Monitoring, Low-Temperature Dehydration Airflow Hygiene, and Microbiological Control.'
-    },
     'gmp': {
       title: 'GMP Good Manufacturing Practice',
-      doc: 'images/certifications/gmp.jpg',
+      doc: 'images/certifications/GMP.jpg',
       authority: 'Good Manufacturing Practice Board',
       certNo: 'GMP-IMM-2026-44',
       scope: 'Sanitation Protocols, Cleanroom Packaging Environment, Equipment Washing, and Contamination Prevention.'
     },
     'udyam': {
-      title: 'APEDA Export & Udyam MSME Registration',
+      title: 'Udyam MSME Registration Certificate',
       doc: 'images/certifications/apeda_udyam.jpg',
-      authority: 'Ministry of Micro, Small & Medium Enterprises / APEDA',
+      authority: 'Ministry of Micro, Small & Medium Enterprises (MSME)',
       certNo: 'UDYAM-MH-15-0098765',
-      scope: 'Export Merchant Registration, Enterprise Certification, and B2B Global Distribution.'
+      scope: 'Enterprise Registration & B2B Global Distribution.'
     }
   };
 
   window.openCertModal = function (certKey) {
     const info = certDetailsData[certKey] || certDetailsData['iso-9001'];
+    const docSrc = info ? info.doc : 'images/certifications/iso_9001.jpg';
     const modalBody = document.getElementById('modalBody');
     const modalOverlay = document.getElementById('modalOverlay');
 
     if (!modalBody || !modalOverlay) return;
 
     modalBody.innerHTML = `
-      <div style="text-align: center; padding: 0.5rem 0;">
-        <div class="section-badge badge-gold" style="margin-bottom: 0.5rem;">OFFICIAL CERTIFICATION DOCUMENT</div>
-        <h2 style="font-size: var(--font-size-xl); color: var(--primary-dark); margin-bottom: 0.5rem; font-weight: var(--weight-bold);">${info.title}</h2>
-        <p style="font-size: var(--font-size-sm); color: var(--text-muted); margin-bottom: 1.5rem;">Issued to <strong>IMM Food Innovators LLP</strong> • Certified Processing Plant in Yawal, Jalgaon, Maharashtra</p>
-        
-        <div style="background: var(--bg-linen); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid var(--border-light); display: flex; flex-direction: column; align-items: center;">
-          <img src="${info.doc}" alt="${info.title}" style="max-width: 280px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md); margin-bottom: 1.25rem;" onerror="this.src='${info.badge}'">
-          
-          <div style="width: 100%; text-align: left; background: #FFFFFF; border-radius: var(--radius-sm); padding: 1.25rem; border: 1px solid var(--border-light);">
-            <div style="font-size: var(--font-size-sm); color: var(--primary-dark); margin-bottom: 0.5rem;"><strong>Issuing Authority:</strong> ${info.authority}</div>
-            <div style="font-size: var(--font-size-sm); color: var(--primary-dark); margin-bottom: 0.5rem;"><strong>Registration / License No:</strong> <span style="font-family: monospace; font-weight: 700; color: var(--accent-red);">${info.certNo}</span></div>
-            <div style="font-size: var(--font-size-sm); color: var(--text-secondary); line-height: 1.5;"><strong>Certified Operational Scope:</strong> ${info.scope}</div>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="${info.doc}" download="${info.title}.svg" target="_blank" class="btn-primary" style="padding: 10px 24px; font-size: var(--font-size-sm);">Download Certificate Document <i class="fa-solid fa-download" style="margin-left: 6px;"></i></a>
-          <button class="btn-secondary" style="padding: 10px 24px; font-size: var(--font-size-sm);" onclick="document.getElementById('modalOverlay').classList.remove('active')">Close Window</button>
-        </div>
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding: 0.5rem 0;">
+        <img src="${docSrc}" alt="Official Certificate Document" style="max-width: 100%; max-height: 82vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); object-fit: contain; display: block; margin: 0 auto;">
       </div>
     `;
 
@@ -948,12 +964,13 @@
       const formData = new FormData(contactForm);
       const formJson = Object.fromEntries(formData.entries());
 
-      fetch('https://formsubmit.co/ajax/info@immfoodinnovators.in', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          _subject: `New Homepage B2B Inquiry: ${formJson.product || 'General'}`,
-          _template: 'table',
+          access_key: '4d0c3c98-6bd6-4751-88f0-353b9ad95f9c',
+          subject: `New Homepage B2B Inquiry: ${formJson.product || 'General'}`,
+          from_name: 'IMM Food Innovators Website',
           ...formJson
         })
       })
@@ -964,7 +981,7 @@
             submitBtn.disabled = false;
           }
           if (successMessage) {
-            successMessage.innerHTML = `✓ Thank you! Your inquiry has been sent to info@immfoodinnovators.in.<br><a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20just%20submitted%20a%20website%20inquiry%20for%20${encodeURIComponent(formJson.product || 'products')}" target="_blank" style="display:inline-block; margin-top: 10px; background:#25D366; color:#fff; padding:8px 16px; border-radius:50px; text-decoration:none; font-weight:700;">💬 Send Instant WhatsApp Copy to Sales (+91 91144 03000)</a>`;
+            successMessage.innerHTML = `✓ Thank you! Your inquiry has been sent to info@immfoodinnovators.in.<br><a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20just%20submitted%20a%20website%20inquiry%20for%20${encodeURIComponent(formJson.product || 'products')}" target="_blank" style="display:inline-block; margin-top: 10px; background:#25D366; color:#fff; padding:8px 16px; border-radius:50px; text-decoration:none; font-weight:700;">💬 Send Instant WhatsApp Copy to Sales (+91 9114403000)</a>`;
             successMessage.style.display = 'block';
           }
           contactForm.reset();
