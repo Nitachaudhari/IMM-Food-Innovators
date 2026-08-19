@@ -2652,6 +2652,7 @@ footer .logo-img {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
   }
+}
 
 /* ── CTA Banner Component ── */
 .cta-banner, .cta-box {
@@ -2956,7 +2957,7 @@ footer .logo-img {
 ================================================================ */
 .product-scroll-area {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 1.15rem !important;
   max-height: 680px !important;
   overflow-y: auto !important;
