@@ -1756,30 +1756,40 @@ nav ul {
 }
 
 .faq-cat-btn {
-  padding: 0.6rem 1.25rem;
+  padding: 0.65rem 1.35rem;
   border-radius: 50px;
   border: 1px solid var(--border-light);
   background: #FFFFFF;
   color: var(--primary-dark);
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(10, 46, 29, 0.05);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .faq-cat-btn:hover {
-  background: rgba(10, 46, 29, 0.05);
+  background: rgba(10, 46, 29, 0.06);
   border-color: var(--primary-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 46, 29, 0.1);
 }
 
 .faq-cat-btn.active {
-  background: var(--primary-dark);
-  color: #FFFFFF;
-  border-color: var(--primary-dark);
-  box-shadow: 0 4px 12px rgba(10, 46, 29, 0.2);
+  background: var(--primary-dark) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary-dark) !important;
+  box-shadow: 0 4px 14px rgba(10, 46, 29, 0.25) !important;
+}
+
+.faq-cat-btn:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
 }
 
 .faq-container {
@@ -1821,6 +1831,17 @@ nav ul {
   border: none;
   cursor: pointer;
   gap: 1rem;
+  transition: background 0.2s ease;
+  outline: none;
+}
+
+.faq-header:hover {
+  background: rgba(10, 46, 29, 0.02);
+}
+
+.faq-header:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: -2px;
 }
 
 .faq-header-text {
@@ -1843,24 +1864,41 @@ nav ul {
 }
 
 .faq-toggle-btn {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
   border-radius: 50%;
   background: rgba(10, 46, 29, 0.08);
   color: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, color 0.3s ease;
 }
 
 .faq-item.active .faq-toggle-btn {
   transform: rotate(45deg);
   background: var(--primary-dark);
   color: var(--accent-gold);
+}
+
+@media (max-width: 640px) {
+  .faq-categories {
+    gap: 0.5rem;
+  }
+
+  .faq-cat-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .faq-header {
+    padding: 1rem 1.15rem;
+    font-size: 0.98rem;
+  }
 }
 
 .faq-body {
