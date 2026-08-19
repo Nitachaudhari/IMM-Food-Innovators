@@ -2957,13 +2957,19 @@ footer .logo-img {
 ================================================================ */
 .product-scroll-area {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 1.15rem !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1rem !important;
   height: auto !important;
   max-height: none !important;
   overflow-y: visible !important;
   padding-right: 0 !important;
   transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+  .product-scroll-area {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
 
 /* Custom Scrollbar for Right Product Panel */
