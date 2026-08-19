@@ -618,7 +618,7 @@
     let activeMarker = "100% Pure Farm-Fresh Dehydrated Extract";
     let color = "Characteristic Natural Color";
     let odor = "Fresh Characteristic Aroma";
-    let packaging = "25 kg Food-Grade Aluminum Foil Lined Bulk Packaging";
+    let packaging = "25 kg / 50 kg Food-Grade HDPE Bag for Bulk Quantity";
     let shelfLife = "12 Months (Cool & Dry Storage)";
     let moq = "100 kg Domestic & Export";
     let brixSolubility = "Water Dispersible";
@@ -630,7 +630,7 @@
       activeMarker = "Prebiotic Resistant Starch (~82%) & Potassium (>1,200 mg/100g)";
       color = "Off-White to Pale Creamy Yellow";
       odor = "Sweet Natural Cavendish Banana Aroma";
-      packaging = "25 kg Triple-Barrier Aluminum Foil Lined Bulk Packaging";
+      packaging = "25 kg / 50 kg Food-Grade HDPE Bag for Bulk Quantity";
       shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Smooth Dispersible / Non-Clumping";
@@ -641,7 +641,7 @@
       activeMarker = "Active Curcuminoids (3.5% - 5.0% Curcumin)";
       color = "Vibrant Deep Golden Yellow";
       odor = "Warm, Pungent & Earthy Aroma";
-      packaging = "25 kg Moisture-Proof Woven Packaging with Inner PE Liner";
+      packaging = "25 kg / 50 kg Moisture-Proof HDPE Bag with Inner PE Liner";
       shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Dispersible in Warm Water & Fats";
@@ -652,7 +652,7 @@
       activeMarker = "Active Gingerols (>1.5%) & Volatile Essential Oils (>1.8%)";
       color = "Light Tan to Pale Buff Yellow";
       odor = "Strong Spicy Pungent Aroma";
-      packaging = "25 kg Moisture-Proof Poly-Lined Bulk Packaging";
+      packaging = "25 kg / 50 kg Moisture-Proof Poly-Lined HDPE Bag";
       shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Earthy Dispersible";
@@ -663,7 +663,7 @@
       activeMarker = "Natural Allicin / Alliin Pungent Organosulfur Compounds";
       color = nameLower.includes("white") ? "Off-White Cream" : nameLower.includes("red") ? "Pinkish Buff" : "Creamish Buff";
       odor = "Intense Pungent Characteristic Allium Aroma";
-      packaging = "20 kg Sealed Aluminum Foil Moisture Barrier Box Packaging";
+      packaging = "20 kg / 25 kg Sealed HDPE Bag in Corrugated Box";
       shelfLife = "12 Months (Hygroscopic - Keep Sealed)";
       moq = "200 kg";
       brixSolubility = "Instant Water Dispersible";
@@ -685,7 +685,7 @@
       activeMarker = "Crude Bioactive Protein (>27%) & Rich Chlorophyll";
       color = "Vibrant Deep Emerald Green";
       odor = "Fresh Leafy Herbal Aroma";
-      packaging = "25 kg Vacuum-Sealed Aluminum Foil Lined Packaging";
+      packaging = "25 kg / 50 kg Sealed Food-Grade HDPE Bag";
       shelfLife = "12 Months";
       moq = "50 kg";
       brixSolubility = "Dispersible in Water / Juice";
@@ -696,7 +696,7 @@
       activeMarker = "Steroidal Saponins (Shatavarins)";
       color = "Light Beige to Buff Cream";
       odor = "Sweetish Slightly Bitter Herbal Aroma";
-      packaging = "25 kg Sealed Poly-Lined Bulk Packaging";
+      packaging = "25 kg / 50 kg Poly-Lined HDPE Bag for Bulk Quantity";
       shelfLife = "12 Months";
       moq = "50 kg";
       brixSolubility = "Partially Soluble in Warm Liquids";
@@ -707,7 +707,7 @@
       activeMarker = "Natural Lycopene (>300 mg/kg) & Brix >90%";
       color = "Brilliant Natural Red";
       odor = "Tangy Ripe Tomato Flavor";
-      packaging = "20 kg Foil-Lined Moisture-Lock Box Packaging";
+      packaging = "20 kg / 25 kg Moisture-Lock HDPE Bag in Box";
       shelfLife = "12 Months";
       moq = "200 kg";
       brixSolubility = "High Water Solubility (>92%)";
@@ -718,7 +718,7 @@
       activeMarker = "Natural Vitamin C (>4000 mg/100g) & Gallic Acid";
       color = "Tan Brownish Green";
       odor = "Astringent Sour Taste";
-      packaging = "25 kg PE Lined Food-Grade Bulk Packaging";
+      packaging = "25 kg / 50 kg PE Lined Food-Grade HDPE Bag";
       shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Water Dispersible";
@@ -729,7 +729,7 @@
       activeMarker = "Capsaicin Content (20,000 - 45,000 SHU)";
       color = nameLower.includes("green") ? "Vibrant Green" : "Bright Red";
       odor = "Pungent Spicy Heat";
-      packaging = "25 kg Moisture Barrier Lined Bulk Packaging";
+      packaging = "25 kg / 50 kg Moisture Barrier Lined HDPE Bag";
       shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Dispersible in Oils & Water";
@@ -740,7 +740,7 @@
       activeMarker = "Natural Betanin Pigment & Dietary Nitrates";
       color = "Deep Ruby Red / Magenta";
       odor = "Earthy Sweet Beetroot Flavor";
-      packaging = "25 kg Sealed Food-Grade Poly Packaging in Corrugated Box";
+      packaging = "25 kg / 50 kg Sealed Food-Grade Poly HDPE Bag";
       shelfLife = "12 Months";
       moq = "100 kg";
       brixSolubility = "Fully Water Soluble (>95%)";
@@ -751,7 +751,7 @@
       activeMarker = "100% Pure Standardized Botanical Powder";
       color = "Natural Earthy Tan/Brown";
       odor = "Characteristic Herbal Aroma";
-      packaging = "25 kg Sealed Poly-Lined Bulk Packaging";
+      packaging = "25 kg / 50 kg Poly-Lined HDPE Bag for Bulk Quantity";
       shelfLife = "12 Months";
       moq = "50 kg";
       brixSolubility = "Herbal Dispersible";
