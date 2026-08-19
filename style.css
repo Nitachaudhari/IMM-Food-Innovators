@@ -2959,10 +2959,10 @@ footer .logo-img {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 1.15rem !important;
-  max-height: 680px !important;
-  overflow-y: auto !important;
-  padding-right: 8px !important;
-  scroll-behavior: smooth !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+  padding-right: 0 !important;
   transition: opacity 0.3s ease;
 }
 
