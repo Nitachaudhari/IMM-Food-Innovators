@@ -168,23 +168,23 @@
             <!-- MAIN PRODUCTS TWO-COLUMN LAYOUT (NO INNER SCROLLBAR, NATURAL PAGE SCROLL) -->
             <div class="products-layout" style="display: flex; gap: 1.5rem; align-items: flex-start;">
                 
-                <!-- LEFT CATEGORY SIDEBAR (FULL SCREEN VIEWPORT HEIGHT, STICKY) -->
-                <aside class="category-sidebar" style="flex: 0 0 280px; width: 280px; background: #FFFFFF; border-radius: 16px; border: 1px solid var(--border-light); box-shadow: 0 8px 30px rgba(10, 46, 29, 0.06); padding: 1.5rem 1.25rem; position: sticky; top: 95px; height: calc(100vh - 115px); min-height: 600px; display: flex; flex-direction: column; justify-content: space-between; z-index: 10;">
+                <!-- LEFT CATEGORY SIDEBAR -->
+                <aside class="category-sidebar">
                     <div>
-                        <div style="padding-bottom: 0.85rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-light);">
+                        <div class="category-sidebar-header" style="padding-bottom: 0.85rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-light);">
                             <h3 style="font-size: 0.85rem; color: var(--primary-dark); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; display: flex; align-items: center; gap: 8px;">
                                 <i class="fa-solid fa-layer-group" style="color: var(--accent-gold);"></i> Product Categories
                             </h3>
                         </div>
 
-                        <!-- VERTICAL CATEGORY NAV -->
-                        <ul class="b2b-category-nav" id="categoryNavList" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <!-- VERTICAL / HORIZONTAL CATEGORY NAV -->
+                        <ul class="b2b-category-nav" id="categoryNavList">
                             <!-- Rendered via JS -->
                         </ul>
                     </div>
 
                     <!-- BOTTOM B2B QUOTE BADGE -->
-                    <div style="background: var(--bg-linen); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-light); text-align: center; margin-top: 1.5rem;">
+                    <div class="b2b-quote-box" style="background: var(--bg-linen); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-light); text-align: center; margin-top: 1.5rem;">
                         <span style="font-size: 1.2rem; display: block; margin-bottom: 4px;">📦</span>
                         <h4 style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin: 0 0 4px 0;">Bulk Export Orders</h4>
                         <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0 0 8px 0;">Ready in 25kg Bag-in-Box & HDPE Drums.</p>

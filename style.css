@@ -1742,6 +1742,46 @@ nav ul {
   background: var(--bg-linen);
 }
 
+.faq-categories-wrapper {
+  max-width: 900px;
+  margin: 0 auto 2.25rem auto;
+  padding: 0 var(--space-lg);
+}
+
+.faq-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.faq-cat-btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-light);
+  background: #FFFFFF;
+  color: var(--primary-dark);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-cat-btn:hover {
+  background: rgba(10, 46, 29, 0.05);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.faq-cat-btn.active {
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(10, 46, 29, 0.2);
+}
+
 .faq-container {
   max-width: 900px;
   margin: 0 auto;
@@ -1754,30 +1794,58 @@ nav ul {
   border-radius: var(--radius-md);
   margin-bottom: 1rem;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.faq-item.hidden {
+  display: none !important;
 }
 
 .faq-item.active {
-  border-color: rgba(10, 46, 29, 0.3);
-  box-shadow: var(--shadow-sm);
+  border-color: rgba(10, 46, 29, 0.4);
+  box-shadow: 0 4px 20px rgba(10, 46, 29, 0.08);
 }
 
 .faq-header {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: left;
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--primary-dark);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.faq-header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.faq-category-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #D97706;
+  background: rgba(245, 158, 11, 0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
 }
 
 .faq-toggle-btn {
   width: 32px;
   height: 32px;
+  min-width: 32px;
   border-radius: 50%;
   background: rgba(10, 46, 29, 0.08);
   color: var(--primary-dark);
@@ -1786,7 +1854,7 @@ nav ul {
   justify-content: center;
   font-size: 1.2rem;
   font-weight: 800;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .faq-item.active .faq-toggle-btn {
@@ -1802,14 +1870,37 @@ nav ul {
 }
 
 .faq-item.active .faq-body {
-  max-height: 300px;
+  max-height: 1000px;
   padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .faq-body p {
   font-size: 0.95rem;
   color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.faq-body p strong {
+  color: var(--primary-dark);
+}
+
+.faq-list {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.faq-list li {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
   line-height: 1.6;
+}
+
+.faq-list li strong {
+  color: var(--primary-dark);
 }
 
 /* ================================================================
@@ -2974,52 +3065,117 @@ footer .logo-img {
   font-weight: 800 !important;
 }
 
+/* B2B Catalog Two-Column Layout (Desktop Default) */
+.category-sidebar {
+  flex: 0 0 280px;
+  width: 280px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 30px rgba(10, 46, 29, 0.06);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.b2b-category-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 @media (min-width: 992px) {
   .category-sidebar {
     position: sticky !important;
     top: 95px !important;
     height: calc(100vh - 115px) !important;
     min-height: 600px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
   }
 }
 
-/* Responsive Mobile Layout for Two-Column B2B Catalog */
+/* Responsive Mobile Layout for B2B Catalog */
 @media (max-width: 991px) {
   .products-layout {
     display: flex !important;
     flex-direction: column !important;
+    gap: 1rem !important;
     height: auto !important;
     overflow: visible !important;
+    align-items: stretch !important;
   }
+
   .category-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
     height: auto !important;
-    border-right: none !important;
-    border-bottom: 1px solid var(--border-light) !important;
-    padding: 1rem !important;
+    min-height: 0 !important;
+    position: static !important;
+    padding: 0.85rem 1rem !important;
+    border-radius: 12px !important;
+    box-shadow: var(--shadow-sm) !important;
+    margin-bottom: 0.5rem !important;
   }
+
+  .category-sidebar-header {
+    display: none !important;
+  }
+
+  .b2b-quote-box {
+    display: none !important;
+  }
+
   .b2b-category-nav {
+    display: flex !important;
     flex-direction: row !important;
     overflow-x: auto !important;
     white-space: nowrap !important;
-    padding-bottom: 6px !important;
+    padding: 4px 0 6px 0 !important;
+    gap: 8px !important;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+
+  .b2b-category-nav::-webkit-scrollbar {
+    display: none;
+  }
+
   .b2b-category-item {
     flex: 0 0 auto !important;
-    padding: 9px 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 8px 14px !important;
+    border-radius: 50px !important;
     font-size: 0.85rem !important;
+    border: 1px solid var(--border-light) !important;
+    background: #F8FAFC !important;
+    margin: 0 !important;
   }
-  .b2b-category-item:hover {
-    transform: none !important;
+
+  .b2b-category-item.active {
+    background: var(--primary-dark) !important;
+    color: #FFFFFF !important;
+    border-color: var(--primary-dark) !important;
   }
+
+  .b2b-category-item.active .cat-badge {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: #FFFFFF !important;
+  }
+
   .product-panel {
+    width: 100% !important;
     height: auto !important;
     overflow: visible !important;
     padding: 1.25rem 1rem !important;
+    border-radius: 12px !important;
   }
+
   .product-scroll-area {
     height: auto !important;
     max-height: none !important;
@@ -3032,5 +3188,16 @@ footer .logo-img {
 @media (max-width: 640px) {
   .product-scroll-area {
     grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .product-panel > div:first-child {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  .product-panel > div:first-child > div:last-of-type {
+    width: 100% !important;
   }
 }

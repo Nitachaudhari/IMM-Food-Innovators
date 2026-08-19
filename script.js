@@ -886,20 +886,63 @@
   }
 
   /* ============================================================
-     7. FAQ ACCORDION
+     7. FAQ ACCORDION & CATEGORY FILTERING
   ============================================================ */
   function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
+    const categoryBtns = document.querySelectorAll('.faq-cat-btn');
+
+    if (!faqItems.length) return;
+
+    // Accordion Toggle Logic
     faqItems.forEach(item => {
       const header = item.querySelector('.faq-header');
       if (!header) return;
 
       header.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        faqItems.forEach(i => i.classList.remove('active'));
-        if (!isActive) item.classList.add('active');
+        
+        // Close all items
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          const btn = i.querySelector('.faq-header');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (!isActive) {
+          item.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
+        }
       });
     });
+
+    // Category Filter Buttons Logic
+    if (categoryBtns.length) {
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedCat = btn.getAttribute('data-category');
+
+          // Update active button
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Filter items
+          faqItems.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+            item.classList.remove('active');
+            const header = item.querySelector('.faq-header');
+            if (header) header.setAttribute('aria-expanded', 'false');
+
+            if (selectedCat === 'all' || itemCat === selectedCat) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    }
   }
 
   /* ============================================================
