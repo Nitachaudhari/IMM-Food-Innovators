@@ -12,6 +12,118 @@
   ============================================================ */
   const blogsData = [
     {
+      id: "dehydrated-powder-supplier-buyers-guide-india",
+      title: "Choosing a Bulk Dehydrated Powder Supplier in India: A B2B Buyer's Checklist",
+      metaTitle: "Bulk Dehydrated Powder Supplier India | B2B Buyer Guide",
+      metaDescription: "A practical checklist for sourcing bulk banana, moringa, shatavari & turmeric powder in India — certifications, lab reports, and drying process explained.",
+      category: "B2B Sourcing & Quality",
+      date: "September 3, 2026",
+      readTime: "7 min read",
+      image: "images/blog_b2b_dehydrated_powder_checklist.png",
+      excerpt: "Banana, moringa, shatavari and turmeric powder — what to check before you commit to a bulk supplier in India.",
+      content: `
+        <p class="lead-text" style="font-size: 1.12rem; line-height: 1.75; color: var(--primary-dark); font-weight: 500; margin-bottom: 1.5rem;">
+          If you're sourcing dehydrated fruit, herbal, or spice powder in bulk — for a food brand, a nutraceutical formulation, a bakery ingredient line, or export — the hardest part usually isn't finding a supplier. A search for <em>"banana powder manufacturer"</em> or <em>"moringa powder bulk supplier"</em> turns up dozens of listings. The hard part is telling which of them will still be answering your calls, holding their spec, and passing your quality audit six months into the relationship.
+        </p>
+
+        <p>Here's a practical checklist, built around what we look for in our own supply chain and what buyers regularly ask us for.</p>
+
+        <h3 style="margin-top: 2rem; color: var(--primary-dark); font-weight: 700;">1. Where is it actually grown and processed?</h3>
+        <p>Raw material consistency starts before the dehydration line — it starts in the field. A supplier sitting inside an established growing belt has shorter, more predictable harvest-to-processing windows and a deeper bench of local farmers to draw on when one crop cycle underperforms.</p>
+        <p><strong>Jalgaon district in Maharashtra</strong> — often called India's banana capital — is a useful example. It's not just banana: the wider Khandesh region has a long-standing base of vegetable, spice, and medicinal-herb cultivation alongside it. A processor based there isn't importing raw material across the country before it even reaches the drying line.</p>
+        <div style="background: #F0FDF4; border-left: 4px solid #10B981; padding: 1.25rem; margin: 1.25rem 0; border-radius: 0 8px 8px 0;">
+          <strong style="color: #065F46;">Ask your supplier:</strong> Do you source directly from farmers, or through multiple layers of traders? Direct or contract-farming relationships (ours currently cover 250+ acres) mean fewer hands between the field and your finished powder, and better traceability if something needs to be investigated.
+        </div>
+
+        <h3 style="margin-top: 2rem; color: var(--primary-dark); font-weight: 700;">2. Which certifications does the facility actually hold?</h3>
+        <p>Certification badges get thrown around loosely in this industry, so it's worth knowing what each one is actually supposed to guarantee:</p>
+        <ul style="line-height: 1.8; margin-bottom: 1.5rem;">
+          <li><strong>FSSAI</strong> — the baseline legal license to manufacture and sell food in India. Table stakes, not a differentiator.</li>
+          <li><strong>ISO 22000:2018</strong> — a food safety management system audited against hazard-control practices across the whole process, not just the finished product.</li>
+          <li><strong>ISO 9001:2015</strong> — a quality management system covering consistency of process, not just food safety specifically.</li>
+          <li><strong>GMP (Good Manufacturing Practice)</strong> — hygiene, facility, and handling standards on the production floor itself.</li>
+        </ul>
+        <p>None of these alone proves a specific batch is clean — they prove the system around that batch is being managed. For that, you need the next item.</p>
+
+        <h3 style="margin-top: 2rem; color: var(--primary-dark); font-weight: 700;">3. Ask for the lab report, not just the claim</h3>
+        <p>Any supplier can describe their powder as "premium" or "export quality." What you actually want is a <strong>Certificate of Analysis (COA)</strong> from an independent, accredited lab — ideally <strong>NABL-accredited</strong> (National Accreditation Board for Testing and Calibration Laboratories), which means the lab itself has been audited for testing competence, not just hired by the supplier.</p>
+        <p>A COA worth trusting should show, at minimum: moisture content, microbial load (Total Plate Count), and yeast & mould presence — plus whatever nutrient or active-compound panel is relevant to your use case (protein, curcumin, fibre, and so on).</p>
+        <div style="background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 1.25rem; margin: 1.25rem 0; border-radius: 0 8px 8px 0;">
+          <p style="margin: 0; font-size: 0.95rem; color: #1E3A8A;"><strong>As an example of what this looks like in practice:</strong> Here's a real, current NABL result for our tray-dehydrated banana powder (Shree ATR Laboratory, NABL Certificate No. TC-14380): <strong>moisture 7.91g/100g, Total Plate Count 70 cfu/g, yeast & mould absent</strong>. That TPC figure in particular is well inside the range a food-grade buyer wants to see — it's a direct read on how clean the drying and packaging process actually was.</p>
+        </div>
+        <p>The point isn't this one number. It's that you should be able to get a report like this, for the specific product and ideally the specific batch you're buying, before you place a bulk order — not a generic spec sheet reused across every SKU.</p>
+
+        <h3 style="margin-top: 2rem; color: var(--primary-dark); font-weight: 700;">4. How is it actually dried?</h3>
+        <p>The drying method changes the product, not just the price. Three you'll commonly run into:</p>
+        <ul style="line-height: 1.8; margin-bottom: 1.5rem;">
+          <li><strong>Sun/solar drying</strong> — cheapest, but exposed to contamination, inconsistent temperature, and weather risk. Hard to standardize batch to batch.</li>
+          <li><strong>Spray drying</strong> — used for fine, instant-soluble powders (common for some potato or dairy powders); requires different equipment and a liquid-slurry input, and isn't typically how fruit, leaf, or root powders like banana, moringa, or shatavari are made.</li>
+          <li><strong>Tray/tunnel dehydration at a controlled temperature</strong> — the middle ground most fruit, vegetable, and herbal powder manufacturers (including us) actually use. Keeping the temperature controlled and consistent — we run our lines at a fixed, tested drying temperature rather than "however hot it gets" — is what keeps color, texture, and composition from swinging between batches.</li>
+        </ul>
+        <p>Ask your supplier which method they use and why, rather than assuming "dehydrated" means the same process everywhere.</p>
+
+        <h3 style="margin-top: 2rem; color: var(--primary-dark); font-weight: 700;">5. Can they support your actual order size — not just your first order?</h3>
+        <p>A supplier who quotes you a great price for a 5kg sample bag may not have 15 metric tons sitting ready when your production schedule needs it. Before you commit, confirm:</p>
+        <ul style="line-height: 1.8; margin-bottom: 1.5rem;">
+          <li><strong>Published packaging sizes</strong> (we run 25kg bulk packs as standard) and whether smaller trial quantities are available.</li>
+          <li><strong>Minimum order quantity</strong>, and whether pricing actually changes at higher volume tiers — a supplier with a real tiered pricing structure is usually a supplier who's shipped enough volume to know their own costs at scale.</li>
+          <li><strong>Current stock position and lead time</strong>. "Made to order" and "ready for immediate dispatch" are very different promises.</li>
+        </ul>
+
+        <h3 style="margin-top: 2.5rem; color: var(--primary-dark); font-weight: 700;">6. A quick reference for four commonly-sourced powders</h3>
+        <div style="overflow-x: auto; margin: 1.5rem 0;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr style="background: var(--primary-dark); color: #FFFFFF;">
+                <th style="padding: 14px 16px; width: 22%;">Product</th>
+                <th style="padding: 14px 16px; width: 38%;">What buyers typically use it for</th>
+                <th style="padding: 14px 16px; width: 40%;">What to specifically verify</th>
+              </tr>
+            </thead>
+            <tbody style="line-height: 1.6; color: var(--text-secondary);">
+              <tr style="border-bottom: 1px solid var(--border-light); background: #FFFFFF;">
+                <td style="padding: 12px 16px; font-weight: 700;"><a href="products.html?search=banana" style="color: var(--primary-dark); text-decoration: underline;">Banana powder</a></td>
+                <td style="padding: 12px 16px;">Baby/infant food, bakery, nutraceutical bases, extruded snacks</td>
+                <td style="padding: 12px 16px;">Moisture %, microbial load, resistant starch (if for a functional-food use case — ask if this has been tested)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light); background: #F8FAFC;">
+                <td style="padding: 12px 16px; font-weight: 700;"><a href="products.html?search=moringa" style="color: var(--primary-dark); text-decoration: underline;">Moringa powder</a></td>
+                <td style="padding: 12px 16px;">Nutraceuticals, functional foods, wellness blends</td>
+                <td style="padding: 12px 16px;">Protein % and colour/chlorophyll retention — ask for the leaf-only sourcing practice, since stem content directly drags down protein results</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light); background: #FFFFFF;">
+                <td style="padding: 12px 16px; font-weight: 700;"><a href="products.html?search=shatavari" style="color: var(--primary-dark); text-decoration: underline;">Shatavari powder</a></td>
+                <td style="padding: 12px 16px;">Ayurvedic/herbal formulations, wellness supplements</td>
+                <td style="padding: 12px 16px;">Root sourcing and grade, since shatavari pricing and quality both vary significantly by grade</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light); background: #F8FAFC;">
+                <td style="padding: 12px 16px; font-weight: 700;"><a href="products.html?search=turmeric" style="color: var(--primary-dark); text-decoration: underline;">Turmeric powder</a></td>
+                <td style="padding: 12px 16px;">Spice blends, nutraceuticals, food colour/flavour applications</td>
+                <td style="padding: 12px 16px;">Curcumin content and — particularly for export — heavy-metals testing, which not every domestic supplier runs by default</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-muted); font-style: italic; margin-bottom: 2rem;">This isn't a ranking of one product over another — it's a reminder that each of these has a different thing that actually matters most, and a supplier's marketing copy won't always tell you which one to ask about.</p>
+
+        <div style="background: #FDF8F0; border: 1px solid #FCD34D; border-radius: 12px; padding: 1.75rem; margin: 2.5rem 0;">
+          <h3 style="margin-top: 0; color: #92400E; font-size: 1.3rem; font-weight: 800;">The Short Version</h3>
+          <p style="color: #78350F; line-height: 1.7; margin-bottom: 1rem; font-size: 1rem;">
+            Before you sign off on a bulk order: confirm where it's grown, check which certifications are current (not just listed), get a batch-specific lab report from an accredited lab, understand the drying process, and verify the supplier can actually hold your volume and packaging spec — not just your sample order.
+          </p>
+          <hr style="border: 0; border-top: 1px solid #FDE68A; margin: 1.25rem 0;">
+          <p style="color: #451A03; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            We manufacture <a href="products.html?search=banana" style="color: #92400E; font-weight: 700; text-decoration: underline;">banana powder</a>, <a href="products.html?search=moringa" style="color: #92400E; font-weight: 700; text-decoration: underline;">moringa powder</a>, <a href="products.html?search=shatavari" style="color: #92400E; font-weight: 700; text-decoration: underline;">shatavari powder</a>, and <a href="products.html?search=turmeric" style="color: #92400E; font-weight: 700; text-decoration: underline;">turmeric powder</a> (along with a wider range of dehydrated spice, vegetable, and herbal powders) at our facility in Nhavi, Yawal, Jalgaon — ISO 9001:2015, ISO 22000:2018, GMP, and FSSAI certified, with NABL-accredited lab testing on file. If you'd like a sample, a current COA, or a bulk quote, reach out:
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+            <a href="tel:+919114403000" class="btn-primary" style="padding: 10px 18px; font-size: 0.88rem; text-decoration: none;"><i class="fa-solid fa-phone" style="margin-right: 6px;"></i> +91 91144 03000</a>
+            <a href="https://wa.me/919170625050" target="_blank" rel="noopener noreferrer" style="padding: 10px 18px; font-size: 0.88rem; background: #25D366; color: white; border-radius: var(--radius-sm); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;"><i class="fa-brands fa-whatsapp" style="margin-right: 6px;"></i> WhatsApp +91 91706 25050</a>
+            <a href="mailto:info.immfoodinnovators@gmail.com" style="color: #92400E; font-weight: 700; text-decoration: underline; font-size: 0.9rem;"><i class="fa-regular fa-envelope" style="margin-right: 4px;"></i> info.immfoodinnovators@gmail.com</a>
+          </div>
+        </div>
+      `
+    },
+    {
       id: "contract-farming-quality-control",
       title: "From Field to Factory: How ~250 Acres of Contract Farming Ensures Uncompromising Raw Material Quality",
       category: "Contract Farming & Origin",
@@ -277,9 +389,11 @@
     let activeCategory = 'All Products';
     let searchQuery = '';
 
-    // Parse URL query parameter for category (e.g. ?category=herbal)
+    // Parse URL query parameter for category & search (e.g. ?category=herbal or ?search=banana)
     const urlParams = new URLSearchParams(window.location.search);
     const paramCategory = urlParams.get('category');
+    const paramSearch = urlParams.get('search');
+
     if (paramCategory) {
       const lowerParam = paramCategory.toLowerCase();
       if (lowerParam.includes('herbal') || lowerParam.includes('wellness')) {
@@ -288,6 +402,13 @@
         activeCategory = 'Pure Spices';
       } else if (lowerParam.includes('veggie') || lowerParam.includes('fruit') || lowerParam.includes('powder')) {
         activeCategory = 'Fruit & Veggie Powders';
+      }
+    }
+
+    if (paramSearch) {
+      searchQuery = paramSearch;
+      if (searchInput) {
+        searchInput.value = paramSearch;
       }
     }
 
@@ -403,19 +524,26 @@
     const blogGrid = document.getElementById('blogGrid');
     if (!blogGrid) return;
 
-    blogGrid.innerHTML = blogsData.map(b => `
-      <article class="blog-card" style="cursor: pointer;" onclick="window.location.href='blog-detail.html?id=${b.id}'">
-        <div class="blog-img-wrap">
-          <img src="${b.image}" alt="${b.title}" loading="lazy">
-        </div>
-        <div class="blog-body">
-          <div class="blog-meta">${b.category} • ${b.readTime}</div>
-          <h3 class="blog-title">${b.title}</h3>
-          <p class="blog-excerpt">${b.excerpt}</p>
-          <a href="blog-detail.html?id=${b.id}" class="blog-read-more" onclick="event.stopPropagation();">Read Full Article →</a>
-        </div>
-      </article>
-    `).join('');
+    blogGrid.innerHTML = blogsData.map(b => {
+      const targetUrl = b.id === 'dehydrated-powder-supplier-buyers-guide-india' 
+        ? 'dehydrated-powder-supplier-buyers-guide-india.html' 
+        : `blog-detail.html?id=${b.id}`;
+
+      return `
+        <article class="blog-card" style="cursor: pointer;" onclick="window.location.href='${targetUrl}'">
+          <div class="blog-img-wrap" style="position: relative;">
+            <img src="${b.image}" alt="${b.title}" loading="lazy">
+            ${b.id === 'dehydrated-powder-supplier-buyers-guide-india' ? '<span style="position: absolute; top: 12px; left: 12px; background: rgba(10, 46, 29, 0.9); color: var(--accent-gold); font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">NEW • FEATURED</span>' : ''}
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">${b.category} • ${b.readTime}</div>
+            <h3 class="blog-title">${b.title}</h3>
+            <p class="blog-excerpt">${b.excerpt}</p>
+            <a href="${targetUrl}" class="blog-read-more" onclick="event.stopPropagation();">Read Full Article →</a>
+          </div>
+        </article>
+      `;
+    }).join('');
   }
 
   function initBlogDetail() {
@@ -423,7 +551,7 @@
     if (!container) return;
 
     const urlParams = new URLSearchParams(window.location.search);
-    const blogId = urlParams.get('id') || 'banana-powder-benefits';
+    const blogId = urlParams.get('id') || 'dehydrated-powder-supplier-buyers-guide-india';
     const blog = blogsData.find(b => b.id === blogId) || blogsData[0];
 
     const titleElem = document.getElementById('blogDetailTitle');
@@ -441,7 +569,13 @@
     }
     if (contentElem) contentElem.innerHTML = blog.content;
 
-    document.title = `${blog.title} | IMM Food Innovators LLP`;
+    document.title = `${blog.metaTitle || blog.title} | IMM Food Innovators LLP`;
+    if (blog.metaDescription) {
+      const descMeta = document.querySelector('meta[name="description"]');
+      if (descMeta) descMeta.setAttribute('content', blog.metaDescription);
+      const ogDescMeta = document.querySelector('meta[property="og:description"]');
+      if (ogDescMeta) ogDescMeta.setAttribute('content', blog.metaDescription);
+    }
   }
 
   /* ============================================================
