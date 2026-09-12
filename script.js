@@ -304,7 +304,7 @@
           <div class="product-card-top-badges" style="position: absolute; top: 10px; left: 10px; z-index: 5;">
             <span class="product-category-badge" style="font-size: 0.68rem; font-weight: 700; background: rgba(10, 46, 29, 0.88); color: var(--accent-gold); padding: 3px 8px; border-radius: 6px;">${p.category}</span>
           </div>
-          <img src="${p.image}" alt="${p.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" onerror="this.src='images/powders/Banana Powder.png'">
+          <img src="${p.image}" alt="${p.name} - Dehydrated Powder Manufacturer IMM Food Innovators" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" onerror="this.src='images/powders/Banana Powder.png'">
         </div>
         <div class="product-body" style="padding: 0.85rem 1rem 1rem 1rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
           <h3 class="product-title" style="font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin: 0; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${p.name}</h3>
