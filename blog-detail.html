@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png?v=2.0" type="image/png">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/IMMLogo_icon.png">
     <title>Blog Article | IMM Food Innovators LLP</title>
     <meta name="description"
         content="Read full technical article and B2B industry insights on food processing, banana powder, moringa powder, and contract manufacturing from IMM Food Innovators LLP.">
@@ -16,8 +20,6 @@
     <meta name="geo.placename" content="Jalgaon">
     <meta name="geo.position" content="21.1643;75.6980">
     <meta name="ICBM" content="21.1643, 75.6980">
-
-    <link rel="icon" href="images/IMMLogo.png?v=4.0" type="image/png">
     <link rel="canonical" href="https://www.immfoodinnovators.in/blog-detail.html">
 
     <!-- Resource Hints -->
@@ -26,7 +28,9 @@
 
     <!-- Font Awesome Icons & Main CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=18.0">
+    <link rel="stylesheet" href="css/style.css?v=18.0">
+    <link rel="stylesheet" href="css/components.css?v=18.0">
+    <link rel="stylesheet" href="css/responsive.css?v=18.0">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
@@ -111,11 +115,7 @@
     <header id="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="images/IMMLogo.png?v=4.0" alt="IMM Food Innovators Logo" class="logo-img">
-                <div class="logo-text-wrap">
-                    <span class="logo-text">IMM Food Innovators</span>
-                    <span class="logo-sub">LLP • Nhavi, Jalgaon, India</span>
-                </div>
+                <img src="images/IMMLogo_nav.png" alt="IMM Food Innovators Logo" class="logo-img">
             </a>
             <nav>
                 <ul id="navMenu">
@@ -125,10 +125,10 @@
                     <li class="nav-item dropdown">
                         <a href="products.html" class="nav-link">Products <span class="dropdown-arrow">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="products.html?category=powder" class="dropdown-item"><i class="fa-solid fa-lemon" style="color: var(--accent-gold); margin-right: 6px;"></i> Fruit & Veggie Powders</a></li>
-                            <li><a href="products.html?category=spices" class="dropdown-item"><i class="fa-solid fa-pepper-hot" style="color: var(--accent-red); margin-right: 6px;"></i> Pure Spices</a></li>
-                            <li><a href="products.html?category=herbal" class="dropdown-item"><i class="fa-solid fa-leaf" style="color: #10B981; margin-right: 6px;"></i> Herbal & Wellness</a></li>
-                            <li><a href="products.html" class="dropdown-item"><i class="fa-solid fa-boxes-stacked" style="color: var(--accent-amber); margin-right: 6px;"></i> View All 25+ Products</a></li>
+                            <li><a href="products.html?category=powder" class="dropdown-item">Fruit & Veggie Powders</a></li>
+                            <li><a href="products.html?category=spices" class="dropdown-item">Pure Spices</a></li>
+                            <li><a href="products.html?category=herbal" class="dropdown-item">Herbal & Wellness</a></li>
+                            <li><a href="products.html" class="dropdown-item">View All 25+ Products</a></li>
                         </ul>
                     </li>
                     
@@ -136,10 +136,10 @@
                     <li class="nav-item dropdown">
                         <a href="services.html" class="nav-link">Our Services <span class="dropdown-arrow">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="services.html#retail-packaging" class="dropdown-item"><i class="fa-solid fa-tag" style="color: var(--accent-amber); margin-right: 6px;"></i> Retail Packaging Solutions</a></li>
-                            <li><a href="services.html#bulk-packaging" class="dropdown-item"><i class="fa-solid fa-box-archive" style="color: var(--accent-gold); margin-right: 6px;"></i> Bulk Export Packaging</a></li>
-                            <li><a href="services.html#custom-blends" class="dropdown-item"><i class="fa-solid fa-flask" style="color: #10B981; margin-right: 6px;"></i> Custom Blend Development</a></li>
-                            <li><a href="services.html#contract-mfg" class="dropdown-item"><i class="fa-solid fa-industry" style="color: var(--accent-red); margin-right: 6px;"></i> Third-Party Contract Manufacturing</a></li>
+                            <li><a href="services.html#retail-packaging" class="dropdown-item">Retail Packaging Solutions</a></li>
+                            <li><a href="services.html#bulk-packaging" class="dropdown-item">Bulk Export Packaging</a></li>
+                            <li><a href="services.html#custom-blends" class="dropdown-item">Custom Blend Development</a></li>
+                            <li><a href="services.html#contract-mfg" class="dropdown-item">Third-Party Contract Manufacturing</a></li>
                         </ul>
                     </li>
 
@@ -190,9 +190,10 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <img src="images/IMMLogo.png?v=4.0" alt="IMM Logo" class="logo-img">
-                    <span class="logo-text">IMM Food Innovators</span>
+                <div class="footer-logo">
+                    <a href="index.html" aria-label="IMM Food Innovators Home">
+                        <img src="images/IMMLogo_footer.png" alt="IMM Food Innovators Logo" class="footer-logo-img">
+                    </a>
                 </div>
                 <p>India's leading manufacturer and exporter of dehydrated banana powder, fruit & vegetable powders, pure spices, and herbal food ingredients.</p>
                 <div class="top-bar-social" style="justify-content: flex-start; margin-top: 1rem;">
@@ -245,7 +246,12 @@
         </div>
     </div>
 
-    <script src="script.js?v=10.5"></script>
+    <script src="data/company.js"></script>
+    <script src="data/products.js"></script>
+    <script src="data/blogs.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/blogs.js"></script>
 </body>
 
 </html>

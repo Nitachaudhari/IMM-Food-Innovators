@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png?v=2.0" type="image/png">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/IMMLogo_icon.png">
     <title>B2B Products Catalog - Dehydrated Powders, Flakes & Pure Spices | IMM Food Innovators LLP</title>
     <meta name="description"
         content="Wholesale catalog of 25+ low-temperature dehydrated food products: banana powder, moringa powder, turmeric, shatavari, garlic flakes, and pure ground spices from IMM Food Innovators Jalgaon.">
@@ -17,8 +21,6 @@
     <meta name="geo.placename" content="Jalgaon">
     <meta name="geo.position" content="21.1643;75.6980">
     <meta name="ICBM" content="21.1643, 75.6980">
-
-    <link rel="icon" href="images/IMMLogo.png?v=4.0" type="image/png">
     <link rel="canonical" href="https://www.immfoodinnovators.in/products.html">
 
     <!-- Resource Hints -->
@@ -27,7 +29,9 @@
 
     <!-- Font Awesome Icons & Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=18.0">
+    <link rel="stylesheet" href="css/style.css?v=18.0">
+    <link rel="stylesheet" href="css/components.css?v=18.0">
+    <link rel="stylesheet" href="css/responsive.css?v=18.0">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -186,11 +190,7 @@
     <header id="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="images/IMMLogo.png?v=4.0" alt="IMM Food Innovators Logo" class="logo-img">
-                <div class="logo-text-wrap">
-                    <span class="logo-text">IMM Food Innovators</span>
-                    <span class="logo-sub">LLP • Nhavi, Jalgaon, India</span>
-                </div>
+                <img src="images/IMMLogo_nav.png" alt="IMM Food Innovators Logo" class="logo-img">
             </a>
             <nav>
                 <ul id="navMenu">
@@ -201,20 +201,10 @@
                         <a href="products.html" class="nav-link active">Products <span
                                 class="dropdown-arrow">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="products.html?category=powder" class="dropdown-item active"><i
-                                        class="fa-solid fa-lemon"
-                                        style="color: var(--accent-gold); margin-right: 6px;"></i> Fruit & Veggie
-                                    Powders</a></li>
-                            <li><a href="products.html?category=spices" class="dropdown-item"><i
-                                        class="fa-solid fa-pepper-hot"
-                                        style="color: var(--accent-red); margin-right: 6px;"></i> Pure Spices</a></li>
-                            <li><a href="products.html?category=herbal" class="dropdown-item"><i
-                                        class="fa-solid fa-leaf" style="color: #10B981; margin-right: 6px;"></i> Herbal
-                                    & Wellness</a>
-                            </li>
-                            <li><a href="products.html" class="dropdown-item"><i class="fa-solid fa-boxes-stacked"
-                                        style="color: var(--accent-amber); margin-right: 6px;"></i> View All 25+
-                                    Products</a></li>
+                            <li><a href="products.html?category=powder" class="dropdown-item active">Fruit & Veggie Powders</a></li>
+                            <li><a href="products.html?category=spices" class="dropdown-item">Pure Spices</a></li>
+                            <li><a href="products.html?category=herbal" class="dropdown-item">Herbal & Wellness</a></li>
+                            <li><a href="products.html" class="dropdown-item">View All 25+ Products</a></li>
                         </ul>
                     </li>
 
@@ -222,21 +212,10 @@
                     <li class="nav-item dropdown">
                         <a href="services.html" class="nav-link">Our Services <span class="dropdown-arrow">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="services.html#retail-packaging" class="dropdown-item"><i
-                                        class="fa-solid fa-tag"
-                                        style="color: var(--accent-amber); margin-right: 6px;"></i> Retail Packaging
-                                    Solutions</a></li>
-                            <li><a href="services.html#bulk-packaging" class="dropdown-item"><i
-                                        class="fa-solid fa-box-archive"
-                                        style="color: var(--accent-gold); margin-right: 6px;"></i> Bulk Export
-                                    Packaging</a></li>
-                            <li><a href="services.html#custom-blends" class="dropdown-item"><i class="fa-solid fa-flask"
-                                        style="color: #10B981; margin-right: 6px;"></i> Custom Blend
-                                    Development</a></li>
-                            <li><a href="services.html#contract-mfg" class="dropdown-item"><i
-                                        class="fa-solid fa-industry"
-                                        style="color: var(--accent-red); margin-right: 6px;"></i> Third-Party Contract
-                                    Manufacturing</a></li>
+                            <li><a href="services.html#retail-packaging" class="dropdown-item">Retail Packaging Solutions</a></li>
+                            <li><a href="services.html#bulk-packaging" class="dropdown-item">Bulk Export Packaging</a></li>
+                            <li><a href="services.html#custom-blends" class="dropdown-item">Custom Blend Development</a></li>
+                            <li><a href="services.html#contract-mfg" class="dropdown-item">Third-Party Contract Manufacturing</a></li>
                         </ul>
                     </li>
 
@@ -261,8 +240,7 @@
         <div class="hero-content"
             style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
             <div class="section-badge badge-gold"
-                style="margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 6px;"><i
-                    class="fa-solid fa-boxes-stacked"></i> EXPORT CATALOG</div>
+                style="margin-bottom: 0.5rem; display: inline-flex; align-items: center;">EXPORT CATALOG</div>
             <h1
                 style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); color: #FFFFFF; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem;">
                 Pure Dehydrated Ingredients Portfolio</h1>
@@ -285,8 +263,8 @@
                 <aside class="category-sidebar">
                     <div>
                         <div class="category-sidebar-header" style="padding-bottom: 0.85rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-light);">
-                            <h3 style="font-size: 0.85rem; color: var(--primary-dark); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; display: flex; align-items: center; gap: 8px;">
-                                <i class="fa-solid fa-layer-group" style="color: var(--accent-gold);"></i> Product Categories
+                            <h3 style="font-size: 0.85rem; color: var(--primary-dark); font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin: 0;">
+                                Product Categories
                             </h3>
                         </div>
 
@@ -298,7 +276,7 @@
 
                     <!-- BOTTOM B2B QUOTE BADGE -->
                     <div class="b2b-quote-box" style="background: var(--bg-linen); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-light); text-align: center; margin-top: 1.5rem;">
-                        <span style="font-size: 1.2rem; display: block; margin-bottom: 4px;">📦</span>
+                        
                         <h4 style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin: 0 0 4px 0;">Bulk Export Orders</h4>
                         <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0 0 8px 0;">Ready in 25kg / 50kg HDPE Bags for Bulk Quantity.</p>
                         <a href="contact.html" class="btn btn-primary" style="display: inline-block; width: 100%; padding: 7px 12px; font-size: 0.78rem; font-weight: 700; border-radius: 6px; text-decoration: none;">Inquire Bulk Quote</a>
@@ -346,7 +324,7 @@
                 <div class="grid-4col">
                     <div
                         style="background: #FFFFFF; border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid var(--border-light); text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🌾</div>
+                        
                         <h4
                             style="font-size: 1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 0.4rem;">
                             ~250 Acres Direct Farm</h4>
@@ -355,7 +333,7 @@
                     </div>
                     <div
                         style="background: #FFFFFF; border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid var(--border-light); text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🔬</div>
+                        
                         <h4
                             style="font-size: 1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 0.4rem;">
                             Low-Temp Dehydration</h4>
@@ -364,7 +342,7 @@
                     </div>
                     <div
                         style="background: #FFFFFF; border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid var(--border-light); text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🛡️</div>
+                        
                         <h4
                             style="font-size: 1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 0.4rem;">
                             Micro & Heavy Metal Tested</h4>
@@ -373,7 +351,7 @@
                     </div>
                     <div
                         style="background: #FFFFFF; border-radius: var(--radius-md); padding: 1.5rem; border: 1px solid var(--border-light); text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.75rem;">📦</div>
+                        
                         <h4
                             style="font-size: 1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 0.4rem;">
                             Bulk & Private Label</h4>
@@ -388,9 +366,10 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <img src="images/IMMLogo.png?v=4.0" alt="IMM Logo" class="logo-img">
-                    <span class="logo-text">IMM Food Innovators</span>
+                <div class="footer-logo">
+                    <a href="index.html" aria-label="IMM Food Innovators Home">
+                        <img src="images/IMMLogo_footer.png" alt="IMM Food Innovators Logo" class="footer-logo-img">
+                    </a>
                 </div>
                 <p>India's leading manufacturer and exporter of dehydrated banana powder, fruit & vegetable powders,
                     pure spices, and herbal food ingredients.</p>
@@ -451,7 +430,12 @@
         </div>
     </div>
 
-    <script src="script.js?v=10.5"></script>
+    <script src="data/company.js"></script>
+    <script src="data/products.js"></script>
+    <script src="data/blogs.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/blogs.js"></script>
 </body>
 
 </html>

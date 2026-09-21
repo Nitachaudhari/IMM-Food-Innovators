@@ -1,0 +1,132 @@
+/* ============================================================
+   IMM Food Innovators LLP — Responsive Media Queries
+   Mobile Drawer Navigation, Tablet & Desktop Breakpoints
+   ============================================================ */
+
+/* ── TABLET & SMALL DESKTOP BREAKPOINTS (<= 1024px) ── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .b2b-catalog-wrapper {
+    grid-template-columns: 240px 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── MOBILE NAV & TABLET BREAKPOINTS (<= 768px) ── */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none; /* Hide top header bar on mobile for clean viewport */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FCF5ED;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+    transform: translateX(100%);
+    transition: transform 0.35s var(--ease-smooth);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  nav ul.active {
+    transform: translateX(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: rgba(10, 46, 29, 0.04);
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-item.dropdown.mobile-open .dropdown-menu {
+    display: flex;
+  }
+
+  .hero-slider-section {
+    height: 520px;
+    min-height: 480px;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .b2b-catalog-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .b2b-sidebar {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .modal-container {
+    padding: 1.5rem;
+  }
+}
+
+/* ── SMALL MOBILE BREAKPOINTS (<= 480px) ── */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary, .btn-secondary, .btn-secondary-light {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+}
