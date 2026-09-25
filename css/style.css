@@ -329,17 +329,7 @@ h1, h2, h3, h4, h5, h6 {
    1. TOP HEADER BAR & NAVIGATION
 ================================================================ */
 .top-bar {
-  background-color: var(--header-black);
-  min-height: var(--topbar-height);
-  height: auto;
-  padding: 4px 0;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.82rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1001;
+  display: none !important;
 }
 
 .top-bar-container {
