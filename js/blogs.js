@@ -12,9 +12,11 @@
     if (!blogGrid) return;
 
     blogGrid.innerHTML = blogsData.map(b => {
-      const targetUrl = b.id === 'dehydrated-powder-supplier-buyers-guide-india' 
-        ? 'dehydrated-powder-supplier-buyers-guide-india.html' 
-        : `blog-detail.html?id=${b.id}`;
+      let targetUrl = 'dehydrated-powder-supplier-buyers-guide-india.html';
+      if (b.id === 'contract-farming-quality-control') targetUrl = 'contract-farming-quality-control-jalgaon.html';
+      else if (b.id === 'banana-powder-benefits') targetUrl = 'banana-powder-health-benefits-b2b.html';
+      else if (b.id === 'private-label-food-startup') targetUrl = 'private-label-food-manufacturing-guide.html';
+      else if (b.id === 'dehydration-technology-drying') targetUrl = 'low-temperature-dehydration-technology.html';
 
       return `
         <article class="blog-card" style="cursor: pointer;" onclick="window.location.href='${targetUrl}'">

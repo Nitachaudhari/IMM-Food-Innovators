@@ -9,19 +9,29 @@
 
   /* Render Short B2B Product Card HTML */
   function renderProductCard(p) {
+    const heroBadgeHtml = p.isHero ? `<span class="product-hero-badge">★ FLAGSHIP</span>` : '';
+    const specHtml = p.spec ? `<div class="product-card-spec" style="font-size: 0.74rem; font-weight: 600; color: #047857; background: #ECFDF5; padding: 4px 10px; border-radius: 6px; border: 1px solid #A7F3D0; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box;"><span style="font-size: 0.78rem;">⚡</span> <span style="overflow: hidden; text-overflow: ellipsis;">${p.spec}</span></div>` : '';
+    const descHtml = p.description ? `<p class="product-desc" style="font-size: 0.83rem; color: #475569; line-height: 1.45; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: left;">${p.description}</p>` : '';
+
     return `
       <div class="product-card b2b-card compact-card" onclick="openSpecModal('${p.name.replace(/'/g, "\\'")}')" data-category="${p.category}" style="cursor: pointer;">
-        <div class="product-img-wrap" style="width: 100%; aspect-ratio: 1 / 1; position: relative; overflow: hidden; background: #F8FAFC;">
-          <div class="product-card-top-badges" style="position: absolute; top: 10px; left: 10px; z-index: 5;">
-            <span class="product-category-badge" style="font-size: 0.68rem; font-weight: 700; background: rgba(10, 46, 29, 0.88); color: var(--accent-gold); padding: 3px 8px; border-radius: 6px;">${p.category}</span>
+        <div class="product-img-wrap">
+          <div class="product-card-top-badges">
+            <span class="product-category-badge">${p.category}</span>
+            ${heroBadgeHtml}
           </div>
-          <img src="${p.image}" alt="${p.name} - Dehydrated Powder Manufacturer IMM Food Innovators" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" onerror="this.src='images/powders/Banana Powder.png'">
+          <img src="${p.image}" alt="${p.name} - Dehydrated Powder Manufacturer IMM Food Innovators" loading="lazy" decoding="async">
         </div>
-        <div class="product-body" style="padding: 0.85rem 1rem 1rem 1rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">
-          <h3 class="product-title" style="font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin: 0; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${p.name}</h3>
-          <button class="btn-quick-view" style="width: 100%; padding: 7px 10px; font-size: 0.78rem; font-weight: 700; background: var(--bg-linen); border: 1px solid var(--border-light); color: var(--primary-dark); border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
-            📋 View Details & Specs
-          </button>
+        <div class="product-body">
+          <h3 class="product-title" style="text-align: left; font-size: 1.1rem; font-weight: 700; color: var(--primary-dark); margin: 0 0 6px 0;">${p.name}</h3>
+          ${specHtml}
+          ${descHtml}
+          <div class="product-action-bar" style="margin-top: auto; padding-top: 4px;">
+            <button class="btn-primary-card" style="width: 100%;">
+              <span>📄 View Details & Specs</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
         </div>
       </div>
     `;
@@ -84,14 +94,14 @@
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Moisture Limit:</span><strong style="color: #D97706; font-size: 0.88rem;">${d.moisture || '< 5.0% Max'}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Bioactive Marker / Key Content:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.activeMarker || '100% Pure Extract'}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Solubility / Rehydration:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.solubility || 'Water Dispersible'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Microbial Safety:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">TPC &lt; 50,000 CFU/g | Salmonella/E.Coli Absent</strong></div>
+            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Microbial Safety:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.microbial || 'TPC < 50,000 CFU/g | Salmonella/E.Coli Absent'}</strong></div>
           </div>
 
           <!-- SECTION 3: COMMERCIAL LOGISTICS & PACKAGING -->
           <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">3. B2B Packaging & Dispatch Logistics</h4>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.75rem;">
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Standard B2B Packaging:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.packaging || '25 kg HDPE Bag'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Shelf Life:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.shelfLife || '12 Months'}</strong></div>
+            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Shelf Life & Season:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.shelfLife || '12 Months'}${d.harvestSeason ? ' (' + d.harvestSeason + ')' : ''}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Dispatch MOQ:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.moq || '100 kg'}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Plant Origin:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">Yawal, Jalgaon, Maharashtra, India</strong></div>
           </div>

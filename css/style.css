@@ -4,40 +4,46 @@
    Aesthetic: Farm-fresh agriculture, organic food processing & B2B export
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ── Theme Tokens ── */
+/* ── Verified September 2026 Brand Identity Palette Tokens ── */
 :root {
-  --primary-dark:   #0A2E1D; /* Rich Deep Forest Emerald Green */
-  --secondary-dark: #0F3B28; /* Deep Forest Emerald Medium */
-  --header-black:   #051C12; /* Darkest Emerald Green for Header & Footer */
-  
-  --accent-red:     #C84B31; /* Terracotta / Spice Red Accent */
-  --accent-red-hover:#A83821;
-  --accent-amber:   #D97706; /* Warm Spice Amber */
-  --accent-gold:    #F59E0B; /* Golden Banana & Sun Amber */
-  --accent-gold-light:#FBBF24;
-  
-  --bg-linen:       #FAF8F3; /* Warm Cream Linen Light BG */
-  --bg-card:        #FFFFFF;
-  --bg-alt:         #F3EFE6; /* Warm Sand BG */
-  
-  --text-primary:   #1E293B;
-  --text-secondary: #475569;
-  --text-muted:     #64748B;
-  --text-light:     #F8FAFC;
-  
-  --border-light:   #E2E8F0;
-  --border-dark:    #1E293B;
-  --border-accent:  rgba(200, 75, 49, 0.2);
-  
-  --shadow-sm:  0 2px 8px rgba(10, 46, 29, 0.05);
-  --shadow-md:  0 10px 30px rgba(10, 46, 29, 0.1);
-  --shadow-lg:  0 20px 40px rgba(10, 46, 29, 0.16);
-  --shadow-glow:0 0 25px rgba(245, 158, 11, 0.3);
-  
-  --font-heading: 'Outfit', sans-serif;
-  --font-body:    'Inter', sans-serif;
+  /* Primary Grounds */
+  --primary-dark: #246828; /* IMM Official Deep Green */
+  --secondary-dark: #1E5622; /* Medium Forest Green */
+  --header-black: #153E18; /* Dark Header/Footer Green */
+
+  /* Brand Ribbon Accents (Four Hero Products) */
+  --accent-gold: #FCBC10; /* IMM Brand Gold (Banana) */
+  --accent-gold-light: #FCD058;
+  --accent-olive: #84A42C; /* IMM Olive Green (Moringa) */
+  --accent-orange: #FC9C24; /* IMM Amber/Orange (Shatavari) */
+  --accent-red: #D91420; /* IMM Spice Red (Chilli/Turmeric) */
+  --accent-red-hover: #B50F18;
+  --accent-amber: #DC8C00;
+
+  /* Backgrounds */
+  --bg-linen: #FCF3E2; /* IMM Official Brand Warm Cream */
+  --bg-card: #FFFFFF;
+  --bg-alt: #F5EAD4; /* Warm Sand Accent */
+
+  /* Typography */
+  --text-primary: #241608; /* IMM Brand Deep Ink/Text */
+  --text-secondary: #4A4036;
+  --text-muted: #7A7066;
+  --text-light: #F8FAFC;
+
+  --border-light: #E2E8F0;
+  --border-dark: #241608;
+  --border-accent: rgba(217, 20, 32, 0.2);
+
+  --shadow-sm: 0 2px 8px rgba(36, 104, 40, 0.05);
+  --shadow-md: 0 10px 30px rgba(36, 104, 40, 0.1);
+  --shadow-lg: 0 20px 40px rgba(36, 104, 40, 0.16);
+  --shadow-glow: 0 0 25px rgba(252, 188, 16, 0.3);
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
   /* ── Modular Typography Scale ── */
   --font-size-xs:   0.8rem;    /* 12.8px - Micro tags, badges, caption */
@@ -248,21 +254,24 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 10px;
   padding: 14px 32px;
-  background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-red-hover) 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.5px;
   border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(200, 75, 49, 0.35);
+  border: 1px solid var(--primary-dark);
+  box-shadow: 0 6px 20px rgba(36, 104, 40, 0.35);
   transition: all 0.3s var(--ease-smooth);
+  text-decoration: none;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(200, 75, 49, 0.5);
-  background: linear-gradient(135deg, #DF573D 0%, var(--accent-red) 100%);
+  box-shadow: 0 10px 28px rgba(36, 104, 40, 0.5);
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--header-black) 100%);
+  color: var(--accent-gold);
 }
 
 .btn-secondary {
@@ -276,9 +285,10 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid var(--primary-dark);
   font-family: var(--font-heading);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 50px;
   transition: all 0.3s var(--ease-smooth);
+  text-decoration: none;
 }
 
 .btn-secondary:hover {
@@ -294,20 +304,24 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 10px;
   padding: 14px 32px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(252, 188, 16, 0.5);
   font-family: var(--font-heading);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 50px;
   transition: all 0.3s var(--ease-smooth);
+  text-decoration: none;
 }
 
 .btn-secondary-light:hover {
   background: #FFFFFF;
-  color: var(--primary-dark);
+  color: var(--primary-dark) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
   transform: translateY(-3px);
 }
 
@@ -1018,7 +1032,7 @@ nav ul {
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -1082,25 +1096,46 @@ nav ul {
 
 .product-card-top-badges {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
+  top: 10px;
+  left: 10px;
+  right: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 6px;
   z-index: 5;
+  pointer-events: none;
 }
 
 .product-category-badge {
   padding: 4px 10px;
-  background: rgba(10, 46, 29, 0.88);
+  background: rgba(15, 23, 42, 0.78);
   backdrop-filter: blur(8px);
-  color: var(--accent-gold);
-  font-size: 0.72rem;
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.68rem;
   font-weight: 700;
-  border-radius: 6px;
+  border-radius: 20px;
   letter-spacing: 0.3px;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-hero-badge {
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.4);
 }
 
 .product-status-badge {
@@ -1368,13 +1403,34 @@ nav ul {
    7. QUALITY & CERTIFICATIONS SECTION
 ================================================================ */
 .certifications-section {
-  padding: var(--space-2xl) 0;
-  background: var(--primary-dark);
-  color: #FFFFFF;
+  padding: 5rem 0 !important;
+  background: linear-gradient(135deg, #0A2E1D 0%, #061F13 100%) !important;
+  color: #FFFFFF !important;
+  border-top: 3px solid #F59E0B;
+  border-bottom: 3px solid #F59E0B;
+  position: relative;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
-.certifications-section .section-title { color: #FFFFFF; }
-.certifications-section .section-subtitle { color: rgba(255,255,255,0.8); }
+.certifications-section .section-title { 
+  color: #FFFFFF !important; 
+  font-weight: 800 !important;
+  font-size: 2.25rem !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.certifications-section .section-subtitle { 
+  color: #FAF8F3 !important; 
+  font-size: 1.05rem !important;
+  opacity: 0.95;
+}
+
+.certifications-section .section-badge.badge-gold {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: #F59E0B !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  font-weight: 700 !important;
+}
 
 .cert-grid {
   max-width: 1180px;
@@ -1384,17 +1440,17 @@ nav ul {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .cert-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 0.85rem;
+  background: #FFFFFF !important;
+  border: 2px solid #F59E0B !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1.75rem 1.25rem !important;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1402,39 +1458,41 @@ nav ul {
   align-items: center;
   justify-content: center;
   flex: 1 1 200px;
-  max-width: 215px;
+  max-width: 220px;
   width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
 }
 
 .cert-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--accent-gold);
-  transform: translateY(-5px);
+  background: #FFFFFF !important;
+  border-color: #EA580C !important;
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 18px 36px rgba(245, 158, 11, 0.45) !important;
 }
 
 .cert-icon-wrapper {
-  width: 115px;
-  height: 115px;
-  min-width: 115px;
-  min-height: 115px;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #FAF8F3;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0.85rem auto;
-  padding: 12px;
+  margin: 0 auto 1.1rem auto;
+  padding: 10px;
   overflow: hidden;
-  border: 3px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  border: 3px solid #F59E0B;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
 }
 
 .cert-card:hover .cert-icon-wrapper {
-  border-color: var(--accent-gold);
+  border-color: #EA580C;
   transform: scale(1.08);
-  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.35);
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.4);
 }
 
 .cert-icon-wrapper img,
@@ -1451,53 +1509,42 @@ nav ul {
   transition: transform 0.3s ease;
 }
 
-.cert-card img {
-  width: 115px;
-  height: 115px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  padding: 10px;
-  border: 3px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-}
-
-.cert-card:hover img {
-  transform: scale(1.08);
-}
-
 .cert-card h4 {
-  color: #FFFFFF;
-  font-size: 0.92rem;
-  font-weight: 700;
+  color: #0A2E1D !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
   margin-bottom: 4px;
 }
 
 .cert-card p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.75rem;
+  color: #4B5563 !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
   line-height: 1.3;
 }
 
 .cert-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(10, 46, 29, 0.94);
+  background: linear-gradient(135deg, rgba(10, 46, 29, 0.96) 0%, rgba(5, 28, 18, 0.98) 100%) !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  color: var(--accent-gold);
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 1rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  color: #F59E0B !important;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 1.25rem;
   text-align: center;
+  border-radius: 14px;
 }
 
 .cert-card:hover .cert-overlay {
-  opacity: 1;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* ── FACTORY PROCESSING & QUALITY SHOWCASE VIDEO SECTION ── */
@@ -2125,7 +2172,7 @@ footer .logo {
 
 footer .footer-logo-img,
 footer .logo-img {
-  width: 250px;
+  width: 175px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -2134,7 +2181,7 @@ footer .logo-img {
   border: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
   transition: transform 0.3s ease;
 }
 
@@ -2311,7 +2358,7 @@ footer .logo-text {
 /* Page Header for Inner Pages */
 .inner-page-hero {
   background: var(--primary-dark);
-  padding: 2.2rem 1.5rem;
+  padding: 1.25rem 1rem 1rem 1rem;
   text-align: center;
   color: #FFFFFF;
   position: relative;
@@ -2319,17 +2366,17 @@ footer .logo-text {
 }
 
 .inner-page-hero h1 {
-  font-size: 2.1rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
   color: #FFFFFF;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .inner-page-hero p {
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.98rem;
-  max-width: 680px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  max-width: 850px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* ── Responsive Grid Utility System ── */
@@ -3016,8 +3063,8 @@ footer .logo-text {
 ================================================================ */
 .product-scroll-area {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 1rem !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
   height: auto !important;
   max-height: none !important;
   overflow-y: visible !important;
@@ -3025,9 +3072,9 @@ footer .logo-text {
   transition: opacity 0.3s ease;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .product-scroll-area {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 

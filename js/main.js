@@ -135,6 +135,8 @@
         <h2 style="font-size: 1.8rem; margin: 1rem 0; color: var(--primary-dark);">Inquire Bulk Supply</h2>
         <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Fill out the form below and our export sales manager will send specifications and pricing within 24 hours.</p>
         <form id="modalQuoteForm">
+          <!-- Honeypot anti-spam field -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none !important;" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label>Selected Product *</label>
             <select name="product" required style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); font-family: inherit; font-size: 0.95rem;">
@@ -180,6 +182,11 @@
           const formData = new FormData(modalForm);
           const formJson = Object.fromEntries(formData.entries());
 
+          if (formJson.botcheck) {
+            console.warn('Honeypot anti-spam triggered. Aborting modal submission.');
+            return;
+          }
+
           fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -209,16 +216,16 @@
   };
 
   const certDetailsData = {
-    'iso-22000': { doc: 'images/certifications/iso_22000.jpg' },
-    'iso-9001': { doc: 'images/certifications/iso_9001.jpg' },
-    'fssai': { doc: 'images/certifications/fssai.jpg' },
-    'gmp': { doc: 'images/certifications/GMP.jpg' },
-    'udyam': { doc: 'images/certifications/apeda_udyam.jpg' }
+    'iso-22000': { doc: 'images/certifications/iso_22000.webp' },
+    'iso-9001': { doc: 'images/certifications/iso_9001.webp' },
+    'fssai': { doc: 'images/certifications/fssai.webp' },
+    'gmp': { doc: 'images/certifications/GMP.webp' },
+    'udyam': { doc: 'images/certifications/apeda_udyam.webp' }
   };
 
   window.openCertModal = function (certKey) {
     const info = certDetailsData[certKey] || certDetailsData['iso-9001'];
-    const docSrc = info ? info.doc : 'images/certifications/iso_9001.jpg';
+    const docSrc = info ? info.doc : 'images/certifications/iso_9001.webp';
     openModal(`
       <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding: 0.5rem 0;">
         <img src="${docSrc}" alt="Official Certificate Document" style="max-width: 100%; max-height: 82vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); object-fit: contain; display: block; margin: 0 auto;">
@@ -375,6 +382,11 @@
       const formData = new FormData(contactForm);
       const formJson = Object.fromEntries(formData.entries());
 
+      if (formJson.botcheck) {
+        console.warn('Honeypot anti-spam triggered. Aborting homepage submission.');
+        return;
+      }
+
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -406,9 +418,34 @@
             successMessage.innerHTML = `✓ Inquiry Recorded! We will contact you at ${formJson.email || 'your email'}.`;
             successMessage.style.display = 'block';
           }
-          contactForm.reset();
         });
     });
+  }
+
+  function initContactPageQuerySubject() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const subjectParam = urlParams.get('subject');
+    if (!subjectParam) return;
+
+    const inquirySelect = document.getElementById('contact_inquiry_type');
+    const messageArea = document.getElementById('contact_message');
+
+    if (subjectParam === 'PrivateLabel') {
+      if (inquirySelect) inquirySelect.value = 'Private Label';
+      if (messageArea && !messageArea.value) {
+        messageArea.value = 'Inquiry: Private Label Packaging (100g to 1kg pouches/canisters). Please send wholesale pricing, custom pouch printing options, and minimum order quantities (MOQ).';
+      }
+    } else if (subjectParam === 'ExportQuote' || subjectParam === 'BulkExportQuote') {
+      if (inquirySelect) inquirySelect.value = 'Export Inquiry';
+      if (messageArea && !messageArea.value) {
+        messageArea.value = 'Inquiry: Bulk Export Packaging (25kg/50kg HDPE bags) & Gulf Container Sea Shipping via JNPT Nhava Sheva (Mumbai). Please send specification sheets and ocean freight quotes.';
+      }
+    } else if (subjectParam === 'ContractMfg') {
+      if (inquirySelect) inquirySelect.value = 'Contract Mfg';
+      if (messageArea && !messageArea.value) {
+        messageArea.value = 'Inquiry: Third-Party Contract Manufacturing & Custom Mesh Size Milling (60-120 mesh) at Jalgaon plant up to 1,000 kg/shift.';
+      }
+    }
   }
 
   /* ============================================================
@@ -420,6 +457,7 @@
     initCertificates();
     initFAQ();
     initContactForm();
+    initContactPageQuerySubject();
     initScrollEffects();
 
     console.log('IMM Food Innovators v4.0 main.js loaded ✅');

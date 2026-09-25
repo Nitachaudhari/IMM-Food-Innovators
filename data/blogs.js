@@ -15,7 +15,7 @@ const blogsData = [
     category: "B2B Sourcing & Quality",
     date: "September 3, 2026",
     readTime: "7 min read",
-    image: "images/blog_b2b_dehydrated_powder_checklist.png",
+    image: "images/blog_b2b_dehydrated_powder_checklist.webp",
     excerpt: "Banana, moringa, shatavari and turmeric powder — what to check before you commit to a bulk supplier in India.",
     content: `
       <p class="lead-text" style="font-size: 1.12rem; line-height: 1.75; color: var(--primary-dark); font-weight: 500; margin-bottom: 1.5rem;">
@@ -125,7 +125,7 @@ const blogsData = [
     category: "Contract Farming & Origin",
     date: "August 12, 2026",
     readTime: "5 min read",
-    image: "images/blog_contract_farming.jpg",
+    image: "images/blog_contract_farming.webp",
     excerpt: "Sourcing 60-70% of raw materials from ~250 acres in Jalgaon guarantees batch traceability and zero pesticide residue.",
     content: `
       <p>In global B2B food manufacturing, quality control that begins at the factory gate is already too late. Soil health, irrigation purity, harvest timing, and field hygiene directly dictate the nutrient density, moisture retention, and microbial safety of the final dehydrated product.</p>
@@ -151,7 +151,7 @@ const blogsData = [
     category: "Superfoods & Exports",
     date: "July 20, 2026",
     readTime: "5 min read",
-    image: "images/banana_packaging_imm.png",
+    image: "images/banana_packaging_imm.webp",
     excerpt: "Dehydrated banana powder is rapidly gaining traction in B2B markets. Explore why this nutrient-dense superfood is becoming a vital ingredient for baby foods, gluten-free baking, and wellness blends.",
     content: `
       <p>Dehydrated banana powder is rapidly transitioning from a niche ingredient to a global B2B powerhouse. Produced from ripe or unripe Cavendish bananas using advanced low-temperature dehydration technology, it retains the essential vitamins, minerals, and prebiotic fibers of the fresh fruit while offering a stable shelf life and versatility for food formulation.</p>
@@ -182,7 +182,7 @@ const blogsData = [
     category: "Business Strategy",
     date: "July 15, 2026",
     readTime: "6 min read",
-    image: "images/blog_spice_processing.jpg",
+    image: "images/blog_spice_processing.webp",
     excerpt: "Launching a food brand requires significant capital. Learn how third-party contract manufacturing allows brands to scale efficiently, reduce costs, and accelerate product launches.",
     content: `
       <p>The food industry is experiencing a massive shift toward D2C brands, organic superfoods, and clean-label snacks. However, setting up a processing facility involves massive capital expenditures, regulatory delays, and operational bottlenecks. This is where private label and third-party contract manufacturing comes in as a game-changer for startups and growing FMCG companies.</p>
@@ -206,7 +206,7 @@ const blogsData = [
     category: "Food Tech",
     date: "July 10, 2026",
     readTime: "5 min read",
-    image: "images/factory.jpg",
+    image: "images/factory.webp",
     excerpt: "Traditional solar or high-heat oven drying often damages the flavor, color, and nutritional values of food ingredients. Discover how modern low-temperature dehydration preserves quality.",
     content: `
       <p>Drying is one of the oldest methods of food preservation. However, the technology used to dehydrate raw materials plays a critical role in determining the final product's quality, color, aroma, and nutrient density. Modern food processing demands advanced low-temperature dehydration over traditional drying methods.</p>
