@@ -28,7 +28,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Font Awesome Icons & Main CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/style.css?v=19.0">
     <link rel="stylesheet" href="css/components.css?v=19.0">
     <link rel="stylesheet" href="css/responsive.css?v=19.0">
@@ -94,7 +95,7 @@
     <header id="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="images/IMMLogo_nav.webp" alt="IMM Food Innovators Logo" class="logo-img" loading="lazy" width="1350" height="260">
+                <img src="images/IMMLogo_nav.webp" alt="IMM Food Innovators Logo" class="logo-img" loading="eager" width="1350" height="260">
             </a>
             <nav>
                 <ul id="navMenu">
@@ -107,7 +108,7 @@
                             <li><a href="products.html?category=powder" class="dropdown-item">Fruit & Veggie Powders</a></li>
                             <li><a href="products.html?category=spices" class="dropdown-item">Pure Spices</a></li>
                             <li><a href="products.html?category=herbal" class="dropdown-item">Herbal & Wellness</a></li>
-                            <li><a href="products.html" class="dropdown-item">View All 25+ Products</a></li>
+                            <li><a href="products.html" class="dropdown-item">View All 29+ Products</a></li>
                         </ul>
                     </li>
 
@@ -125,6 +126,19 @@
                     <li><a href="blogs.html" class="nav-link active">Blogs</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                        <div class="nav-actions" style="display:flex;align-items:center;gap:12px;">
+                <a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20would%20like%20to%20inquire%20about%20your%20products"
+                   target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"
+                   style="color:#25D366;font-size:1.3rem;display:inline-flex;align-items:center;text-decoration:none;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="contact.html?subject=RFQ"
+                   style="background:linear-gradient(135deg,#246828 0%,#153E18 100%);color:#FCBC10;padding:8px 18px;
+                          border-radius:50px;font-weight:700;font-size:0.85rem;border:1px solid rgba(252,188,16,0.4);
+                          text-decoration:none;white-space:nowrap;">
+                    Request Quote →
+                </a>
+            </div>
             </nav>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -133,6 +147,8 @@
             </div>
         </div>
     </header>
+
+    <main>
 
     <!-- INNER PAGE HERO -->
     <section class="inner-page-hero" style="background: linear-gradient(135deg, #153E18 0%, #246828 60%, #1E5622 100%); padding: 1.25rem 1rem 1rem 1rem; position: relative; overflow: hidden; text-align: center;">
@@ -146,7 +162,7 @@
             <!-- CORE TRUST SIGNALS HEADER BAR -->
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 0.35rem;">
                 <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FCBC10; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🌾 ~250 Acres Contract Farming (Jalgaon)</span>
-                <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🛡️ ISO 9001, ISO 22000, GMP & FSSAI Certified</span>
+                <span class="badge-cert-clickable" data-cert-key="iso-22000" title="Click to view Official ISO 22000 Certificate" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600; cursor: pointer;">🛡️ ISO 9001, ISO 22000, GMP & FSSAI Certified</span>
                 <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🔬 NABL Batch Tested (TC-14380)</span>
             </div>
         </div>
@@ -184,7 +200,7 @@
             </article>
 
             <article class="blog-card" style="cursor: pointer;"
-                onclick="window.location.href='blog-detail.html?id=contract-farming-quality-control'">
+                onclick="window.location.href='contract-farming-quality-control-jalgaon.html'">
                 <div class="blog-img-wrap">
                     <img src="images/blog_contract_farming.webp" alt="From Field to Factory" loading="lazy" width="1024" height="1024">
                 </div>
@@ -193,13 +209,13 @@
                     <h3 class="blog-title">From Field to Factory: How ~250 Acres Ensures Raw Material Quality</h3>
                     <p class="blog-excerpt">Sourcing 60-70% of raw materials from ~250 acres in Jalgaon guarantees batch
                         traceability and zero pesticide residue.</p>
-                    <a href="blog-detail.html?id=contract-farming-quality-control" class="blog-read-more"
+                    <a href="contract-farming-quality-control-jalgaon.html" class="blog-read-more"
                         onclick="event.stopPropagation();">Read Full Article →</a>
                 </div>
             </article>
 
             <article class="blog-card" style="cursor: pointer;"
-                onclick="window.location.href='blog-detail.html?id=banana-powder-benefits'">
+                onclick="window.location.href='banana-powder-health-benefits-b2b.html'">
                 <div class="blog-img-wrap">
                     <img src="images/banana_packaging_imm.webp" alt="Dehydrated Banana Powder Benefits" loading="lazy" width="1024" height="1024">
                 </div>
@@ -209,13 +225,13 @@
                         Applications</h3>
                     <p class="blog-excerpt">Dehydrated banana powder is rapidly gaining traction in B2B markets. Explore
                         why this nutrient-dense superfood is becoming a vital ingredient.</p>
-                    <a href="blog-detail.html?id=banana-powder-benefits" class="blog-read-more"
+                    <a href="banana-powder-health-benefits-b2b.html" class="blog-read-more"
                         onclick="event.stopPropagation();">Read Full Article →</a>
                 </div>
             </article>
 
             <article class="blog-card" style="cursor: pointer;"
-                onclick="window.location.href='blog-detail.html?id=private-label-food-startup'">
+                onclick="window.location.href='private-label-food-manufacturing-guide.html'">
                 <div class="blog-img-wrap">
                     <img src="images/blog_spice_processing.webp" alt="Private Label Food Manufacturing" loading="lazy" width="1024" height="1024">
                 </div>
@@ -224,13 +240,13 @@
                     <h3 class="blog-title">How Private Label Food Manufacturing Accelerates Startup Growth</h3>
                     <p class="blog-excerpt">Launching a food brand requires significant capital. Learn how contract
                         manufacturing allows brands to scale efficiently.</p>
-                    <a href="blog-detail.html?id=private-label-food-startup" class="blog-read-more"
+                    <a href="private-label-food-manufacturing-guide.html" class="blog-read-more"
                         onclick="event.stopPropagation();">Read Full Article →</a>
                 </div>
             </article>
 
             <article class="blog-card" style="cursor: pointer;"
-                onclick="window.location.href='blog-detail.html?id=dehydration-technology-drying'">
+                onclick="window.location.href='low-temperature-dehydration-technology.html'">
                 <div class="blog-img-wrap">
                     <img src="images/factory.webp?v=4.0" alt="Low-Temperature Dehydration" loading="lazy">
                 </div>
@@ -239,7 +255,7 @@
                     <h3 class="blog-title">Low-Temperature Dehydration vs. Traditional Drying: Why Quality Matters</h3>
                     <p class="blog-excerpt">Traditional solar or high-heat oven drying often damages flavor and color.
                         Discover how low-temp dehydration preserves quality.</p>
-                    <a href="blog-detail.html?id=dehydration-technology-drying" class="blog-read-more"
+                    <a href="low-temperature-dehydration-technology.html" class="blog-read-more"
                         onclick="event.stopPropagation();">Read Full Article →</a>
                 </div>
             </article>
@@ -247,6 +263,8 @@
     </section>
 
     <!-- FOOTER -->
+    </main>
+
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
@@ -287,10 +305,10 @@
             <div class="footer-col">
                 <h4>Featured Articles</h4>
                 <div class="footer-links">
-                    <a href="blog-detail.html?id=dehydrated-powder-supplier-buyers-guide-india">B2B Powder Supplier
+                    <a href="dehydrated-powder-supplier-buyers-guide-india.html">B2B Powder Supplier
                         Checklist</a>
-                    <a href="blog-detail.html?id=banana-powder-benefits">Dehydrated Banana Powder Benefits</a>
-                    <a href="blog-detail.html?id=contract-farming-quality-control">Contract Farming & Quality</a>
+                    <a href="banana-powder-health-benefits-b2b.html">Dehydrated Banana Powder Benefits</a>
+                    <a href="contract-farming-quality-control-jalgaon.html">Contract Farming & Quality</a>
                 </div>
             </div>
 
@@ -322,6 +340,13 @@
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
     <script src="js/blogs.js"></script>
+<a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20am%20interested%20in%20bulk%20purchasing%2Fexport%20specifications"
+   target="_blank" rel="noopener noreferrer" aria-label="Chat with Export Sales on WhatsApp"
+   style="position:fixed;bottom:25px;right:25px;z-index:9999;background:#25D366;color:#FFFFFF;
+          width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+          font-size:30px;box-shadow:0 4px 16px rgba(37,211,102,0.4);text-decoration:none;">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 </body>
 
 </html>

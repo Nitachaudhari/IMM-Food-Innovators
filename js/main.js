@@ -94,28 +94,54 @@
   /* ============================================================
      3. MODAL DIALOG CONTROLLER (SPECS, QUOTE, CERTIFICATES)
   ============================================================ */
-  const modalOverlay = document.getElementById('modalOverlay');
-  const modalBody = document.getElementById('modalBody');
-  const modalClose = document.getElementById('modalClose');
+  function getOrCreateModal() {
+    let overlay = document.getElementById('modalOverlay');
+    let body = document.getElementById('modalBody');
+    let closeBtn = document.getElementById('modalClose');
+
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.id = 'modalOverlay';
+      overlay.innerHTML = `
+        <div class="modal-container">
+          <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+          <div id="modalBody"></div>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      body = overlay.querySelector('#modalBody');
+      closeBtn = overlay.querySelector('#modalClose');
+    }
+
+    if (closeBtn && !closeBtn.hasAttribute('data-bound')) {
+      closeBtn.setAttribute('data-bound', 'true');
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (overlay && !overlay.hasAttribute('data-bound')) {
+      overlay.setAttribute('data-bound', 'true');
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal();
+      });
+    }
+
+    return { overlay, body };
+  }
 
   function openModal(contentHtml) {
-    if (!modalOverlay || !modalBody) return;
-    modalBody.innerHTML = contentHtml;
-    modalOverlay.classList.add('active');
+    const { overlay, body } = getOrCreateModal();
+    if (!overlay || !body) return;
+    body.innerHTML = contentHtml;
+    overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
-    if (!modalOverlay) return;
-    modalOverlay.classList.remove('active');
+    const overlay = document.getElementById('modalOverlay');
+    if (!overlay) return;
+    overlay.classList.remove('active');
     document.body.style.overflow = '';
-  }
-
-  if (modalClose) modalClose.addEventListener('click', closeModal);
-  if (modalOverlay) {
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) closeModal();
-    });
   }
 
   window.openModal = openModal;
@@ -216,36 +242,95 @@
   };
 
   const certDetailsData = {
-    'iso-22000': { doc: 'images/certifications/iso_22000.webp' },
-    'iso-9001': { doc: 'images/certifications/iso_9001.webp' },
-    'fssai': { doc: 'images/certifications/fssai.webp' },
-    'gmp': { doc: 'images/certifications/GMP.webp' },
-    'udyam': { doc: 'images/certifications/apeda_udyam.webp' }
+    'iso-22000': {
+      title: 'ISO 22000:2018 Food Safety Management System Certificate',
+      subtitle: 'Certified International Food Safety & Hygiene Standard',
+      doc: 'images/certifications/iso_22000.webp'
+    },
+    'iso-9001': {
+      title: 'ISO 9001:2015 Quality Management System Certificate',
+      subtitle: 'Certified Quality Management & Production Process Standard',
+      doc: 'images/certifications/iso_9001.webp'
+    },
+    'fssai': {
+      title: 'FSSAI Food Safety License',
+      subtitle: 'Licence No. 11524021000216 — Food Safety and Standards Authority of India',
+      doc: 'images/certifications/fssai.webp'
+    },
+    'gmp': {
+      title: 'GMP Good Manufacturing Practice Certificate',
+      subtitle: 'Certified Sanitary Infrastructure & Batch Manufacturing Compliance',
+      doc: 'images/certifications/GMP.webp'
+    },
+    'udyam': {
+      title: 'Udyam MSME Registration Certificate',
+      subtitle: 'Government of India Enterprise Registration — IMM Food Innovators LLP',
+      doc: 'images/certifications/apeda_udyam.webp'
+    },
+    'msme': {
+      title: 'Udyam MSME Registration Certificate',
+      subtitle: 'Government of India Enterprise Registration — IMM Food Innovators LLP',
+      doc: 'images/certifications/apeda_udyam.webp'
+    },
+    'haccp': {
+      title: 'HACCP Hazard Analysis Critical Control Point',
+      subtitle: 'International Hazard Analysis & Risk Control Compliance Standard',
+      doc: 'images/certifications/haccp.webp'
+    },
+    'quality': {
+      title: 'Quality Control & NABL Lab Verification',
+      subtitle: 'Accredited NABL Batch Analysis on File (Shree ATR Lab Jalgaon — TC-14380)',
+      doc: 'images/certifications/quality.webp'
+    }
   };
 
-  window.openCertModal = function (certKey) {
-    const info = certDetailsData[certKey] || certDetailsData['iso-9001'];
-    const docSrc = info ? info.doc : 'images/certifications/iso_9001.webp';
+  window.openCertModal = function (certKey, customName) {
+    const key = (certKey || '').toLowerCase();
+    const info = certDetailsData[key] || certDetailsData['iso-9001'];
+    const docSrc = (typeof certKey === 'string' && certKey.includes('/')) ? certKey : (info ? info.doc : 'images/certifications/iso_9001.webp');
+    const title = customName || (info ? info.title : 'Official Certification Document');
+    const subtitle = info ? info.subtitle : 'IMM Food Innovators LLP Official Verified Document';
+
     openModal(`
-      <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding: 0.5rem 0;">
-        <img src="${docSrc}" alt="Official Certificate Document" style="max-width: 100%; max-height: 82vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); object-fit: contain; display: block; margin: 0 auto;">
+      <div style="text-align: center; width: 100%; max-width: 720px; margin: 0 auto; padding: 0.25rem 0;">
+        <div style="margin-bottom: 1.25rem;">
+          <span style="display: inline-block; background: #FEF3C7; color: #92400E; font-weight: 700; border: 1px solid #FDE68A; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase;">VERIFIED OFFICIAL COMPLIANCE DOCUMENT</span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: #0A2E1D; margin: 0.5rem 0 0.25rem 0; line-height: 1.3;">${title}</h3>
+          <p style="font-size: 0.88rem; color: #4B5563; margin: 0; font-weight: 500;">${subtitle}</p>
+        </div>
+        <div style="position: relative; background: #F8FAFC; border-radius: 12px; padding: 0.75rem; border: 1px solid #E2E8F0; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; min-height: 300px;">
+          <img src="${docSrc}" alt="${title}" style="max-width: 100%; max-height: 62vh; width: auto; height: auto; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.18); object-fit: contain; display: block; margin: 0 auto;" onerror="this.onerror=null; this.src='images/certifications/iso_9001.webp';">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center;">
+          <a href="${docSrc}" target="_blank" rel="noopener" class="btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border-radius: 8px;">
+            <span>🔍 View High-Resolution Full Document ↗</span>
+          </a>
+          <button type="button" onclick="if(window.openQuoteModal){window.openQuoteModal('Certificate Verification: ${title.replace(/'/g, "\\'")}');}" class="btn-secondary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 6px; border-radius: 8px; cursor: pointer; border: 1px solid var(--primary-dark); background: transparent; color: var(--primary-dark); font-weight: 700;">
+            <span>📋 Request COA / Verification</span>
+          </button>
+        </div>
       </div>
     `);
   };
 
   function initCertificates() {
-    const certCards = document.querySelectorAll('.cert-card');
-    certCards.forEach(card => {
-      card.addEventListener('click', function () {
-        const certKey = this.getAttribute('data-cert-key');
-        if (certKey && window.openCertModal) {
-          window.openCertModal(certKey);
-        } else {
-          const src = this.getAttribute('data-cert-src');
-          if (src) window.open(src, '_blank');
-        }
-      });
+    const certElements = document.querySelectorAll('.cert-card, [data-cert-key], [data-cert-src], .badge-cert-clickable');
+    certElements.forEach(el => {
+      el.removeEventListener('click', handleCertClick);
+      el.addEventListener('click', handleCertClick);
     });
+  }
+
+  function handleCertClick(e) {
+    const certKey = this.getAttribute('data-cert-key');
+    const certSrc = this.getAttribute('data-cert-src');
+    const certName = this.getAttribute('data-cert-name');
+    if (certKey || certSrc) {
+      e.preventDefault();
+      if (window.openCertModal) {
+        window.openCertModal(certKey || certSrc, certName);
+      }
+    }
   }
 
   /* ============================================================
@@ -444,6 +529,13 @@
       if (inquirySelect) inquirySelect.value = 'Contract Mfg';
       if (messageArea && !messageArea.value) {
         messageArea.value = 'Inquiry: Third-Party Contract Manufacturing & Custom Mesh Size Milling (60-120 mesh) at Jalgaon plant up to 1,000 kg/shift.';
+      }
+    } else if (subjectParam === 'SampleKit') {
+      if (inquirySelect) inquirySelect.value = 'Bulk Order';
+      const volumeSelect = document.getElementById('contact_volume') || document.getElementById('index_volume');
+      if (volumeSelect) volumeSelect.value = 'Free B2B Sample Kit (500g-2kg)';
+      if (messageArea && !messageArea.value) {
+        messageArea.value = 'Inquiry: Requesting Free B2B Sample Kit (500g-2kg trial sample pack) for laboratory QA testing & product formulation evaluation.';
       }
     }
   }

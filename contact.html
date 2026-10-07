@@ -28,7 +28,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Font Awesome Icons & Main CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/style.css?v=19.0">
     <link rel="stylesheet" href="css/components.css?v=19.0">
     <link rel="stylesheet" href="css/responsive.css?v=19.0">
@@ -121,7 +122,7 @@
     <header id="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="images/IMMLogo_nav.webp" alt="IMM Food Innovators Logo" class="logo-img" loading="lazy" width="1350" height="260">
+                <img src="images/IMMLogo_nav.webp" alt="IMM Food Innovators Logo" class="logo-img" loading="eager" width="1350" height="260">
             </a>
             <nav>
                 <ul id="navMenu">
@@ -135,7 +136,7 @@
                             </li>
                             <li><a href="products.html?category=spices" class="dropdown-item">Pure Spices</a></li>
                             <li><a href="products.html?category=herbal" class="dropdown-item">Herbal & Wellness</a></li>
-                            <li><a href="products.html" class="dropdown-item">View All 25+ Products</a></li>
+                            <li><a href="products.html" class="dropdown-item">View All 29+ Products</a></li>
                         </ul>
                     </li>
 
@@ -157,6 +158,19 @@
                     <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
+                        <div class="nav-actions" style="display:flex;align-items:center;gap:12px;">
+                <a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20would%20like%20to%20inquire%20about%20your%20products"
+                   target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"
+                   style="color:#25D366;font-size:1.3rem;display:inline-flex;align-items:center;text-decoration:none;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="contact.html?subject=RFQ"
+                   style="background:linear-gradient(135deg,#246828 0%,#153E18 100%);color:#FCBC10;padding:8px 18px;
+                          border-radius:50px;font-weight:700;font-size:0.85rem;border:1px solid rgba(252,188,16,0.4);
+                          text-decoration:none;white-space:nowrap;">
+                    Request Quote →
+                </a>
+            </div>
             </nav>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -178,7 +192,7 @@
             <!-- CORE TRUST SIGNALS HEADER BAR -->
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 0.35rem;">
                 <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FCBC10; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🌾 ~250 Acres Contract Farming (Jalgaon)</span>
-                <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🛡️ ISO 9001, ISO 22000, GMP & FSSAI Certified</span>
+                <span class="badge-cert-clickable" data-cert-key="iso-22000" title="Click to view Official ISO 22000 Certificate" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600; cursor: pointer;">🛡️ ISO 9001, ISO 22000, GMP & FSSAI Certified</span>
                 <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🔬 NABL Batch Tested (TC-14380)</span>
             </div>
         </div>
@@ -191,9 +205,9 @@
                 <!-- LEFT COLUMN: INQUIRY FORM -->
                 <div class="contact-form-card"
                     style="background: #FFFFFF; border-radius: var(--radius-md); padding: 2.5rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-                    <h3
+                    <h2
                         style="font-size: var(--font-size-xl); color: var(--primary-dark); margin-bottom: 0.5rem; font-weight: var(--weight-bold);">
-                        Send Direct B2B Requirement</h3>
+                        Send Direct B2B Requirement</h2>
                     <p style="color: var(--text-secondary); margin-bottom: 1.8rem; font-size: var(--font-size-sm);">Fill
                         out your requirements below to receive product specifications, samples, and wholesale pricing.
                     </p>
@@ -232,6 +246,8 @@
                                     <option value="" disabled selected>-- Select Product of Interest --</option>
                                     <optgroup label="Fruit & Veggie Powders">
                                         <option value="Banana Powder">Banana Powder</option>
+                                        <option value="Banana Peel Powder">Banana Peel Powder</option>
+                                        <option value="Banana Stem Powder">Banana Stem Powder</option>
                                         <option value="Beetroot Powder">Beetroot Powder</option>
                                         <option value="Tomato Powder">Tomato Powder</option>
                                         <option value="Potato Powder">Potato Powder</option>
@@ -254,6 +270,7 @@
                                         <option value="Moringa Leaf Powder">Moringa Leaf Powder</option>
                                         <option value="Shatavari Powder">Shatavari Powder</option>
                                         <option value="Ashwagandha Powder">Ashwagandha Powder</option>
+                                        <option value="Single-Herb Capsules">Single-Herb Capsules (Private Label)</option>
                                         <option value="Lemongrass Powder">Lemongrass Powder</option>
                                         <option value="Guduchi (Giloy) Powder">Guduchi (Giloy) Powder</option>
                                         <option value="Neem Powder">Neem Powder</option>
@@ -280,10 +297,27 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact_volume">Estimated Order Volume *</label>
+                                <select id="contact_volume" name="order_volume" required>
+                                    <option value="" disabled selected>-- Select Order Volume Tier --</option>
+                                    <option value="Free B2B Sample Kit (500g-2kg)">Free B2B Sample Kit (500g - 2kg Trial)</option>
+                                    <option value="< 500 kg (Pilot Batch)">&lt; 500 kg (Pilot / Trial Batch)</option>
+                                    <option value="1 – 5 Metric Tons (LCL Container)">1 – 5 Metric Tons (LCL Container)</option>
+                                    <option value="10 – 25 Metric Tons (FCL Container)">10 – 25 Metric Tons (FCL Container)</option>
+                                    <option value="25+ Metric Tons (Contract Supply)">25+ Metric Tons (Contract Annual Supply)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact_destination">Delivery Destination / Seaport</label>
+                                <input type="text" id="contact_destination" name="destination_port" placeholder="e.g. Jebel Ali, Dubai / Hamburg / Domestic">
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <label for="contact_message">Requirement Details *</label>
-                            <textarea id="contact_message" name="message" rows="4"
-                                placeholder="Please specify volume required (e.g. 1,000 kg Banana Powder), packaging preferences, and delivery destination..."
+                            <label for="contact_message">Requirement Details & Specifications *</label>
+                            <textarea id="contact_message" name="message" rows="3"
+                                placeholder="Specify mesh size, custom blending ratios, private label preferences, or target delivery timeline..."
                                 required></textarea>
                         </div>
                         <button type="submit" class="btn-primary" style="width: 100%;">Submit Business Inquiry
@@ -339,12 +373,13 @@
                         style="flex: 1; min-height: 320px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex;">
                         <iframe title="IMM Food Innovators LLP Location Map"
                             src="https://maps.google.com/maps?q=IMM+Food+Innovators+LLP,+Nhavi+Hambardi+Road,+Nhavi,+Yawal,+Jalgaon,+Maharashtra+425524&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            width="100%" height="100%" style="border:0; display: block; flex: 1; min-height: 320px;"
+                            width="600" height="450" style="border:0; display: block; flex: 1; min-height: 320px; width: 100%; height: 100%;"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -418,10 +453,7 @@
 
     <script src="data/company.js"></script>
     <script src="data/products.js"></script>
-    <script src="data/blogs.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/blogs.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contactFormPage');
@@ -457,6 +489,8 @@
                         return;
                     }
 
+                    const apiKey = (window.companyData && window.companyData.web3formsKey) ? window.companyData.web3formsKey : '4d0c3c98-6bd6-4751-88f0-353b9ad95f9c';
+
                     fetch('https://api.web3forms.com/submit', {
                         method: 'POST',
                         headers: {
@@ -464,7 +498,7 @@
                             'Accept': 'application/json'
                         },
                         body: JSON.stringify({
-                            access_key: '4d0c3c98-6bd6-4751-88f0-353b9ad95f9c',
+                            access_key: apiKey,
                             subject: `New B2B Website Inquiry: ${formJson.product || 'General Inquiry'}`,
                             from_name: 'IMM Food Innovators Website',
                             ...formJson
@@ -490,6 +524,13 @@
             }
         });
     </script>
+<a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20am%20interested%20in%20bulk%20purchasing%2Fexport%20specifications"
+   target="_blank" rel="noopener noreferrer" aria-label="Chat with Export Sales on WhatsApp"
+   style="position:fixed;bottom:25px;right:25px;z-index:9999;background:#25D366;color:#FFFFFF;
+          width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+          font-size:30px;box-shadow:0 4px 16px rgba(37,211,102,0.4);text-decoration:none;">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 </body>
 
 </html>

@@ -3,8 +3,20 @@
    Mobile Drawer Navigation, Tablet & Desktop Breakpoints
    ============================================================ */
 
-/* ── TABLET & SMALL DESKTOP BREAKPOINTS (<= 1024px) ── */
-@media (max-width: 1024px) {
+/* ── TABLET & SMALL DESKTOP BREAKPOINTS (<= 1120px) ── */
+@media (max-width: 1120px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  nav {
+    gap: 0.85rem;
+  }
+  nav ul {
+    gap: 0.75rem;
+  }
+  .nav-link {
+    font-size: 0.82rem;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
@@ -28,6 +40,16 @@
 
   .hamburger {
     display: flex;
+  }
+
+  .nav-actions {
+    gap: 8px;
+    margin-right: 8px;
+  }
+
+  .nav-actions a[href*="contact.html"] {
+    padding: 6px 14px !important;
+    font-size: 0.78rem !important;
   }
 
   nav ul {
@@ -77,8 +99,8 @@
   }
 
   .hero-slider-section {
-    height: 520px;
-    min-height: 480px;
+    height: clamp(480px, 70vh, 620px);
+    min-height: 460px;
   }
 
   .hero-title {
@@ -110,6 +132,22 @@
 
   .modal-container {
     padding: 1.5rem;
+  }
+
+  .why-card, #retail-packaging, #bulk-packaging, #custom-blends, #contract-mfg {
+    padding: 1.5rem 1.15rem !important;
+  }
+
+  .contact-form-card, .contact-info-card {
+    padding: 1.5rem 1.15rem !important;
+  }
+
+  [style*="min-width: 300px"] {
+    min-width: 0 !important;
+  }
+
+  .buyer-guide-table, table {
+    min-width: 580px;
   }
 }
 

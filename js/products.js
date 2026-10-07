@@ -43,7 +43,7 @@
     const p = productsData.find(item => item.name.toLowerCase() === productName.toLowerCase()) || {
       name: productName,
       category: 'Fruit & Veggie Powders',
-      image: 'images/powders/Banana Powder.png',
+      image: 'images/powders/Banana Powder.webp',
       description: 'Premium low-temperature dehydrated ingredient processed in Jalgaon facility.',
       spec: '80 Mesh • Food Grade',
       details: {
@@ -98,12 +98,13 @@
           </div>
 
           <!-- SECTION 3: COMMERCIAL LOGISTICS & PACKAGING -->
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">3. B2B Packaging & Dispatch Logistics</h4>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">3. B2B Packaging, Customs HS Code & Logistics</h4>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.75rem;">
+            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">HS Customs Code:</span><strong style="color: #047857; font-size: 0.88rem;">${d.hsCode || '0803.90 / 0712.90'}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Standard B2B Packaging:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.packaging || '25 kg HDPE Bag'}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Shelf Life & Season:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.shelfLife || '12 Months'}${d.harvestSeason ? ' (' + d.harvestSeason + ')' : ''}</strong></div>
             <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Dispatch MOQ:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.moq || '100 kg'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Plant Origin:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">Yawal, Jalgaon, Maharashtra, India</strong></div>
+            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Plant Origin:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.origin || 'Yawal, Jalgaon, Maharashtra, India'}</strong></div>
           </div>
 
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">

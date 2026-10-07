@@ -1,0 +1,62 @@
+# ============================================================
+# IMM Food Innovators LLP — Server Configuration & Security
+# Hostinger Apache / Litespeed Configuration (.htaccess)
+# ============================================================
+
+# 1. SECURITY HEADERS
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# 2. PROTECT SENSITIVE FILES & REPOSITORIES (.git, .agents, AGENTS.md, etc.)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^\.git/ - [F,L]
+    RewriteRule ^\.agents/ - [F,L]
+    RewriteRule ^AGENTS\.md$ - [F,L]
+</IfModule>
+
+<FilesMatch "^(\.git|\.agents|AGENTS\.md|\.gitignore)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3. BROWSER ASSET CACHING & PERFORMANCE (EXPIRES / CACHE-CONTROL)
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images & Favicons
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Stylesheets & Scripts
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+
+    # Web Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(webp|png|jpg|jpeg|svg|ico|woff2|woff)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>

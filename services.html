@@ -28,7 +28,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Font Awesome Icons & Main Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/style.css?v=19.0">
     <link rel="stylesheet" href="css/components.css?v=19.0">
     <link rel="stylesheet" href="css/responsive.css?v=19.0">
@@ -134,7 +135,7 @@
     <header id="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="images/IMMLogo_nav.webp" alt="IMM Food Innovators Logo" class="logo-img" loading="lazy" width="1350" height="260">
+                <img src="images/IMMLogo_nav.webp" alt="IMM Food Innovators Logo" class="logo-img" loading="eager" width="1350" height="260">
             </a>
             <nav>
                 <ul id="navMenu">
@@ -147,7 +148,7 @@
                             <li><a href="products.html?category=powder" class="dropdown-item">Fruit & Veggie Powders</a></li>
                             <li><a href="products.html?category=spices" class="dropdown-item">Pure Spices</a></li>
                             <li><a href="products.html?category=herbal" class="dropdown-item">Herbal & Wellness</a></li>
-                            <li><a href="products.html" class="dropdown-item">View All 25+ Products</a></li>
+                            <li><a href="products.html" class="dropdown-item">View All 29+ Products</a></li>
                         </ul>
                     </li>
 
@@ -165,6 +166,19 @@
                     <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                        <div class="nav-actions" style="display:flex;align-items:center;gap:12px;">
+                <a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20would%20like%20to%20inquire%20about%20your%20products"
+                   target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"
+                   style="color:#25D366;font-size:1.3rem;display:inline-flex;align-items:center;text-decoration:none;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="contact.html?subject=RFQ"
+                   style="background:linear-gradient(135deg,#246828 0%,#153E18 100%);color:#FCBC10;padding:8px 18px;
+                          border-radius:50px;font-weight:700;font-size:0.85rem;border:1px solid rgba(252,188,16,0.4);
+                          text-decoration:none;white-space:nowrap;">
+                    Request Quote →
+                </a>
+            </div>
             </nav>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -173,6 +187,8 @@
             </div>
         </div>
     </header>
+
+    <main>
 
     <!-- INNER PAGE HERO -->
     <section class="inner-page-hero" style="background: linear-gradient(135deg, #153E18 0%, #246828 60%, #1E5622 100%); padding: 1.25rem 1rem 1rem 1rem; text-align: center; color: #FFFFFF; position: relative; overflow: hidden;">
@@ -184,7 +200,7 @@
             <!-- CORE TRUST SIGNALS HEADER BAR -->
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 0.35rem;">
                 <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FCBC10; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🌾 ~250 Acres Contract Farming (Jalgaon)</span>
-                <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🛡️ ISO 9001, ISO 22000, GMP & FSSAI Certified</span>
+                <span class="badge-cert-clickable" data-cert-key="iso-22000" title="Click to view Official ISO 22000 Certificate" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600; cursor: pointer;">🛡️ ISO 9001, ISO 22000, GMP & FSSAI Certified</span>
                 <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(252, 188, 16, 0.35); color: #FFFFFF; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;">🔬 NABL Batch Tested (TC-14380)</span>
             </div>
         </div>
@@ -242,8 +258,6 @@
                     </div>
                     <div style="margin-top: 1.75rem;">
                         <a href="contact.html?subject=PrivateLabel" class="btn-primary" style="font-weight: 800;">Inquire About Private Label Packaging →</a>
-                    </div>
-                        </div>
                     </div>
                 </div>
 
@@ -314,7 +328,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
             <!-- SECTION 2: BULK EXPORT PACKAGING SOLUTIONS -->
             <div id="bulk-packaging" class="why-card" style="padding: 3rem; margin-bottom: 3rem;">
@@ -429,20 +442,13 @@
                     <a href="contact.html?subject=ContractMfg" class="btn-secondary" style="background: var(--bg-linen); border: 1px solid var(--border-light); color: var(--primary-dark); font-weight: 700; padding: 12px 20px; border-radius: 8px;">Start Contract Manufacturing Partnership →</a>
                 </div>
             </div>
-                        <p style="font-size: 0.88rem; color: var(--text-secondary);">Strict non-disclosure
-                            confidentiality agreements protecting your brand's unique formulations.</p>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 2.5rem;">
-                    <a href="contact.html" class="btn-primary">Start Contract Manufacturing Partnership →</a>
-                </div>
-            </div>
 
         </div>
     </section>
 
     <!-- FOOTER -->
+    </main>
+
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
@@ -517,6 +523,13 @@
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
     <script src="js/blogs.js"></script>
+<a href="https://wa.me/919114403000?text=Hi%20IMM%20Food%20Innovators%2C%20I%20am%20interested%20in%20bulk%20purchasing%2Fexport%20specifications"
+   target="_blank" rel="noopener noreferrer" aria-label="Chat with Export Sales on WhatsApp"
+   style="position:fixed;bottom:25px;right:25px;z-index:9999;background:#25D366;color:#FFFFFF;
+          width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+          font-size:30px;box-shadow:0 4px 16px rgba(37,211,102,0.4);text-decoration:none;">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 </body>
 
 </html>

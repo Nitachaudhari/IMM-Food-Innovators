@@ -23,6 +23,7 @@ const productsData = [
     description: "100% pure Cavendish Green & Ripe banana powder varieties from Jalgaon. Packed with prebiotic resistant starch (~82%) and low moisture (<4.0%), ideal for infant nutrition/baby cereals, gluten-free baking, and functional foods.",
     spec: "80-100 Mesh • Prebiotic Starch ~82% • Moisture < 4.0%",
     details: {
+      hsCode: "0803.90 (Fresh/Dried Bananas) / 1106.30",
       form: "Fine Micro-Ground Powder (Cavendish Green & Ripe Varieties)",
       mesh: "80 - 100 Fine Mesh",
       moisture: "< 4.0% Max (Low Moisture Processed)",
@@ -46,6 +47,7 @@ const productsData = [
     description: "Micro-ground high-chlorophyll Moringa oleifera leaf powder processed with 50°C controlled dehydration and zero stem tolerance. Rich in plant protein & essential micronutrients, perfect for health beverages and nutraceuticals.",
     spec: "80-120 Mesh • 50°C Controlled Dehydration • Zero Stem Tolerance",
     details: {
+      hsCode: "1211.90 (Medicinal/Herbal Plants) / 0712.90",
       form: "Micro-Ground Dried Leaf Powder (50°C Controlled Dehydration, Zero Stem)",
       mesh: "80 - 120 Micro-Fine Mesh",
       moisture: "< 6.0% Max",
@@ -92,6 +94,7 @@ const productsData = [
     description: "Ayurvedic beverage grade Asparagus racemosus pure root powder with standardized active steroidal saponins (>5.0%). Ideal for vitality & female hormonal wellness formulations, tonic beverages, and nutraceutical extracts.",
     spec: "Pure Root Extract • Active Saponins > 5.0% • Ayurvedic Grade",
     details: {
+      hsCode: "1211.90 (Medicinal Roots)",
       form: "Pure Root Extract Powder (Asparagus Racemosus)",
       mesh: "80 - 100 Mesh",
       moisture: "< 7.0% Max",
@@ -114,6 +117,7 @@ const productsData = [
     description: "Vibrant natural red betanin pigment for natural food coloring, meat processing & health beverages.",
     spec: "80 Mesh • 100% Water Soluble",
     details: {
+      hsCode: "0712.90 (Dehydrated Vegetables)",
       form: "Natural Vegetable Color Powder",
       mesh: "80 Mesh",
       moisture: "< 4.5% Max",
@@ -174,6 +178,7 @@ const productsData = [
     description: "Pungent natural allicin garlic powder for meat seasonings, sausage premixes & instant gravies.",
     spec: "80-100 Mesh • Pure Allium",
     details: {
+      hsCode: "0712.90 (Dehydrated Vegetables)",
       form: "High-Pungency Dehydrated Vegetable Powder",
       mesh: "80 - 100 Fine Mesh",
       moisture: "< 5.0% Max",
@@ -194,6 +199,7 @@ const productsData = [
     description: "Aromatic gingerol-rich powder for tea premixes, bakery, confectionery & digestive formulations.",
     spec: "Pungency High • 80 Mesh",
     details: {
+      hsCode: "0910.11 / 0910.12 (Dehydrated Ginger)",
       form: "Pure Ground Ginger Root Powder",
       mesh: "60 - 80 Spice Mesh",
       moisture: "< 7.0% Max",
@@ -294,6 +300,7 @@ const productsData = [
     description: "Tangy, rich lycopene-packed tomato powder for instant soup mixes, snack seasonings & tomato pastes.",
     spec: "Low-Temp Dried • Free Flowing",
     details: {
+      hsCode: "0712.90 (Dehydrated Vegetables)",
       form: "Fine Dehydrated Spray-Dried / Low-Temp Powder",
       mesh: "80 Mesh",
       moisture: "< 3.8% Max",
@@ -394,6 +401,7 @@ const productsData = [
     description: "Withanolide-rich Ayurvedic adaptogen root powder for energy, stress relief & wellness blends.",
     spec: "Withanolide 2.5%+ • Root Extract",
     details: {
+      hsCode: "1211.90 (Medicinal Plants/Roots)",
       form: "Ayurvedic Adaptogenic Root Powder",
       mesh: "80 - 100 Mesh",
       moisture: "< 5.0% Max",
@@ -451,9 +459,10 @@ const productsData = [
     name: "Neem Powder",
     category: "Herbal & Wellness",
     image: "images/powders/Neem Powder.webp",
-    description: "Medicinal Azadirachta indica leaf powder for health detox, cosmetics & organic agriculture.",
+    description: "Medicinal Azadirachta indica leaf powder for health detox, cosmetics & natural agriculture.",
     spec: "Azadirachtin Active • Fine Mesh",
     details: {
+      hsCode: "1211.90 (Medicinal Leaves)",
       form: "Micro-Ground Leaf Powder",
       mesh: "80 - 100 Fine Mesh",
       moisture: "< 5.0% Max",
@@ -534,6 +543,7 @@ const productsData = [
     description: "High natural Vitamin C concentration for nutraceutical blends, immunity drinks & Ayurvedic formulations.",
     spec: "Fine Powder • Vitamin C 300mg+",
     details: {
+      hsCode: "1211.90 / 2008.99",
       form: "Raw Herbal Fruit Powder",
       mesh: "80 Mesh",
       moisture: "< 6.0% Max",
@@ -544,6 +554,78 @@ const productsData = [
       shelfLife: "12 Months",
       moq: "100 kg",
       solubility: "Water Dispersible"
+    }
+  },
+  {
+    id: 27,
+    name: "Banana Peel Powder",
+    category: "Fruit & Veggie Powders",
+    image: "images/powders/Banana Peel Powder.webp",
+    isHero: false,
+    description: "Tray-dehydrated banana peel powder, dried in controlled hot-air trays rather than open sun — giving consistent colour, low microbial load and no grit or field contamination.",
+    spec: "TRAY-DRIED, NOT SUN-DRIED • 60-80 Mesh • High Fibre & Potassium",
+    details: {
+      hsCode: "0803.90 / 0712.90",
+      form: "Micro-Ground Dried Peel Powder",
+      mesh: "60 – 80 Mesh (100 mesh on request)",
+      moisture: "< 7.0% Max",
+      microbial: "TPC < 50,000 CFU/g | Salmonella/E.Coli Absent",
+      activeMarker: "High Dietary Fibre & Natural Potassium",
+      color: "Uniform Light Brown to Tan",
+      odor: "Mild Fruity, Faintly Bitter",
+      packaging: "25 kg / 50 kg Sealed Food-Grade HDPE Bag",
+      shelfLife: "12 Months",
+      moq: "50 kg",
+      harvestSeason: "Year-Round (Peak Nov - March)",
+      solubility: "Partially Dispersible — Suited to Blending"
+    }
+  },
+  {
+    id: 28,
+    name: "Banana Stem Powder",
+    category: "Fruit & Veggie Powders",
+    image: "images/powders/Banana Stem Powder.webp",
+    isHero: false,
+    description: "Dehydrated banana pseudostem powder, processed within hours of harvest to limit oxidation and hold an even, pale colour. A high-fibre base ingredient for beverage mixes, soups and speciality flour blends.",
+    spec: "60-80 Mesh • Pale Cream to Light Beige • High Insoluble Fibre",
+    details: {
+      hsCode: "0803.90 / 0712.90",
+      form: "Micro-Ground Dried Pseudostem Powder",
+      mesh: "60 – 80 Mesh",
+      moisture: "< 7.0% Max",
+      microbial: "TPC < 50,000 CFU/g | Salmonella/E.Coli Absent",
+      activeMarker: "High Insoluble Dietary Fibre & Natural Potassium",
+      color: "Pale Cream to Light Beige",
+      odor: "Neutral, Mildly Vegetal",
+      packaging: "25 kg / 50 kg Sealed Food-Grade HDPE Bag",
+      shelfLife: "12 Months",
+      moq: "50 kg",
+      harvestSeason: "Year-Round (Peak Nov - March)",
+      solubility: "Disperses in Water; Swells on Hydration"
+    }
+  },
+  {
+    id: 29,
+    name: "Single-Herb Capsules",
+    category: "Herbal & Wellness",
+    image: "images/powders/Single Herb Capsules.webp",
+    isHero: false,
+    description: "Hard-shell capsules filled with IMM's own single-herb powders — no blends, no fillers, no flow agents unless specified. Available as a private-label programme in Moringa, Shatavari, Ashwagandha and Safed Musli.",
+    spec: "Private-Label Programme • HPMC Vegetarian Capsules • 500mg Fill",
+    details: {
+      hsCode: "2106.90 / 1211.90",
+      form: "Hard-Shell Capsule, Powder Filled",
+      mesh: "Vegetarian HPMC (Gelatin on request) • 500 mg Fill (250–750 mg on request)",
+      moisture: "< 5.0% Max (fill powder)",
+      microbial: "TPC < 50,000 CFU/g | Salmonella/E.Coli Absent",
+      activeMarker: "100% Single-Herb Fill — No Excipients (Moringa, Shatavari, Ashwagandha, Safed Musli)",
+      color: "Variant Specific Natural Color",
+      odor: "Variant Specific Natural Aroma",
+      packaging: "60 / 90 / 120-Capsule HDPE Jars, or Bulk",
+      shelfLife: "24 Months",
+      moq: "Bulk / Private Label MOQ on Request",
+      solubility: "Encapsulated Powder Format",
+      origin: "Powder milled in Jalgaon; encapsulated at partner facility"
     }
   }
 ];
