@@ -13,21 +13,24 @@
     const specHtml = p.spec ? `<div class="product-card-spec" style="font-size: 0.74rem; font-weight: 600; color: #047857; background: #ECFDF5; padding: 4px 10px; border-radius: 6px; border: 1px solid #A7F3D0; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-sizing: border-box;"><span style="font-size: 0.78rem;">⚡</span> <span style="overflow: hidden; text-overflow: ellipsis;">${p.spec}</span></div>` : '';
     const descHtml = p.description ? `<p class="product-desc" style="font-size: 0.83rem; color: #475569; line-height: 1.45; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: left;">${p.description}</p>` : '';
 
+    const safeImgSrc = encodeURI(p.image);
+    const escapedName = p.name.replace(/'/g, "\\'");
+
     return `
-      <div class="product-card b2b-card compact-card" onclick="openSpecModal('${p.name.replace(/'/g, "\\'")}')" data-category="${p.category}" style="cursor: pointer;">
+      <div class="product-card b2b-card compact-card" onclick="openSpecModal('${escapedName}')" data-category="${p.category}" style="cursor: pointer;">
         <div class="product-img-wrap">
           <div class="product-card-top-badges">
             <span class="product-category-badge">${p.category}</span>
             ${heroBadgeHtml}
           </div>
-          <img src="${p.image}" alt="${p.name} - Dehydrated Powder Manufacturer IMM Food Innovators" loading="lazy" decoding="async">
+          <img src="${safeImgSrc}" alt="${p.name} - Dehydrated Powder Manufacturer IMM Food Innovators" decoding="async" onerror="this.onerror=null;this.src='images/powders/Banana%20Powder.webp';">
         </div>
         <div class="product-body">
           <h3 class="product-title" style="text-align: left; font-size: 1.1rem; font-weight: 700; color: var(--primary-dark); margin: 0 0 6px 0;">${p.name}</h3>
           ${specHtml}
           ${descHtml}
           <div class="product-action-bar" style="margin-top: auto; padding-top: 4px;">
-            <button class="btn-primary-card" style="width: 100%;">
+            <button type="button" class="btn-primary-card" style="width: 100%; cursor: pointer;" onclick="event.stopPropagation(); openSpecModal('${escapedName}');">
               <span>📄 View Details & Specs</span>
               <span class="arrow">→</span>
             </button>
@@ -65,6 +68,8 @@
     const heroBadgeHtml = p.isHero ? `<span class="product-hero-badge" style="font-size: 0.68rem; padding: 3px 8px; border-radius: 4px;">★ FLAGSHIP</span>` : '';
     const specHighlightHtml = p.spec ? `<div class="spec-tds-spec-badge" style="font-size: 0.76rem; font-weight: 600; color: #047857; background: #ECFDF5; padding: 5px 12px; border-radius: 6px; border: 1px solid #A7F3D0; margin-bottom: 0.65rem; display: inline-flex; align-items: center; gap: 6px; width: fit-content;"><span style="font-size: 0.82rem;">⚡</span> <span>${p.spec}</span></div>` : '';
 
+    const safeModalImg = encodeURI(p.image);
+
     if (window.openModal) {
       window.openModal(`
         <div class="spec-tds-container" style="text-align: left; max-width: 720px; margin: 0 auto;">
@@ -84,7 +89,7 @@
             <!-- LEFT: PRODUCT IMAGE -->
             <div class="spec-tds-image-frame-wrap" style="flex: 0 0 250px; width: 250px; max-width: 100%;">
               <div class="spec-tds-image-frame" style="position: relative; width: 100%; height: 180px; border-radius: 10px; overflow: hidden; background: #FFFFFF; border: 1px solid var(--border-light); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); display: flex; align-items: center; justify-content: center;">
-                <img src="${p.image}" alt="${p.name} - Technical Data Sheet IMM Food Innovators" class="spec-tds-img" style="width: 100%; height: 100%; object-fit: contain; padding: 6px; display: block;" onerror="this.onerror=null;this.src='images/powders/Banana Powder.webp';">
+                <img src="${safeModalImg}" alt="${p.name} - Technical Data Sheet IMM Food Innovators" class="spec-tds-img" style="width: 100%; height: 100%; object-fit: contain; padding: 6px; display: block;" onerror="this.onerror=null;this.src='images/powders/Banana%20Powder.webp';">
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 0.72rem;">
                 <span style="font-weight: 700; color: var(--primary-dark); background: #F8FAFC; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border-light);">${p.category}</span>
@@ -299,10 +304,10 @@
       if (!categoryNavList) return;
 
       categoryNavList.innerHTML = B2B_CATEGORIES.map(cat => {
-        const count = cat.label === 'All Products' 
-          ? productsData.length 
+        const count = cat.label === 'All Products'
+          ? productsData.length
           : productsData.filter(p => p.category === cat.label).length;
-        
+
         const isActive = activeCategory === cat.label;
         return `
           <li class="b2b-category-item ${isActive ? 'active' : ''}" data-cat="${cat.label}">

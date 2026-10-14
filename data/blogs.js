@@ -135,7 +135,7 @@ const blogsData = [
       <ul>
         <li><strong>Direct Field-Level Agronomic Oversight:</strong> Our technical team dictates soil enrichment, non-toxic pest management, and natural fertilizer protocols from seed sowing to harvest.</li>
         <li><strong>Zero Pesticide & Chemical Residue Risk:</strong> By controlling 60-70% of crops internally, we eliminate pesticide contamination risks often found in open mandi wholesale trading networks.</li>
-        <li><strong>Harvest-to-Dehydration Speed:</strong> Cavendish bananas, moringa leaves, and spices are harvested at peak ripeness and transferred to our Yawal facility within hours, preventing post-harvest nutrient breakdown.</li>
+        <li><strong>Harvest-to-Dehydration Speed:</strong> Cavendish bananas, moringa leaves, and spices are harvested at optimal maturity and transferred to our Yawal facility within hours, preventing post-harvest nutrient breakdown.</li>
       </ul>
 
       <h3>Vetted Regional Partner Network</h3>
@@ -154,7 +154,7 @@ const blogsData = [
     image: "images/banana_packaging_imm.webp",
     excerpt: "Dehydrated raw banana powder is rapidly gaining traction in B2B markets. Explore why this nutrient-dense superfood is becoming a vital ingredient for baby foods, gluten-free baking, and wellness blends.",
     content: `
-      <p>Dehydrated raw banana powder is rapidly transitioning from a niche ingredient to a global B2B powerhouse. Produced from ripe or unripe Cavendish bananas using advanced low-temperature dehydration technology, it retains the essential vitamins, minerals, and prebiotic fibers of the fresh fruit while offering a stable shelf life and versatility for food formulation.</p>
+      <p>Dehydrated raw banana powder is rapidly transitioning from a niche ingredient to a global B2B powerhouse. Produced from fresh Cavendish green raw bananas using advanced low-temperature dehydration technology, it retains the essential vitamins, minerals, and prebiotic fibers of the fresh fruit while offering a stable shelf life and versatility for food formulation.</p>
       
       <h3>Key Health Benefits & Nutrients</h3>
       <p>Dehydrated raw banana powder is a nutrient-dense powerhouse. It is exceptionally rich in:</p>
