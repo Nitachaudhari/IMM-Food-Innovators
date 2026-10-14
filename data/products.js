@@ -214,10 +214,10 @@ const productsData = [
   },
   {
     id: 10,
-    name: "Bedgi Red Chilli Powder",
+    name: "Rasgulla Red Chilli Powder",
     category: "Pure Spices",
-    image: "images/powders/Bedgyi Mirchi Powder.webp",
-    description: "Vibrant deep red Bedgi chilli variety, prized for intense natural color (ASTA 100+) & medium heat.",
+    image: "images/powders/RasgullaChilli.webp",
+    description: "Vibrant deep red Rasgulla chilli variety, prized for intense natural color (ASTA 100+) & medium heat.",
     spec: "ASTA 100+ • Medium Heat",
     details: {
       form: "Ground Spice Powder",
@@ -254,10 +254,10 @@ const productsData = [
   },
   {
     id: 12,
-    name: "Bedgi & Chapata Mix Powder",
+    name: "Rasgulla & Chapata Mix Powder",
     category: "Pure Spices",
     image: "images/powders/Bedgi and Chapata Mix Powder.webp",
-    description: "Balanced blend of Bedgi color and Chapata heat for commercial food manufacturers.",
+    description: "Balanced blend of Rasgulla color and Chapata heat for commercial food manufacturers.",
     spec: "Color & Heat Synergistic Blend",
     details: {
       form: "Blended Spice Powder",
