@@ -16,11 +16,11 @@ const B2B_CATEGORIES = [
 const productsData = [
   {
     id: 1,
-    name: "Banana Powder",
+    name: "Raw Banana Powder",
     category: "Fruit & Veggie Powders",
     image: "images/powders/Banana Powder.webp",
     isHero: true,
-    description: "100% pure Cavendish Green & Ripe banana powder varieties from Jalgaon. Packed with prebiotic resistant starch (~82%) and low moisture (<4.0%), ideal for infant nutrition/baby cereals, gluten-free baking, and functional foods.",
+    description: "100% pure Cavendish Green & Ripe raw banana powder varieties from Jalgaon. Packed with prebiotic resistant starch (~82%) and low moisture (<4.0%), ideal for infant nutrition/baby cereals, gluten-free baking, and functional foods.",
     spec: "80-100 Mesh • Prebiotic Starch ~82% • Moisture < 4.0%",
     details: {
       hsCode: "0803.90 (Fresh/Dried Bananas) / 1106.30",

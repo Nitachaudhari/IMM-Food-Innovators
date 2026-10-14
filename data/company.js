@@ -7,7 +7,7 @@
 
 const companyData = {
   name: "IMM Food Innovators LLP",
-  tagline: "Dehydrated Banana Powder, Spices & Food Ingredients Manufacturer",
+  tagline: "Dehydrated Raw Banana Powder, Spices & Food Ingredients Manufacturer",
   phones: [
     { display: "+91 9114403000", raw: "+919114403000", label: "Sales & Inquiries" },
     { display: "+91 9170625050", raw: "+919170625050", label: "Customer Service" }
@@ -29,7 +29,7 @@ const companyData = {
     facebook: "https://www.facebook.com/profile.php?id=61581102029221",
     instagram: "https://www.instagram.com/imm_food_innovators",
     whatsapp: "https://wa.me/919114403000",
-    linkedin: "https://www.linkedin.com/company/immfoodinnovators"
+    linkedin: "https://www.linkedin.com/company/138713943/admin/page-posts/published/"
   },
   web3formsKey: "4d0c3c98-6bd6-4751-88f0-353b9ad95f9c"
 };

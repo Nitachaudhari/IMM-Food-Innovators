@@ -142,6 +142,10 @@
     if (!overlay) return;
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+    const container = overlay.querySelector('.modal-container');
+    if (container) {
+      container.classList.remove('cert-modal-box');
+    }
   }
 
   window.openModal = openModal;
@@ -253,9 +257,9 @@
       doc: 'images/certifications/iso_9001.webp'
     },
     'fssai': {
-      title: 'FSSAI Food Safety License',
-      subtitle: 'Licence No. 11524021000216 — Food Safety and Standards Authority of India',
-      doc: 'images/certifications/fssai.webp'
+      title: 'FSSAI Central Food Safety License',
+      subtitle: 'Central Licence No. 11525073000252 (Valid thru 17-09-2027) — Food Safety and Standards Authority of India',
+      doc: 'images/certifications/fssai.webp?v=26.0'
     },
     'gmp': {
       title: 'GMP Good Manufacturing Practice Certificate',
@@ -292,25 +296,36 @@
     const subtitle = info ? info.subtitle : 'IMM Food Innovators LLP Official Verified Document';
 
     openModal(`
-      <div style="text-align: center; width: 100%; max-width: 720px; margin: 0 auto; padding: 0.25rem 0;">
-        <div style="margin-bottom: 1.25rem;">
-          <span style="display: inline-block; background: #FEF3C7; color: #92400E; font-weight: 700; border: 1px solid #FDE68A; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase;">VERIFIED OFFICIAL COMPLIANCE DOCUMENT</span>
-          <h3 style="font-size: 1.35rem; font-weight: 800; color: #0A2E1D; margin: 0.5rem 0 0.25rem 0; line-height: 1.3;">${title}</h3>
-          <p style="font-size: 0.88rem; color: #4B5563; margin: 0; font-weight: 500;">${subtitle}</p>
+      <div class="cert-modal-content" style="text-align: center; width: 100%; max-width: 480px; margin: 0 auto; padding: 0.15rem 0;">
+        <div style="margin-bottom: 0.85rem; padding-right: 1.8rem; text-align: left;">
+          <span style="display: inline-flex; align-items: center; gap: 5px; background: rgba(245, 158, 11, 0.12); color: #B45309; border: 1px solid rgba(245, 158, 11, 0.3); padding: 3px 10px; border-radius: 50px; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;">
+            <i class="fa-solid fa-shield-halved" style="color: #D97706;"></i> Verified Compliance
+          </span>
+          <h3 style="font-size: 1.05rem; font-weight: 800; color: #0A2E1D; margin: 0 0 4px 0; line-height: 1.25;">${title}</h3>
+          <p style="font-size: 0.76rem; color: #64748B; margin: 0; line-height: 1.35; font-weight: 500;">${subtitle}</p>
         </div>
-        <div style="position: relative; background: #F8FAFC; border-radius: 12px; padding: 0.75rem; border: 1px solid #E2E8F0; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; min-height: 300px;">
-          <img src="${docSrc}" alt="${title}" style="max-width: 100%; max-height: 62vh; width: auto; height: auto; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.18); object-fit: contain; display: block; margin: 0 auto;" onerror="this.onerror=null; this.src='images/certifications/iso_9001.webp';">
+        <div style="position: relative; background: #F8FAFC; border-radius: 12px; padding: 0.5rem; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);">
+          <img src="${docSrc}" alt="${title}" style="max-width: 100%; max-height: 65vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); object-fit: contain; display: block; margin: 0 auto;" onerror="this.onerror=null; this.src='images/certifications/iso_9001.webp';">
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center;">
-          <a href="${docSrc}" target="_blank" rel="noopener" class="btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border-radius: 8px;">
-            <span>🔍 View High-Resolution Full Document ↗</span>
+        <div style="margin-top: 0.7rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 0.72rem; color: #16A34A; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+            <i class="fa-solid fa-circle-check"></i> Authentic Scan on File
+          </span>
+          <a href="${docSrc}" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; color: var(--primary-color); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+            Open Full Image <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
-          <button type="button" onclick="if(window.openQuoteModal){window.openQuoteModal('Certificate Verification: ${title.replace(/'/g, "\\'")}');}" class="btn-secondary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 6px; border-radius: 8px; cursor: pointer; border: 1px solid var(--primary-dark); background: transparent; color: var(--primary-dark); font-weight: 700;">
-            <span>📋 Request COA / Verification</span>
-          </button>
         </div>
       </div>
     `);
+
+    // Add compact styling to modal container when viewing certificate
+    const overlay = document.getElementById('modalOverlay');
+    if (overlay) {
+      const container = overlay.querySelector('.modal-container');
+      if (container) {
+        container.classList.add('cert-modal-box');
+      }
+    }
   };
 
   function initCertificates() {
@@ -412,11 +427,26 @@
     });
 
     if (hamburger && navMenu) {
-      hamburger.addEventListener('click', () => {
-        const isOpen = navMenu.classList.contains('active');
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('open');
-        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+
+      // Close menu when tapping anywhere outside
+      document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('open');
+        }
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('open');
+        }
       });
 
       const navLinks = navMenu.querySelectorAll('a');
@@ -427,7 +457,6 @@
           }
           navMenu.classList.remove('active');
           hamburger.classList.remove('open');
-          document.body.style.overflow = '';
         });
       });
     }
@@ -523,7 +552,7 @@
     } else if (subjectParam === 'ExportQuote' || subjectParam === 'BulkExportQuote') {
       if (inquirySelect) inquirySelect.value = 'Export Inquiry';
       if (messageArea && !messageArea.value) {
-        messageArea.value = 'Inquiry: Bulk Export Packaging (25kg/50kg HDPE bags) & Gulf Container Sea Shipping via JNPT Nhava Sheva (Mumbai). Please send specification sheets and ocean freight quotes.';
+        messageArea.value = 'Inquiry: Bulk Export Packaging (25kg/50kg HDPE bags) & Container Sea Shipping. Please send specification sheets and ocean freight quotes.';
       }
     } else if (subjectParam === 'ContractMfg') {
       if (inquirySelect) inquirySelect.value = 'Contract Mfg';

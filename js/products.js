@@ -62,49 +62,158 @@
 
     const d = p.details || {};
     const docId = 'TDS-IMM-' + p.name.replace(/[^a-zA-Z0-9]/g, '-').toUpperCase();
+    const heroBadgeHtml = p.isHero ? `<span class="product-hero-badge" style="font-size: 0.68rem; padding: 3px 8px; border-radius: 4px;">★ FLAGSHIP</span>` : '';
+    const specHighlightHtml = p.spec ? `<div class="spec-tds-spec-badge" style="font-size: 0.76rem; font-weight: 600; color: #047857; background: #ECFDF5; padding: 5px 12px; border-radius: 6px; border: 1px solid #A7F3D0; margin-bottom: 0.65rem; display: inline-flex; align-items: center; gap: 6px; width: fit-content;"><span style="font-size: 0.82rem;">⚡</span> <span>${p.spec}</span></div>` : '';
 
     if (window.openModal) {
       window.openModal(`
         <div class="spec-tds-container" style="text-align: left; max-width: 720px; margin: 0 auto;">
-          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-gold); padding-bottom: 0.75rem;">
+          <!-- TOP DOCUMENT HEADER -->
+          <div class="spec-tds-header-bar" style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--accent-gold); padding-bottom: 0.75rem; padding-right: 2.5rem;">
             <div>
-              <span class="section-badge badge-gold" style="font-size: 0.7rem; padding: 4px 10px;">TECHNICAL DATA SHEET (TDS)</span>
-              <h2 style="font-size: 1.75rem; color: var(--primary-dark); margin-top: 4px; font-weight: 800; line-height: 1.2;">${p.name}</h2>
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;">
+                <span class="section-badge badge-gold" style="font-size: 0.7rem; padding: 4px 10px; margin: 0;">TECHNICAL DATA SHEET (TDS)</span>
+                ${heroBadgeHtml}
+              </div>
+              <h2 class="spec-tds-title" style="font-size: 1.65rem; color: var(--primary-dark); margin: 0; font-weight: 800; line-height: 1.2;">${p.name}</h2>
             </div>
-            <div style="text-align: right;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #10B981; background: rgba(16,185,129,0.12); padding: 4px 10px; border-radius: 20px; display: inline-block;">✓ ISO 9001:2015 & FSSAI Compliant</span>
-              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; font-family: monospace;">Ref: ${docId}</div>
+          </div>
+
+          <!-- PRODUCT OVERVIEW: IMAGE + BULLET POINTS (NO BOXES) -->
+          <div class="spec-tds-overview-section" style="display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border-light);">
+            <!-- LEFT: PRODUCT IMAGE -->
+            <div class="spec-tds-image-frame-wrap" style="flex: 0 0 250px; width: 250px; max-width: 100%;">
+              <div class="spec-tds-image-frame" style="position: relative; width: 100%; height: 180px; border-radius: 10px; overflow: hidden; background: #FFFFFF; border: 1px solid var(--border-light); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); display: flex; align-items: center; justify-content: center;">
+                <img src="${p.image}" alt="${p.name} - Technical Data Sheet IMM Food Innovators" class="spec-tds-img" style="width: 100%; height: 100%; object-fit: contain; padding: 6px; display: block;" onerror="this.onerror=null;this.src='images/powders/Banana Powder.webp';">
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 0.72rem;">
+                <span style="font-weight: 700; color: var(--primary-dark); background: #F8FAFC; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border-light);">${p.category}</span>
+                <span style="color: #047857; font-weight: 700;">● Direct Farm Tested</span>
+              </div>
+            </div>
+
+            <!-- RIGHT: DESCRIPTION & BULLET POINTS -->
+            <div class="spec-tds-overview-info" style="flex: 1; min-width: 0;">
+              ${specHighlightHtml}
+              <p class="spec-tds-desc" style="color: var(--text-secondary); margin: 0 0 12px 0; font-size: 0.88rem; line-height: 1.55;">${p.description}</p>
+              
+              <!-- BULLET POINTS LIST (NO BOXES) -->
+              <ul class="spec-tds-bullet-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px;">
+                <li style="display: flex; align-items: baseline; gap: 8px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                  <span style="color: var(--accent-gold); font-size: 1rem; line-height: 1;">•</span>
+                  <span><strong style="color: var(--primary-dark);">Physical Form:</strong> ${d.form || 'Fine Micro-Ground Powder'}</span>
+                </li>
+                <li style="display: flex; align-items: baseline; gap: 8px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                  <span style="color: var(--accent-gold); font-size: 1rem; line-height: 1;">•</span>
+                  <span><strong style="color: var(--primary-dark);">Particle Mesh Size:</strong> ${d.mesh || '80-100 Mesh'}</span>
+                </li>
+                <li style="display: flex; align-items: baseline; gap: 8px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                  <span style="color: var(--accent-gold); font-size: 1rem; line-height: 1;">•</span>
+                  <span><strong style="color: var(--primary-dark);">Moisture Limit:</strong> <span style="color: #D97706; font-weight: 700;">${d.moisture || '< 5.0% Max'}</span></span>
+                </li>
+                <li style="display: flex; align-items: baseline; gap: 8px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                  <span style="color: var(--accent-gold); font-size: 1rem; line-height: 1;">•</span>
+                  <span><strong style="color: var(--primary-dark);">Standard B2B Packaging:</strong> ${d.packaging || '25 kg HDPE Bag with Inner PE Liner'}</span>
+                </li>
+                ${d.activeMarker ? `
+                <li style="display: flex; align-items: baseline; gap: 8px; font-size: 0.85rem; color: #334155; line-height: 1.45;">
+                  <span style="color: var(--accent-gold); font-size: 1rem; line-height: 1;">•</span>
+                  <span><strong style="color: var(--primary-dark);">Bioactive Marker:</strong> ${d.activeMarker}</span>
+                </li>` : ''}
+              </ul>
             </div>
           </div>
 
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.94rem; line-height: 1.6;">${p.description}</p>
-          
-          <!-- SECTION 1: PHYSICAL & ORGANOLEPTIC SPECS -->
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">1. Physical & Organoleptic Parameters</h4>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem;">
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Physical Form / Cut:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.form || 'Fine Micro-Ground Powder'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Particle Mesh Size:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.mesh || '80-100 Mesh'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Natural Color:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.color || 'Natural Color'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Aroma & Taste:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.odor || 'Characteristic Aroma'}</strong></div>
-          </div>
+          <!-- SPECIFICATION TABLE (REPLACES ALL SECTION BOXES) -->
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin: 0 0 0.75rem 0; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 4px; height: 16px; background: var(--accent-gold); border-radius: 2px;"></span>
+              Complete Technical Data Sheet Specifications
+            </h4>
+            <div class="spec-tds-table-container" style="border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+              <table class="spec-tds-table" style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                <thead>
+                  <tr style="background: var(--primary-dark); color: #FFFFFF;">
+                    <th style="padding: 10px 14px; font-weight: 700; width: 42%; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">Technical Parameter</th>
+                    <th style="padding: 10px 14px; font-weight: 700; width: 58%; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">Specification Standard</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 1. Physical & Organoleptic Parameters -->
+                  <tr style="background: #F8FAFC; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+                    <td colspan="2" style="padding: 7px 14px; font-weight: 800; font-size: 0.76rem; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px; background: #F1F5F9;">
+                      1. Physical & Organoleptic Parameters
+                    </td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Physical Form / Cut</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.form || 'Fine Micro-Ground Powder'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Particle Mesh Size</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.mesh || '80-100 Mesh'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Natural Color</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.color || 'Characteristic Natural Color'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Aroma & Taste</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.odor || 'Characteristic Aroma'}</td>
+                  </tr>
 
-          <!-- SECTION 2: CHEMICAL & QUALITY STANDARDS -->
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">2. Chemical & Quality Standards</h4>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem;">
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Moisture Limit:</span><strong style="color: #D97706; font-size: 0.88rem;">${d.moisture || '< 5.0% Max'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Bioactive Marker / Key Content:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.activeMarker || '100% Pure Extract'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Solubility / Rehydration:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.solubility || 'Water Dispersible'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Microbial Safety:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.microbial || 'TPC < 50,000 CFU/g | Salmonella/E.Coli Absent'}</strong></div>
-          </div>
+                  <!-- 2. Chemical & Microbiological Standards -->
+                  <tr style="background: #F8FAFC; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+                    <td colspan="2" style="padding: 7px 14px; font-weight: 800; font-size: 0.76rem; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px; background: #F1F5F9;">
+                      2. Chemical & Microbiological Standards
+                    </td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Moisture Limit</td>
+                    <td style="padding: 9px 14px; color: #D97706; font-weight: 700;">${d.moisture || '< 5.0% Max'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Bioactive Marker / Key Content</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.activeMarker || '100% Pure Natural Extract'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Solubility / Rehydration</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.solubility || 'Water Dispersible'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Microbial Safety Limits</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.microbial || 'TPC < 50,000 CFU/g | Salmonella & E.Coli Absent'}</td>
+                  </tr>
 
-          <!-- SECTION 3: COMMERCIAL LOGISTICS & PACKAGING -->
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-dark); margin-bottom: 0.75rem; border-left: 4px solid var(--accent-gold); padding-left: 10px; font-weight: 800;">3. B2B Packaging, Customs HS Code & Logistics</h4>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.75rem;">
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">HS Customs Code:</span><strong style="color: #047857; font-size: 0.88rem;">${d.hsCode || '0803.90 / 0712.90'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Standard B2B Packaging:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.packaging || '25 kg HDPE Bag'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Shelf Life & Season:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.shelfLife || '12 Months'}${d.harvestSeason ? ' (' + d.harvestSeason + ')' : ''}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Dispatch MOQ:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.moq || '100 kg'}</strong></div>
-            <div style="background: var(--bg-alt); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-light);"><span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Plant Origin:</span><strong style="color: var(--primary-dark); font-size: 0.88rem;">${d.origin || 'Yawal, Jalgaon, Maharashtra, India'}</strong></div>
+                  <!-- 3. B2B Packaging, Customs & Logistics -->
+                  <tr style="background: #F8FAFC; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+                    <td colspan="2" style="padding: 7px 14px; font-weight: 800; font-size: 0.76rem; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px; background: #F1F5F9;">
+                      3. B2B Packaging, Customs & Logistics
+                    </td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">HS Customs Tariff Code</td>
+                    <td style="padding: 9px 14px; color: #047857; font-weight: 700;">${d.hsCode || '0803.90 / 0712.90'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Standard B2B Packaging</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.packaging || '25 kg Food-Grade HDPE Bag with Inner PE Liner'}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Shelf Life & Season</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.shelfLife || '12 Months'}${d.harvestSeason ? ' (' + d.harvestSeason + ')' : ''}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #F1F5F9; background: #FAFAFA;">
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Dispatch MOQ</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 700;">${d.moq || '100 kg'}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 9px 14px; color: var(--text-secondary); font-weight: 600;">Plant Origin & Traceability</td>
+                    <td style="padding: 9px 14px; color: var(--primary-dark); font-weight: 600;">${d.origin || 'Yawal, Jalgaon, Maharashtra, India'}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">

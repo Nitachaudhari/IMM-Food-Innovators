@@ -11,12 +11,30 @@
     <image:image>
       <image:loc>https://www.immfoodinnovators.in/images/IMMLogo.webp</image:loc>
       <image:title>IMM Food Innovators LLP Logo</image:title>
-      <image:caption>Manufacturer of Dehydrated Banana Powder and Spices in Jalgaon, India</image:caption>
+      <image:caption>Manufacturer of Dehydrated Raw Banana Powder and Spices in Jalgaon, India</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.immfoodinnovators.in/images/factory.webp</image:loc>
       <image:title>IMM Processing Plant Jalgaon</image:title>
       <image:caption>Dehydration & Powder Milling Processing Facility</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Us Detailed Page -->
+  <url>
+    <loc>https://www.immfoodinnovators.in/about.html</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.immfoodinnovators.in/images/about_contract_farming_jalgaon.jpg</image:loc>
+      <image:title>IMM Contract Farming Jalgaon</image:title>
+      <image:caption>~250 Acres Contract Farming in Jalgaon, Maharashtra</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.immfoodinnovators.in/images/about_facility_hero.webp</image:loc>
+      <image:title>IMM Low Temperature Dehydration Facility</image:title>
+      <image:caption>Low Temperature Thermal Air-Drying Chambers</image:caption>
     </image:image>
   </url>
 
@@ -28,8 +46,8 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.immfoodinnovators.in/images/powders/Banana%20Powder.webp</image:loc>
-      <image:title>Dehydrated Banana Powder Bulk</image:title>
-      <image:caption>Pure Low-Temperature Dehydrated Cavendish Banana Powder</image:caption>
+      <image:title>Dehydrated Raw Banana Powder Bulk</image:title>
+      <image:caption>Pure Low-Temperature Dehydrated Cavendish Raw Banana Powder</image:caption>
     </image:image>
   </url>
 
@@ -73,7 +91,7 @@
     </image:image>
   </url>
 
-  <!-- Article: Dehydrated Banana Powder Health Benefits B2B -->
+  <!-- Article: Dehydrated Raw Banana Powder Health Benefits B2B -->
   <url>
     <loc>https://www.immfoodinnovators.in/banana-powder-health-benefits-b2b.html</loc>
     <lastmod>2026-09-23</lastmod>
@@ -81,7 +99,7 @@
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://www.immfoodinnovators.in/images/banana_packaging_imm.webp</image:loc>
-      <image:title>Dehydrated Banana Powder Benefits & B2B Applications</image:title>
+      <image:title>Dehydrated Raw Banana Powder Benefits & B2B Applications</image:title>
     </image:image>
   </url>
 

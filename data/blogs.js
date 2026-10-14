@@ -19,7 +19,7 @@ const blogsData = [
     excerpt: "Banana, moringa, shatavari and turmeric powder — what to check before you commit to a bulk supplier in India.",
     content: `
       <p class="lead-text" style="font-size: 1.12rem; line-height: 1.75; color: var(--primary-dark); font-weight: 500; margin-bottom: 1.5rem;">
-        If you're sourcing dehydrated fruit, herbal, or spice powder in bulk — for a food brand, a nutraceutical formulation, a bakery ingredient line, or export — the hardest part usually isn't finding a supplier. A search for <em>"banana powder manufacturer"</em> or <em>"moringa powder bulk supplier"</em> turns up dozens of listings. The hard part is telling which of them will still be answering your calls, holding their spec, and passing your quality audit six months into the relationship.
+        If you're sourcing dehydrated fruit, herbal, or spice powder in bulk — for a food brand, a nutraceutical formulation, a bakery ingredient line, or export — the hardest part usually isn't finding a supplier. A search for <em>"raw banana powder manufacturer"</em> or <em>"moringa powder bulk supplier"</em> turns up dozens of listings. The hard part is telling which of them will still be answering your calls, holding their spec, and passing your quality audit six months into the relationship.
       </p>
 
       <p>Here's a practical checklist, built around what we look for in our own supply chain and what buyers regularly ask us for.</p>
@@ -45,7 +45,7 @@ const blogsData = [
       <p>Any supplier can describe their powder as "premium" or "export quality." What you actually want is a <strong>Certificate of Analysis (COA)</strong> from an independent, accredited lab — ideally <strong>NABL-accredited</strong> (National Accreditation Board for Testing and Calibration Laboratories), which means the lab itself has been audited for testing competence, not just hired by the supplier.</p>
       <p>A COA worth trusting should show, at minimum: moisture content, microbial load (Total Plate Count), and yeast & mould presence — plus whatever nutrient or active-compound panel is relevant to your use case (protein, curcumin, fibre, and so on).</p>
       <div style="background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 1.25rem; margin: 1.25rem 0; border-radius: 0 8px 8px 0;">
-        <p style="margin: 0; font-size: 0.95rem; color: #1E3A8A;"><strong>As an example of what this looks like in practice:</strong> Here's a real, current NABL result for our tray-dehydrated banana powder (Shree ATR Laboratory, NABL Certificate No. TC-14380): <strong>moisture 7.91g/100g, Total Plate Count 70 cfu/g, yeast & mould absent</strong>. That TPC figure in particular is well inside the range a food-grade buyer wants to see — it's a direct read on how clean the drying and packaging process actually was.</p>
+        <p style="margin: 0; font-size: 0.95rem; color: #1E3A8A;"><strong>As an example of what this looks like in practice:</strong> Here's a real, current NABL result for our tray-dehydrated raw banana powder (Shree ATR Laboratory, NABL Certificate No. TC-14380): <strong>moisture 7.91g/100g, Total Plate Count 70 cfu/g, yeast & mould absent</strong>. That TPC figure in particular is well inside the range a food-grade buyer wants to see — it's a direct read on how clean the drying and packaging process actually was.</p>
       </div>
       <p>The point isn't this one number. It's that you should be able to get a report like this, for the specific product and ideally the specific batch you're buying, before you place a bulk order — not a generic spec sheet reused across every SKU.</p>
 
@@ -78,7 +78,7 @@ const blogsData = [
           </thead>
           <tbody style="line-height: 1.6; color: var(--text-secondary);">
             <tr style="border-bottom: 1px solid var(--border-light); background: #FFFFFF;">
-              <td style="padding: 12px 16px; font-weight: 700;"><a href="products.html?search=banana" style="color: var(--primary-dark); text-decoration: underline;">Banana powder</a></td>
+              <td style="padding: 12px 16px; font-weight: 700;"><a href="products.html?search=banana" style="color: var(--primary-dark); text-decoration: underline;">Raw banana powder</a></td>
               <td style="padding: 12px 16px;">Baby/infant food, bakery, nutraceutical bases, extruded snacks</td>
               <td style="padding: 12px 16px;">Moisture %, microbial load, resistant starch (if for a functional-food use case — ask if this has been tested)</td>
             </tr>
@@ -109,7 +109,7 @@ const blogsData = [
         </p>
         <hr style="border: 0; border-top: 1px solid #FDE68A; margin: 1.25rem 0;">
         <p style="color: #451A03; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-          We manufacture <a href="products.html?search=banana" style="color: #92400E; font-weight: 700; text-decoration: underline;">banana powder</a>, <a href="products.html?search=moringa" style="color: #92400E; font-weight: 700; text-decoration: underline;">moringa powder</a>, <a href="products.html?search=shatavari" style="color: #92400E; font-weight: 700; text-decoration: underline;">shatavari powder</a>, and <a href="products.html?search=turmeric" style="color: #92400E; font-weight: 700; text-decoration: underline;">turmeric powder</a> (along with a wider range of dehydrated spice, vegetable, and herbal powders) at our facility in Nhavi, Yawal, Jalgaon — ISO 9001:2015, ISO 22000:2018, GMP, and FSSAI certified, with NABL-accredited lab testing on file. If you'd like a sample, a current COA, or a bulk quote, reach out:
+          We manufacture <a href="products.html?search=banana" style="color: #92400E; font-weight: 700; text-decoration: underline;">raw banana powder</a>, <a href="products.html?search=moringa" style="color: #92400E; font-weight: 700; text-decoration: underline;">moringa powder</a>, <a href="products.html?search=shatavari" style="color: #92400E; font-weight: 700; text-decoration: underline;">shatavari powder</a>, and <a href="products.html?search=turmeric" style="color: #92400E; font-weight: 700; text-decoration: underline;">turmeric powder</a> (along with a wider range of dehydrated spice, vegetable, and herbal powders) at our facility in Nhavi, Yawal, Jalgaon — ISO 9001:2015, ISO 22000:2018, GMP, and FSSAI certified, with NABL-accredited lab testing on file. If you'd like a sample, a current COA, or a bulk quote, reach out:
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
           <a href="tel:+919114403000" class="btn-primary" style="padding: 10px 18px; font-size: 0.88rem; text-decoration: none;"><i class="fa-solid fa-phone" style="margin-right: 6px;"></i> +91 91144 03000</a>
@@ -147,25 +147,25 @@ const blogsData = [
   },
   {
     id: "banana-powder-benefits",
-    title: "The Rising Demand for Dehydrated Banana Powder: Health Benefits & B2B Applications",
+    title: "The Rising Demand for Dehydrated Raw Banana Powder: Health Benefits & B2B Applications",
     category: "Superfoods & Exports",
     date: "July 20, 2026",
     readTime: "5 min read",
     image: "images/banana_packaging_imm.webp",
-    excerpt: "Dehydrated banana powder is rapidly gaining traction in B2B markets. Explore why this nutrient-dense superfood is becoming a vital ingredient for baby foods, gluten-free baking, and wellness blends.",
+    excerpt: "Dehydrated raw banana powder is rapidly gaining traction in B2B markets. Explore why this nutrient-dense superfood is becoming a vital ingredient for baby foods, gluten-free baking, and wellness blends.",
     content: `
-      <p>Dehydrated banana powder is rapidly transitioning from a niche ingredient to a global B2B powerhouse. Produced from ripe or unripe Cavendish bananas using advanced low-temperature dehydration technology, it retains the essential vitamins, minerals, and prebiotic fibers of the fresh fruit while offering a stable shelf life and versatility for food formulation.</p>
+      <p>Dehydrated raw banana powder is rapidly transitioning from a niche ingredient to a global B2B powerhouse. Produced from ripe or unripe Cavendish bananas using advanced low-temperature dehydration technology, it retains the essential vitamins, minerals, and prebiotic fibers of the fresh fruit while offering a stable shelf life and versatility for food formulation.</p>
       
       <h3>Key Health Benefits & Nutrients</h3>
-      <p>Dehydrated banana powder is a nutrient-dense powerhouse. It is exceptionally rich in:</p>
+      <p>Dehydrated raw banana powder is a nutrient-dense powerhouse. It is exceptionally rich in:</p>
       <ul>
         <li><strong>Potassium & Magnesium:</strong> Critical for cardiovascular wellness, muscle contraction, and maintaining healthy electrolyte levels.</li>
-        <li><strong>Resistant Starch (Prebiotic Fiber):</strong> Particularly high in green banana powder, it supports digestive health and gut microbiomes by feeding beneficial bacteria.</li>
+        <li><strong>Resistant Starch (Prebiotic Fiber):</strong> Particularly high in green raw banana powder, it supports digestive health and gut microbiomes by feeding beneficial bacteria.</li>
         <li><strong>Vitamins A, C, and B6:</strong> Natural immune system boosters that support metabolism and energy production.</li>
       </ul>
 
       <h3>Crucial B2B Applications</h3>
-      <p>Food brands, FMCG companies, and D2C startups are actively incorporating banana powder into diverse product categories:</p>
+      <p>Food brands, FMCG companies, and D2C startups are actively incorporating raw banana powder into diverse product categories:</p>
       <ol>
         <li><strong>Infant Nutrition & Baby Foods:</strong> Naturally sweet, easy to digest, and 100% clean-label with zero additives, making it highly safe for weaning foods.</li>
         <li><strong>Gluten-Free Baking & Confectionery:</strong> Serves as a nutrient-dense starch substitute that improves moisture retention and crumb structure in gluten-free breads, cakes, and waffles.</li>
